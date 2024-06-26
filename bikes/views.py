@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
+from bikes.models import Bikes
 # Create your views here.
 def index(request):
-    return HttpResponse("<h1>Bikes Application</h1>")
+    bikes = Bikes.objects.all()
+    context = {
+        'bikes': bikes
+    }
+    render(request,'templates/index.html', context)
