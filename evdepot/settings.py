@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'trucks.apps.TrucksConfig',
     'bikes.apps.BikesConfig',
     'cars.apps.CarsConfig',
-    'categories.apps.CategoriesConfig',
-    'ratings.apps.RatingsConfig',
+    # 'categories.apps.CategoriesConfig',
+    # 'ratings.apps.RatingsConfig',
 ]
 
 MIDDLEWARE = [

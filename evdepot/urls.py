@@ -22,7 +22,7 @@ urlpatterns = [
     path('bikes/', include('bikes.urls')),
     path('cars/', include('cars.urls')),
     path('trucks/', include('trucks.urls')),
-    path('categories/', include('categories.urls')),
-    path('ratings/', include('ratings.urls')),
+    # path('categories/', include('categories.urls')),
+    # path('ratings/', include('ratings.urls')),
     path('admin/', admin.site.urls),
 ]
