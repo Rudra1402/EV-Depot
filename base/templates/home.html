@@ -1,0 +1,18 @@
+<!-- base/templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to EV Depot</title>
+    <!-- Add any necessary CSS or styling -->
+</head>
+<body>
+    <h1>Welcome to EV Depot</h1>
+    <p>Explore our categories and ratings:</p>
+    <ul>
+        <li><a href="{% url 'categories-list' %}">Categories</a></li>
+        <li><a href="{% url 'ratings-list' %}">Ratings</a></li>
+    </ul>
+</body>
+</html>
