@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings</title>
+    <link rel="stylesheet" href="{% static 'base/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ratings</h1>
+        {% if ratings %}
+            <div class="ratings-list">
+                {% for rating in ratings %}
+                    <div class="rating-item">
+                        <h2>{{ rating.car.name }}</h2>
+                        <p><strong>Rating:</strong> {{ rating.rating }}</p>
+                        <p><strong>Comment:</strong> {{ rating.comment }}</p>
+                        <p><strong>Date Created:</strong> {{ rating.date_created }}</p>
+                        <p><strong>Approved:</strong> {% if rating.is_approved %}Yes{% else %}No{% endif %}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No ratings found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

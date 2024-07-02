@@ -1,0 +1,11 @@
+{% extends 'ratings/index.html' %}
+
+{% block content %}
+    <div class="rating-detail">
+        <h2>{{ rating.car.name }}</h2>
+        <p><strong>Rating:</strong> {{ rating.rating }}</p>
+        <p><strong>Comment:</strong> {{ rating.comment }}</p>
+        <p><strong>Date Created:</strong> {{ rating.date_created }}</p>
+        <p><strong>Approved:</strong> {% if rating.is_approved %}Yes{% else %}No{% endif %}</p>
+    </div>
+{% endblock %}
