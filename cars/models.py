@@ -26,3 +26,6 @@ class Cars(models.Model):
     image = models.URLField()
     isNew = models.BooleanField(default=True)
     createdAt = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = "cars"

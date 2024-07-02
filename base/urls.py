@@ -1,7 +1,10 @@
-from django.contrib import admin
 from django.urls import path
-from base import views
+from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('ratings/', views.RatingListView.as_view(), name='ratings-list'),
+    path('ratings/<int:pk>/', views.RatingDetailView.as_view(), name='ratings-detail'),
+    path('categories/', views.CategoryListView.as_view(), name='categories-list'),
+    path('categories/<int:pk>/', views.CategoryDetailView.as_view(), name='categories-detail'),
+    # other paths as needed
 ]
