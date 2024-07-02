@@ -19,7 +19,11 @@
                         <div class="bike-details">
                             <h2>{{ bike.name }}</h2>
                             <p>Company: {{ bike.companyName }}</p>
-                            <p>Type: {{ bike.get_modelType_display }}</p>
+                            {% if bike.get_modelType_display %}
+                                <p>Type: {{ bike.get_modelType_display }}</p>
+                            {% else %}
+                                <p>Type: {{ bike.modelType }}</p>
+                            {% endif %}
                             <p>Year: {{ bike.manufacturingYear }}</p>
                             <p class="price">Price: ${{ bike.price }}</p>
                             {% if bike.isNew %}
