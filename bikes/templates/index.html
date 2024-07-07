@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Bikes</title>
+    <title>Bikes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .bike-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-6px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
         .bike-item img {
@@ -31,9 +31,11 @@
         }
     </style>
 </head>
-<body class="m-0 p-0 flex poppins-regular bg-[#f5f5f5]">
-    <div class="w-screen h-screen overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-200 to-green-300">
-        <h1 class="text-4xl font-semibold leading-none text-gray-700">All Bikes</h1>
+<body class="m-0 p-0 w-screen h-screen flex poppins-regular bg-[#f5f5f5]">
+    <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-200 to-green-300" style="scrollbar-width: none;">
+        <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700">
+            Bikes<div class="text-base">({{ bikes | length }} results)</div>
+        </h1>
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if bikes %}
                 {% for bike in bikes %}
@@ -42,45 +44,45 @@
                         <div class="p-4 flex flex-col gap-y-4">
                             <h2 class="text-2xl font-semibold text-gray-800">{{ bike.name }}</h2>
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Company</div>
                                     <div class="text-lg font-medium text-gray-800">{{ bike.companyName }}</div>
                                 </div>
                                 {% if bike.get_modelType_display %}
-                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Type</div>
                                         <div class="text-lg font-medium text-gray-800">{{ bike.get_modelType_display }}</div>
                                     </div>
                                 {% else %}
-                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Type</div>
                                         <div class="text-lg font-medium text-gray-800">{{ bike.modelType }}</div>
                                     </div>
                                 {% endif %}
                             </div>
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Year</div>
                                     <div class="text-lg font-medium text-gray-800">{{ bike.manufacturingYear }}</div>
                                 </div>
-                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Price</div>
                                     <div class="text-lg font-medium text-gray-800">${{ bike.price }}</div>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 {% if bike.isNew %}
-                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Condition</div>
                                         <div class="text-lg font-medium text-gray-800">New</div>
                                     </div>
                                 {% else %}
-                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Condition</div>
                                         <div class="text-lg font-medium text-gray-800">Used</div>
                                     </div>
                                 {% endif %}
-                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md p-4">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Posted</div>
                                     <div class="text-lg font-medium text-gray-800">{{ bike.createdAt | timesince }}</div>
                                 </div>
@@ -92,6 +94,52 @@
                 <p class="text-xl font-medium text-gray-700">No bikes available.</p>
             {% endif %}
         </div>
+    </div>
+    <div class="border-l border-l-blue-300 w-1/2 h-full p-8 overflow-y-auto " style="scrollbar-width: none;">
+        <form method="post" enctype="multipart/form-data" class="p-6 rounded-md shadow-lg bg-gradient-to-t from-green-200 to-green-300 flex flex-col gap-4">
+            {% csrf_token %}
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_name" class="block text-gray-700">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_companyName" class="block text-gray-700">Company Name</label>
+                    {{ form.companyName }}
+                </div>
+            </div>
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_modelType" class="block text-gray-700">Model Type</label>
+                    {{ form.modelType }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_manufacturingYear" class="block text-gray-700">Manufacturing Year</label>
+                    {{ form.manufacturingYear }}
+                </div>
+            </div>
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_price" class="block text-gray-700">Price</label>
+                    {{ form.price }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_image" class="block text-gray-700">Image URL</label>
+                    {{ form.image }}
+                </div>
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="id_description" class="block text-gray-700">Description</label>
+                {{ form.description }}
+            </div>
+            <div class="flex itemx-center justify-start gap-3 px-1">
+                {{ form.isNew }}
+                <label for="id_isNew" class="block text-gray-700">Is New</label>
+            </div>
+            <div class="w-full flex justify-end">
+            <button type="submit" class="w-fit mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+            </div>
+        </form>
     </div>
 </body>
 </html>
