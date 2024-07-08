@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Bikes(models.Model):
@@ -17,7 +18,7 @@ class Bikes(models.Model):
     description = models.TextField(blank=True, null=True)
     image = models.URLField()
     isNew = models.BooleanField(default=True)
-    createdAt = models.DateField(auto_now_add=True)
+    createdAt = models.DateField(default=timezone.now)
 
     def __str__(self):
         return self.name
