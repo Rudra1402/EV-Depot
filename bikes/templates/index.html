@@ -32,17 +32,19 @@
     </style>
 </head>
 <body class="m-0 p-0 w-screen h-screen flex poppins-regular bg-[#f5f5f5]">
-    <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-200 to-green-300" style="scrollbar-width: none;">
-        <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700">
+    <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-300 to-green-400" style="scrollbar-width: none;">
+        <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
             Bikes<div class="text-base">({{ bikes | length }} results)</div>
         </h1>
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if bikes %}
                 {% for bike in bikes %}
                     <div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white bike-item">
-                        <img src="{{ bike.image }}" alt="{{ bike.name }}" class="w-full h-80 object-cover">
+                        <img src="{{ bike.image }}" alt="{{ bike.name }}" class="w-full min-h-80 max-h-full object-cover">
                         <div class="p-4 flex flex-col gap-y-4">
+                            <a href="{% url "bikes:bikebyid" id=bike.id %}" class="text-gray-800">
                             <h2 class="text-2xl font-semibold text-gray-800">{{ bike.name }}</h2>
+                            </a>
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Company</div>
@@ -95,8 +97,8 @@
             {% endif %}
         </div>
     </div>
-    <div class="border-l border-l-blue-300 w-1/2 h-full p-8 overflow-y-auto " style="scrollbar-width: none;">
-        <form method="post" enctype="multipart/form-data" class="p-6 rounded-md shadow-lg bg-gradient-to-t from-green-200 to-green-300 flex flex-col gap-4">
+    <div class="border-l border-l-blue-300 w-1/2 h-full p-6 overflow-y-auto " style="scrollbar-width: none;">
+        <form method="post" enctype="multipart/form-data" class="p-6 rounded-md shadow-lg bg-gradient-to-t from-green-300 to-green-400 flex flex-col gap-4">
             {% csrf_token %}
             <div class="flex items-center w-full gap-4">
                 <div class="w-1/2 flex flex-col gap-1">
