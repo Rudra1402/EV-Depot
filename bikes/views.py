@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 
 from bikes.models import Bikes
@@ -21,3 +21,7 @@ def index(request):
         'form': bikeForm
     }
     return render(request,'index.html', context)
+
+def bikeById(request, id):
+    bike = get_object_or_404(Bikes, id=id)
+    return render(request, 'bike.html', {'bike': bike})
