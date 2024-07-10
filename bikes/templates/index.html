@@ -9,28 +9,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <script src="{% static 'script.js' %}" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .poppins-regular {
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        .bike-item {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .bike-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-        .bike-item img {
-            transition: transform 0.3s;
-        }
-        .bike-item:hover img {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
+<style>
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .bike-item {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .bike-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    .bike-item img {
+        transition: transform 0.3s;
+    }
+    .bike-item:hover img {
+        transform: scale(1.05);
+    }
+</style>
+<script>
+    const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
+</script>
 <body class="m-0 p-0 w-screen h-screen flex poppins-regular bg-[#f5f5f5]">
     <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-300 to-green-400" style="scrollbar-width: none;">
         <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
@@ -39,12 +43,28 @@
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if bikes %}
                 {% for bike in bikes %}
-                    <div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white bike-item">
+                    <div 
+                        class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white bike-item"
+                        id="bike-{{bike.id}}"
+                    >
                         <img src="{{ bike.image }}" alt="{{ bike.name }}" class="w-full min-h-80 max-h-full object-cover">
                         <div class="p-4 flex flex-col gap-y-4">
-                            <a href="{% url "bikes:bikebyid" id=bike.id %}" class="text-gray-800">
-                            <h2 class="text-2xl font-semibold text-gray-800">{{ bike.name }}</h2>
-                            </a>
+                            <div class="flex items-center justify-between gap-5">
+                                <a href="{% url "bikes:bikebyid" id=bike.id %}" class="text-gray-800">
+                                    <h2 class="text-2xl font-semibold text-gray-800">{{ bike.name }}</h2>
+                                </a>
+                                <div class="flex items-center gap-2 px-2">
+                                    <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                                        <i class="fa-solid fa-pen-to-square text-gray-100"></i>
+                                    </div>
+                                    <div 
+                                    class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"
+                                    onclick="deleteBike({{ bike.id }})"
+                                    >
+                                        <i class="fa-solid fa-trash text-gray-100"></i>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Company</div>
