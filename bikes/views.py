@@ -11,7 +11,7 @@ def index(request):
         form = BikeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('homepage')  # Redirect to the same page to clear the form
+            return redirect('bikes:homepage')  # Redirect to the same page to clear the form
     else:
         form = BikeForm()
 
@@ -29,10 +29,10 @@ def bikeById(request, id):
 
 def delete_bike(request, id):
     if request.method == 'DELETE':
-        print(f"Received DELETE request for bike ID {id}")  # Debug statement
+        print(f"Received DELETE request for bike ID {id}")
         bike = get_object_or_404(Bikes, pk=id)
         bike.delete()
         return JsonResponse({"message": "Bike deleted successfully."}, status=200)
     else:
-        print(f"Received {request.method} request, only DELETE is allowed")  # Debug statement
+        print(f"Received {request.method} request, only DELETE is allowed")
         raise Http404("Only DELETE method is allowed")

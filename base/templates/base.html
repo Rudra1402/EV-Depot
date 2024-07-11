@@ -18,6 +18,7 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Add any necessary CSS or styling -->
+    {% block extra_head %}{% endblock %}
 </head>
 <style>
     #middle-container {
@@ -44,27 +45,9 @@
 
 <body class="w-screen h-screen bg-[#f5f5f5]">
     <div class="h-full w-full flex flex-col overflow-y-auto" style="scrollbar-width: none;">
-        <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">
-            <img src="{% static "logo.png" %}" class="h-10 w-auto">
-            <div class="flex items-center justify-center gap-x-8">
-                <a href="#" class="text-white font-semibold text-lg leading-none">Home</a>
-                <a href="#" class="text-white font-semibold text-lg leading-none">About</a>
-                <a href="#" class="text-white font-semibold text-lg leading-none">Vehicles</a>
-                <a href="#" class="text-white font-semibold text-lg leading-none">Profile</a>
-            </div>
-        </nav>
+        {% include "navbar.html" %}
         {%  block body_block %}  {% endblock %}
-        <div class="bg-[#0B391C] py-4 px-20">
-            <div class="bg-black rounded-lg py-4 px-10 flex items-center justify-between">
-                <img src="{% static "logo.png" %}" class="h-10 w-auto">
-                <div class="flex items-center justify-center gap-x-6">
-                    <img src="{% static "twitter.png" %}" class="h-6 w-auto">
-                    <img src="{% static "insta.png" %}" class="h-6 w-6">
-                    <img src="{% static "fb.png" %}" class="h-6 w-auto">
-                    <img src="{% static "linkedin.png" %}" class="h-6 w-auto">
-                </div>
-            </div>
-        </div>
+        {% include "footer.html" %}
     </div>
 </body>
 </html>
