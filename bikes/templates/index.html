@@ -39,7 +39,7 @@
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if bikes %}
                 {% for bike in bikes %}
-                    <div 
+                    {% comment %} <div 
                         class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white bike-item"
                         id="bike-{{bike.id}}"
                     >
@@ -106,7 +106,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
+                    {% include 'vehicle_card.html' with vehicle=bike %}
                 {% endfor %}
             {% else %}
                 <p class="text-xl font-medium text-gray-700">No bikes available.</p>

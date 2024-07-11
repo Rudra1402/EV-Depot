@@ -1,0 +1,65 @@
+{% load static %}
+
+<div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white bike-item" id="bike-{{ vehicle.id }}">
+    <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-full min-h-80 max-h-full object-cover">
+    <div class="p-4 flex flex-col gap-y-4">
+        <div class="flex items-center justify-between gap-5">
+            <a href="{% url "bikes:bikebyid" id=vehicle.id %}" class="text-gray-800">
+                <h2 class="text-2xl font-semibold text-gray-800">{{ vehicle.name }}</h2>
+            </a>
+            <div class="flex items-center gap-2 px-2">
+                <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                    <i class="fa-solid fa-pen-to-square text-gray-100"></i>
+                </div>
+                <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"
+                    onclick="deleteBike({{ vehicle.id }},'{{ vehicle.name }}')">
+                    <i class="fa-solid fa-trash text-gray-100"></i>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Company</div>
+                <div class="text-lg font-medium text-gray-800">{{ vehicle.companyName }}</div>
+            </div>
+            {% if vehicle.get_modelType_display %}
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Type</div>
+                <div class="text-lg font-medium text-gray-800">{{ vehicle.get_modelType_display }}</div>
+            </div>
+            {% else %}
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Type</div>
+                <div class="text-lg font-medium text-gray-800">{{ vehicle.modelType }}</div>
+            </div>
+            {% endif %}
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Year</div>
+                <div class="text-lg font-medium text-gray-800">{{ vehicle.manufacturingYear }}</div>
+            </div>
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Price</div>
+                <div class="text-lg font-medium text-gray-800">${{ vehicle.price }}</div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            {% if vehicle.isNew %}
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Condition</div>
+                <div class="text-lg font-medium text-gray-800">New</div>
+            </div>
+            {% else %}
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Condition</div>
+                <div class="text-lg font-medium text-gray-800">Used</div>
+            </div>
+            {% endif %}
+            <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
+                <div class="text-gray-600">Posted</div>
+                <div class="text-lg font-medium text-gray-800">{{ vehicle.createdAt | timesince }} ago</div>
+            </div>
+        </div>
+    </div>
+</div>
