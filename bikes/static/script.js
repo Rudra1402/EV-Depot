@@ -1,19 +1,17 @@
-function deleteBike(bikeId) {
-    fetch(`/bikes/delete/${bikeId}`, {
-        method: 'DELETE',
-        headers: {
-            'X-CSRFToken': csrfToken,
-        },
-    })
-        .then(response => {
-            if (response.ok) {
-                document.getElementById(`bike-${bikeId}`).remove();
-                console.log(`Bike with ID ${bikeId} deleted successfully.`);
-            } else {
-                console.error(`Failed to delete bike with ID ${bikeId}.`);
-            }
+function deleteBike(bikeId, bikeTitle) {
+    if (window.confirm(`Are you sure you want to delete ${bikeTitle}`)) {
+        fetch(`/bikes/delete/${bikeId}`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRFToken': csrfToken,
+            },
         })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+            .then(response => {
+                document.getElementById(`bike-${bikeId}`).remove();
+                alert(`${bikeTitle} deleted successfully!`);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
 }

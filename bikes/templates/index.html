@@ -38,7 +38,10 @@
 <body class="m-0 p-0 w-screen h-screen flex poppins-regular bg-[#f5f5f5]">
     <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-300 to-green-400" style="scrollbar-width: none;">
         <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
-            Bikes<div class="text-base">({{ bikes | length }} results)</div>
+            Bikes
+            <div class="text-base flex">
+                (<div id="count">{{ bikes | length }}</div>)
+            </div>
         </h1>
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if bikes %}
@@ -59,7 +62,7 @@
                                     </div>
                                     <div 
                                     class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"
-                                    onclick="deleteBike({{ bike.id }})"
+                                    onclick="deleteBike({{ bike.id }},'{{bike.name}}')"
                                     >
                                         <i class="fa-solid fa-trash text-gray-100"></i>
                                     </div>
