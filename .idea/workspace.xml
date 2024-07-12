@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="Created Category and Rating models">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/carindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/templates/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/templates/carindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/carindex.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,7 @@
       <updated>1719074923629</updated>
       <workItem from="1719074924680" duration="7117000" />
       <workItem from="1720732017205" duration="3688000" />
-      <workItem from="1720790453596" duration="4692000" />
+      <workItem from="1720790453596" duration="5223000" />
     </task>
     <task id="LOCAL-00001" summary="Created Category and Rating models">
       <option name="closed" value="true" />
