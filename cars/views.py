@@ -4,9 +4,10 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
 # Create your views here.
 from cars.models import Cars
-from forms import CarForm
+from .forms import CarForm
 
-def index(request):
+
+def carindex(request):
     if request.method == 'POST':
         form = CarForm(request.POST)
         if form.is_valid():
@@ -21,11 +22,13 @@ def index(request):
         'cars': cars,
         'form': car_form
     }
-    return render(request,'index.html', context)
+    return render(request, 'carindex.html', context)
+
 
 def carById(request, id):
     car = get_object_or_404(Cars, id=id)
     return render(request, 'car.html', {'car': car})
+
 
 def deleteCar(request, id):
     if request.method == 'DELETE':
