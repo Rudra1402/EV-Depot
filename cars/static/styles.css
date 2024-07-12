@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.bike-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bike-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid black !important; /* Adding !important to ensure it gets applied */
+}
+
+.bike-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bike-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border: 1px solid black !important; /* Adding !important to ensure it gets applied */
+}
+
+.bike-item:hover img {
+    transform: scale(1.05);
+}
+
+.bike-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.bike-details h2 {
+    font-size: 1.6em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.bike-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.bike-details .price {
+    font-size: 1.2em;
+    color: #e67e22;
+}
+
+.bike-details .condition {
+    font-size: 1em;
+    color: #27ae60;
+}
+
+.bike-details .condition.used {
+    color: #c0392b;
+}
+
+.no-bikes {
+    font-size: 1.2em;
+    color: #777;
+    text-align: center;
+    width: 100%;
+}
