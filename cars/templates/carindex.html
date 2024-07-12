@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_head %}
-<script src="{% static 'script.js' %}"></script>
+<script src="{% static 'carscript.js' %}?v=1"></script>
 <style>
+
     .poppins-regular {
         font-family: "Poppins", sans-serif;
         font-weight: 400;
@@ -23,18 +24,21 @@
     }
 </style>
 <script>
+
     const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
 </script>
 
 {% endblock %}
+
 {% block body_block %}
+
 <div class="m-0 p-0 w-screen h-screen flex bg-[#f5f5f5]">
     <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-300 to-green-400" style="scrollbar-width: none;">
         <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
 
 
             <div class="text-base flex">
-                (<div id="count">{{ cars | length }}</div>)
+               Cars (<div id="count">{{ cars | length }}</div>)
             </div>
         </h1>
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
@@ -163,3 +167,4 @@
     </div>
 </div>
 {% endblock%}
+</div>
