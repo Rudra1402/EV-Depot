@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .bike-item {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bike-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .bike-item img {
+            transition: transform 0.3s;
+        }
+
+        .bike-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="m-0 p-0 w-screen h-screen flex flex-col poppins-regular bg-[#f5f5f5]">
+    <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">
+        <img src="{% static "logo.png" %}" class="h-10 w-auto">
+        <div class="flex items-center justify-center gap-x-8">
+            <a href="#" class="text-white font-semibold text-lg leading-none">Home</a>
+            <a href="#" class="text-white font-semibold text-lg leading-none">About</a>
+            <a href="#" class="text-white font-semibold text-lg leading-none">Vehicles</a>
+            <a href="#" class="text-white font-semibold text-lg leading-none">Profile</a>
+        </div>
+    </nav>
+    <div class="flex flex-1 overflow-auto">
+        <div class="w-1/2 h-full flex items-center p-8 bg-gradient-to-t from-green-200 to-green-300">
+            <img src="{{ car.image }}" alt="{{ car.name }}" class="rounded-lg w-full max-h-full bg-white">
+        </div>
+        <div class="w-1/2 h-full overflow-y-auto p-8 flex flex-col items-start gap-y-4 bg-gradient-to-t from-green-200 to-green-300"
+            style="scrollbar-width: none;">
+            <div class="flex items-center gap-x-6 justify-between w-full mb-2">
+                <div class="font-semibold text-3xl text-gray-700 leading-none pb-2 border-b-2 border-b-gray-700">{{ bike.name }}</div>
+                <div class="px-4 py-2 rounded-md bg-blue-500 text-gray-200 cursor-pointer" onclick="history.back()">Go Back</div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300 w-full">Company</div>
+                    <div class="text-lg font-medium text-gray-100 w-full">{{ bike.companyName }}</div>
+                </div>
+                {% if bike.get_modelType_display %}
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300 w-full">Type</div>
+                    <div class="text-lg font-medium text-gray-100 w-full">{{ bike.get_modelType_display }}</div>
+                </div>
+                {% else %}
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300 w-full">Type</div>
+                    <div class="text-lg font-medium text-gray-100 w-full">{{ bike.modelType }}</div>
+                </div>
+                {% endif %}
+            </div>
+            <div class="grid grid-cols-2 gap-4 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300">Year</div>
+                    <div class="text-lg font-medium text-gray-100">{{ bike.manufacturingYear }}</div>
+                </div>
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300">Price</div>
+                    <div class="text-lg font-medium text-gray-100">${{ bike.price }}</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 w-full">
+                {% if bike.isNew %}
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300">Condition</div>
+                    <div class="text-lg font-medium text-gray-100">New</div>
+                </div>
+                {% else %}
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300">Condition</div>
+                    <div class="text-lg font-medium text-gray-100">Used</div>
+                </div>
+                {% endif %}
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                    <div class="text-gray-300">Posted</div>
+                    <div class="text-lg font-medium text-gray-100">{{ bike.createdAt | timesince }} ago</div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 bg-blue-500 gap-4 rounded-md px-4 pt-2 pb-4 w-full">
+                <div class="text-gray-300">Description</div>
+                <div class="text-lg font-medium text-gray-100">{{ bike.description }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
