@@ -20,20 +20,20 @@
             font-style: normal;
         }
 
-        .bike-item {
+        .car-item {
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .bike-item:hover {
+        .car-item:hover {
             transform: translateY(-6px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
 
-        .bike-item img {
+        .car-item img {
             transition: transform 0.3s;
         }
 
-        .bike-item:hover img {
+        .car-item:hover img {
             transform: scale(1.05);
         }
     </style>
@@ -56,38 +56,38 @@
         <div class="w-1/2 h-full overflow-y-auto p-8 flex flex-col items-start gap-y-4 bg-gradient-to-t from-green-200 to-green-300"
             style="scrollbar-width: none;">
             <div class="flex items-center gap-x-6 justify-between w-full mb-2">
-                <div class="font-semibold text-3xl text-gray-700 leading-none pb-2 border-b-2 border-b-gray-700">{{ bike.name }}</div>
+                <div class="font-semibold text-3xl text-gray-700 leading-none pb-2 border-b-2 border-b-gray-700">{{ car.name }}</div>
                 <div class="px-4 py-2 rounded-md bg-blue-500 text-gray-200 cursor-pointer" onclick="history.back()">Go Back</div>
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
                 <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Company</div>
-                    <div class="text-lg font-medium text-gray-100 w-full">{{ bike.companyName }}</div>
+                    <div class="text-lg font-medium text-gray-100 w-full">{{ car.companyName }}</div>
                 </div>
-                {% if bike.get_modelType_display %}
+                {% if car.get_modelType_display %}
                 <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Type</div>
-                    <div class="text-lg font-medium text-gray-100 w-full">{{ bike.get_modelType_display }}</div>
+                    <div class="text-lg font-medium text-gray-100 w-full">{{ car.get_modelType_display }}</div>
                 </div>
                 {% else %}
                 <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Type</div>
-                    <div class="text-lg font-medium text-gray-100 w-full">{{ bike.modelType }}</div>
+                    <div class="text-lg font-medium text-gray-100 w-full">{{ car.modelType }}</div>
                 </div>
                 {% endif %}
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
                 <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Year</div>
-                    <div class="text-lg font-medium text-gray-100">{{ bike.manufacturingYear }}</div>
+                    <div class="text-lg font-medium text-gray-100">{{ car.manufacturingYear }}</div>
                 </div>
                 <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Price</div>
-                    <div class="text-lg font-medium text-gray-100">${{ bike.price }}</div>
+                    <div class="text-lg font-medium text-gray-100">${{ car.price }}</div>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
-                {% if bike.isNew %}
+                {% if car.isNew %}
                 <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Condition</div>
                     <div class="text-lg font-medium text-gray-100">New</div>
@@ -100,12 +100,12 @@
                 {% endif %}
                 <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Posted</div>
-                    <div class="text-lg font-medium text-gray-100">{{ bike.createdAt | timesince }} ago</div>
+                    <div class="text-lg font-medium text-gray-100">{{ car.createdAt | timesince }} ago</div>
                 </div>
             </div>
             <div class="grid grid-cols-1 bg-blue-500 gap-4 rounded-md px-4 pt-2 pb-4 w-full">
                 <div class="text-gray-300">Description</div>
-                <div class="text-lg font-medium text-gray-100">{{ bike.description }}</div>
+                <div class="text-lg font-medium text-gray-100">{{ car.description }}</div>
             </div>
         </div>
     </div>

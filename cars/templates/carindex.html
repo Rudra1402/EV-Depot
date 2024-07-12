@@ -8,17 +8,17 @@
         font-weight: 400;
         font-style: normal;
     }
-    .bike-item {
+    .car-item {
         transition: transform 0.3s, box-shadow 0.3s;
     }
-    .bike-item:hover {
+    .car-item:hover {
         transform: translateY(-6px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
-    .bike-item img {
+    .car-item img {
         transition: transform 0.3s;
     }
-    .bike-item:hover img {
+    .car-item:hover img {
         transform: scale(1.05);
     }
 </style>
@@ -31,7 +31,8 @@
 <div class="m-0 p-0 w-screen h-screen flex bg-[#f5f5f5]">
     <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-300 to-green-400" style="scrollbar-width: none;">
         <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
-            Cars
+
+
             <div class="text-base flex">
                 (<div id="count">{{ cars | length }}</div>)
             </div>
@@ -40,7 +41,7 @@
             {% if cars %}
                 {% for car in cars %}
                      <div
-                        class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white bike-item"
+                        class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white car-item"
                         id="car-{{car.id}}"
                     >
                         <img src="{{ car.image }}" alt="{{ car.name }}" class="w-full min-h-80 max-h-full object-cover">
@@ -107,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-{#                    {% include 'vehicle_card.html' with vehicle=bike %}#}
+{#                    {% include 'vehicle_card.html' with vehicle=car %}#}
                 {% endfor %}
             {% else %}
                 <p class="text-xl font-medium text-gray-700">No cars available.</p>
