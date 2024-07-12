@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="Created Category and Rating models">
+      <change afterPath="$PROJECT_DIR$/cars/static/carscript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/templates/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/car.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bikes/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/bikes/static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars/static/script.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cars/templates/carindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/carindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.EV_Depot.executor": "Run",
     "Django Server.Unnamed.executor": "Run",
     "Python.manage.executor": "Run",
     "Python.settings.executor": "Run",
@@ -51,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "git-widget-placeholder": "talhaseeb",
-    "last_opened_file_path": "D:/SEM3/8347_InternetApplicationDistributedSystems/project/EV-Depot/cars/templates",
+    "last_opened_file_path": "D:/SEM3/8347_InternetApplicationDistributedSystems/project/EV-Depot/bikes/static",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,12 +69,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\bikes\static" />
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\templates" />
+      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\static" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
+    <configuration name="EV_Depot" type="Python.DjangoServer" factoryName="Django server">
       <module name="EV-Depot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,7 +123,7 @@
       <updated>1719074923629</updated>
       <workItem from="1719074924680" duration="7117000" />
       <workItem from="1720732017205" duration="3688000" />
-      <workItem from="1720790453596" duration="5223000" />
+      <workItem from="1720790453596" duration="9881000" />
     </task>
     <task id="LOCAL-00001" summary="Created Category and Rating models">
       <option name="closed" value="true" />
