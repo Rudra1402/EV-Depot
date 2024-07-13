@@ -15,3 +15,4 @@ function deleteBike(bikeId, bikeTitle) {
             });
     }
 }
+
