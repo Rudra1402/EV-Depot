@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
+from django.db.models import Q
 
 from bikes.models import Bikes
 from .forms import BikeForm
@@ -15,7 +16,20 @@ def index(request):
     else:
         form = BikeForm()
 
-    bikes = Bikes.objects.all().order_by('-createdAt')
+    bikes = Bikes.objects.all()
+
+    latest = request.GET.get('latest')
+    if latest:
+        bikes = bikes.order_by('-createdAt')
+
+    sort = request.GET.get('sort')
+    if sort == 'name':
+        bikes = bikes.order_by('name')
+
+    query = request.GET.get('query')
+    if query:
+        bikes = bikes.filter(name__icontains=query)
+
     bikeForm = BikeForm()
     context = {
         'bikes': bikes,
@@ -36,3 +50,23 @@ def delete_bike(request, id):
     else:
         print(f"Received {request.method} request, only DELETE is allowed")
         raise Http404("Only DELETE method is allowed")
+
+def bike_list(request):
+    bikes = Bikes.objects.all()
+
+    latest = request.GET.get('latest')
+    if latest:
+        bikes = bikes.order_by('-createdAt')
+
+    sort = request.GET.get('sort')
+    if sort == 'name':
+        bikes = bikes.order_by('name')
+
+    query = request.GET.get('query')
+    if query:
+        bikes = bikes.filter(name__icontains=query)
+    
+    context = {
+        'bikes': bikes
+    }
+    return render(request, 'index.html', context)
