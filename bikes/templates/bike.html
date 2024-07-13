@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 {% load static %}
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bikes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+{% block extra_head %}
     <style>
         .poppins-regular {
             font-family: "Poppins", sans-serif;
@@ -37,18 +25,13 @@
             transform: scale(1.05);
         }
     </style>
-</head>
+    <script>
+        const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
+    </script>
+{% endblock %}
+{% block body_block %}
 
-<body class="m-0 p-0 w-screen h-screen flex flex-col poppins-regular bg-[#f5f5f5]">
-    <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">
-        <img src="{% static "logo.png" %}" class="h-10 w-auto">
-        <div class="flex items-center justify-center gap-x-8">
-            <a href="#" class="text-white font-semibold text-lg leading-none">Home</a>
-            <a href="#" class="text-white font-semibold text-lg leading-none">About</a>
-            <a href="#" class="text-white font-semibold text-lg leading-none">Vehicles</a>
-            <a href="#" class="text-white font-semibold text-lg leading-none">Profile</a>
-        </div>
-    </nav>
+<div class="m-0 p-0 w-screen h-screen flex flex-col poppins-regular bg-[#f5f5f5]">
     <div class="flex flex-1 overflow-auto">
         <div class="w-1/2 h-full flex items-center p-8 bg-gradient-to-t from-green-200 to-green-300">
             <img src="{{ bike.image }}" alt="{{ bike.name }}" class="rounded-lg w-full max-h-full bg-white">
@@ -109,6 +92,5 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>
+</div>
+{% endblock %}
