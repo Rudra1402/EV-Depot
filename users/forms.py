@@ -3,11 +3,11 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
 
-class UserRegisterForm(UserCreationForm):
+class UserRegisterForm(forms.ModelForm):
     mobile = forms.CharField(max_length=10)
-    gender = forms.ChoiceField(choices=CustomUser.GENDER_CHOICES)
+    # gender = forms.ChoiceField(choices=CustomUser.GENDER_CHOICES)
 
     class Meta:
-        model = User
-        fields = ['email', 'first_name', 'last_name', 'password', 'mobile', 'gender']
-        labels = {'email': 'Email', 'first_name': 'First Name', 'last_name': 'Last Name', 'password': 'Password', 'mobile': 'Mobile', 'gender': 'Gender'}
+        model = CustomUser
+        fields = ['firstname', 'lastname', 'email', 'password', 'mobile']
+        labels = {'firstname': 'First Name', 'lastname': 'Last Name', 'email': 'Email', 'password': 'Password', 'mobile': 'Mobile'}

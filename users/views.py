@@ -1,25 +1,22 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.models import User
-
 from .forms import UserRegisterForm
 from .models import CustomUser
-from django.db import IntegrityError
+
 
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            CustomUser.objects.create(
-
-                firstname=form.cleaned_data['first_name'],
+            custom_user = CustomUser(
+                firstname=form.cleaned_data['firstname'],
+                lastname=form.cleaned_data['lastname'],
+                email=form.cleaned_data['email'],
+                password=form.cleaned_data['password'],  # Consider hashing passwords
                 mobile=form.cleaned_data['mobile'],
-                gender=form.cleaned_data['gender'],
-                address=form.cleaned_data['address'],
-                city=form.cleaned_data['city'],
-                state=form.cleaned_data['state']
+                gender=form.cleaned_data['gender']
             )
+            custom_user.save()
             messages.success(request, "Account created successfully!")
             return redirect('users:login')
         else:

@@ -11,6 +11,7 @@ class CustomUser(models.Model):
 
     firstname = models.CharField(max_length=30)
     lastname = models.CharField(max_length=30)
+    email = models.EmailField(max_length=30, default='abc@gmail.com')
     password = models.CharField(max_length=30, default='abc')
     mobile = models.CharField(max_length=10)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
