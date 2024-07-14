@@ -1,31 +1,49 @@
-{% load static %}
+<!-- categories/index.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h2>Categories</h2>
+  <ul class="category-list">
+    {% for category in categories %}
+      <li class="category-item">
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.description }}</p>
+      </li>
+    {% empty %}
+      <li>No categories found.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratings</title>
-    <link rel="stylesheet" href="{% static 'base/styles.css' %}">
-</head>
-<body>
-    <div class="container">
-        <h1>Ratings</h1>
-        {% if ratings %}
-            <div class="ratings-list">
-                {% for rating in ratings %}
-                    <div class="rating-item">
-                        <h2>{{ rating.car.name }}</h2>
-                        <p><strong>Rating:</strong> {{ rating.rating }}</p>
-                        <p><strong>Comment:</strong> {{ rating.comment }}</p>
-                        <p><strong>Date Created:</strong> {{ rating.date_created }}</p>
-                        <p><strong>Approved:</strong> {% if rating.is_approved %}Yes{% else %}No{% endif %}</p>
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <p>No ratings found.</p>
-        {% endif %}
-    </div>
-</body>
-</html>
+
+{#{% load static %}#}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>Categories</title>#}
+{#    <link rel="stylesheet" href="{% static 'base/styles.css' %}">#}
+{#</head>#}
+{#<body>#}
+{#    <div class="container">#}
+{#        <h1>Categories</h1>#}
+{#        {% if categories %}#}
+{#            <div class="categories-list">#}
+{#                {% for category in categories %}#}
+{#                    <div class="category-item">#}
+{#                        <h2>{{ category.name }}</h2>#}
+{#                        <p>{{ category.description }}</p>#}
+{#                        <p><strong>Created At:</strong> {{ category.created_at }}</p>#}
+{#                        <p><strong>Last Updated:</strong> {{ category.updated_at }}</p>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        {% else %}#}
+{#            <p>No categories found.</p>#}
+{#        {% endif %}#}
+{#    </div>#}
+{#</body>#}
+{#</html>#}
