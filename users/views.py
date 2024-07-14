@@ -1,44 +1,30 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
+
+from .forms import UserRegisterForm
 from .models import CustomUser
 from django.db import IntegrityError
 
 def register(request):
-    if request.method == 'GET':
-        return render(request, 'register.html')
-
     if request.method == 'POST':
-        username = request.POST['username']
-        firstname = request.POST['firstname']
-        email = request.POST['email']
-        password = request.POST['password']
-        mobile = request.POST['mobile']
-        gender = request.POST['gender']
-        address = request.POST['address']
-        city = request.POST['city']
-        state = request.POST['state']
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            CustomUser.objects.create(
 
-        if len(mobile) != 10 or not mobile.isdigit():
-            messages.warning(request, "The phone number provided is not 10 digits!")
-        elif mobile.startswith('0'):
-            messages.warning(request, "The phone number provided is not valid!")
+                firstname=form.cleaned_data['first_name'],
+                mobile=form.cleaned_data['mobile'],
+                gender=form.cleaned_data['gender'],
+                address=form.cleaned_data['address'],
+                city=form.cleaned_data['city'],
+                state=form.cleaned_data['state']
+            )
+            messages.success(request, "Account created successfully!")
+            return redirect('users:login')
         else:
-            try:
-                user = User.objects.create_user(username=username, email=email, password=password)
-                custom_user = CustomUser.objects.create(
-                    user=user,
-                    firstname=firstname,
-                    mobile=mobile,
-                    gender=gender,
-                    address=address,
-                    city=city,
-                    state=state
-                )
-                messages.success(request, "Account created successfully!")
-                return redirect('users:login')
-            except IntegrityError:
-                messages.warning(request, "Account already exists!")
-                return redirect('users:register')
+            messages.warning(request, "Please correct the errors below.")
+    else:
+        form = UserRegisterForm()
 
-        return render(request, 'register.html')
+    return render(request, 'register.html', {'form': form})
