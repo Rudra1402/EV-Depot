@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'trucks.apps.TrucksConfig',
     'bikes.apps.BikesConfig',
     'cars.apps.CarsConfig',
+    'users',
     # 'categories.apps.CategoriesConfig',
     # 'ratings.apps.RatingsConfig',
 ]
