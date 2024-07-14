@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Rating, Category
+from .forms import CategoryForm, RatingForm
 
 
 class RatingListView(ListView):
@@ -19,7 +20,9 @@ class RatingDetailView(DetailView):
 
 
 def home(request):
-    return render(request, 'home.html')
+    categories = Category.objects.all()  # Retrieve all categories
+    ratings = Rating.objects.all()  # Retrieve all ratings
+    return render(request, 'home.html', {'categories': categories, 'ratings': ratings})
 
 
 class CategoryListView(ListView):
