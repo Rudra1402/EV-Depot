@@ -1,0 +1,124 @@
+<!-- base/templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to EV Depot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add any necessary CSS or styling -->
+    {% block extra_head %}{% endblock %}
+</head>
+<style>
+    @keyframes slide-in-left {
+        0% {
+            transform: translateX(-100%);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-bottom {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    body {
+        overflow: hidden; /* Prevent scrolling during animation */
+        background-color: black; /* Black background during entire animation */
+    }
+
+    .logo-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black; /* Ensure black background */
+        z-index: 9999; /* Ensure the logo covers everything */
+    }
+
+    .logo {
+        width: 300px; /* Increased size of the logo */
+        height: auto;
+        animation: slide-in-left 2s forwards;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .slide-in-bottom {
+        animation: slide-in-bottom 1s forwards;
+    }
+
+    #middle-container {
+        position: relative;
+        background-image: url('../static/ecar.png');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, rgba(11, 156, 57, 0.50), #1F9F4E99);
+        z-index: 1;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('animationend', () => {
+            logo.parentElement.classList.add('hidden');
+            document.querySelector('.homepage-content').classList.add('slide-in-bottom');
+            document.body.style.overflow = 'auto'; /* Restore scrolling after animation */
+        });
+    });
+</script>
+<div class="logo-container">
+    <img src="{% static 'logo.png' %}" alt="Logo" class="logo">
+</div>
+
+<body class="w-screen h-screen bg-[#f5f5f5]">
+    <div class="homepage-content h-full w-full flex flex-col overflow-y-auto" style="scrollbar-width: none;">
+        {% include "navbar.html" %}
+        {%  block body_block %}  {% endblock %}
+        {% include "footer.html" %}
+    </div>
+</body>
+</html>
