@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_block %}
+<div class="flex h-screen" style="margin: 5%;">
+    <!-- Left side with Welcome Back message -->
+    <div class="w-1/2 flex flex-col items-center justify-center bg-[#0B391C] text-white p-8" style="border-radius: 5% 0% 0% 5%">
+        <h2 class="text-4xl font-bold mb-4">Welcome Back!</h2>
+        <p class="mb-8 text-lg">To keep connected with us please login with your personal info</p>
+        <button class="bg-transparent border border-white rounded-lg py-2 px-4 text-white font-bold hover:bg-white hover:text-[#0B391C] transition duration-300">SIGN IN</button>
+    </div>
+
+    <!-- Right side with form -->
+    <div class="w-1/2 p-8 bg-white shadow-md rounded-lg flex flex-col justify-start overflow-y-auto h-full" style="border-radius: 0% 5% 5% 0%; scrollbar-width: none;">
+        <h2 class="text-3xl font-bold text-center mb-8 text-[#0B391C]">Create Account</h2>
+
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="firstname" class="block text-gray-700 font-semibold">First Name:</label>
+                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="firstname" name="firstname" required>
+            </div>
+            <div class="mb-4">
+                <label for="lastname" class="block text-gray-700 font-semibold">Last Name:</label>
+                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="lastname" name="lastname" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-semibold">Email:</label>
+                <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="email" name="email" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-semibold">Password:</label>
+                <input type="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="password" name="password" required>
+            </div>
+            <div class="mb-4">
+                <label for="mobile" class="block text-gray-700 font-semibold">Mobile:</label>
+                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="mobile" name="mobile" required>
+            </div>
+            <div class="mb-4">
+                <label for="gender" class="block text-gray-700 font-semibold">Gender:</label>
+                <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="gender" name="gender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="O">Other</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-[#0B391C] text-white p-3 rounded-lg font-bold hover:bg-[#1A9A7F] transition duration-300">SIGN UP</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
