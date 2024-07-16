@@ -116,6 +116,48 @@
                 </div>
             </div>
         </div>
+            <!-- Ratings Section -->
+{% comment %} <section id="ratings-section" class="bg-gray-100 py-12">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8">Customer Ratings</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for rating in ratings %}
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">{{ rating.car.name }}</h3>
+                <p class="text-gray-600 mb-4">{{ rating.comment }}</p>
+                <div class="flex items-center">
+                    <span class="text-gray-700">Rating:</span>
+                    <div class="ml-2">
+                        <!-- Example: Display the numerical rating -->
+                        <span class="text-gray-700">Rating: {{ rating.rating }}</span>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p>No ratings available.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section id="categories-section" class="bg-gray-200 py-12">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8">Explore Categories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for category in categories %}
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">{{ category.name }}</h3>
+                <p class="text-gray-600 mb-4">{{ category.description }}</p>
+                <a href="{% url 'categories-detail' category.pk %}" class="text-blue-500 hover:underline">Learn more</a>
+            </div>
+            {% empty %}
+            <p>No categories available.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section> {% endcomment %}
+
         {% endblock %}
 {#        <div class="bg-[#0B391C] py-4 px-20">#}
 {#            <div class="bg-black rounded-lg py-4 px-10 flex items-center justify-between">#}

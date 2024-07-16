@@ -1,0 +1,10 @@
+{% extends 'categories/index.html' %}
+
+{% block content %}
+    <div class="category-detail">
+        <h2>{{ category.name }}</h2>
+        <p>{{ category.description }}</p>
+        <p><strong>Created At:</strong> {{ category.created_at }}</p>
+        <p><strong>Last Updated:</strong> {{ category.updated_at }}</p>
+    </div>
+{% endblock %}
