@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_block %}
+<div class="flex h-screen" style="margin: 5%;">
+    <!-- Left side with Welcome Back message -->
+    <div class="w-1/2 flex flex-col items-center justify-center bg-[#0B391C] text-white p-8" style="border-radius: 15px 0px 0px 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)">
+        <h2 class="text-4xl font-bold mb-4">Hello, Friend!</h2>
+        <p class="mb-8 text-lg">Enter your personal details and start your journey with us</p>
+        <a href="{% url 'users:register' %}" class="bg-transparent border border-white rounded-lg py-2 px-4 text-white font-bold hover:bg-white hover:text-[#0B391C] transition duration-300">REGISTER</a>
+    </div>
+
+    <!-- Right side with form -->
+    <div class="w-1/2 p-8 bg-white shadow-md rounded-lg flex flex-col justify-center" style="border-radius: 0px 15px 15px 0px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)">
+        <h2 class="text-3xl font-bold text-center mb-8 text-[#0B391C]">Log In</h2>
+
+        <!-- Display messages -->
+        {% if messages %}
+            <div class="mb-4">
+                {% for message in messages %}
+                    <div class="p-4 mb-4 text-sm text-{{ message.tags }}-700 bg-{{ message.tags }}-100 rounded-lg" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="username" class="block text-gray-700 font-semibold">Username:</label>
+                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="username" name="username" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-semibold">Password:</label>
+                <input type="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none" id="togglePassword" name="password" required>
+            </div>
+            <button type="submit" class="w-full bg-[#0B391C] text-white p-3 rounded-lg font-bold hover:bg-[#000000] transition duration-300">LOG IN</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
