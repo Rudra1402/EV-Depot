@@ -84,3 +84,25 @@ def Register(request):
                 messages.warning(request, "Account already exists!")
                 return redirect('users:register')
         return render(request, "register.html")
+
+
+def LoginUser(request):
+    if request.method == "GET":
+        return render(request, "login.html")
+
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            print("from login", user)
+            print("current: ", timezone.now())
+
+            messages.success(request, "Logged in successfully!")
+            return redirect('base:home')
+        else:
+            messages.error(request, "Invalid username or password!")
+            return redirect('users:login')
+    return render(request, "login.html")
