@@ -7,6 +7,7 @@
     <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="form for register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +131,7 @@
       <workItem from="1720913955709" duration="7109000" />
       <workItem from="1720921225225" duration="437000" />
       <workItem from="1720921666812" duration="19575000" />
-      <workItem from="1721155047886" duration="9625000" />
+      <workItem from="1721155047886" duration="12601000" />
     </task>
     <task id="LOCAL-00001" summary="Created Category and Rating models">
       <option name="closed" value="true" />
