@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="form for register">
-      <change afterPath="$PROJECT_DIR$/users/migrations/0006_customuser_last_login_alter_customuser_email_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0007_buyer_delete_customuser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0008_remove_buyer_gender_remove_buyer_state.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
@@ -140,7 +134,7 @@
       <workItem from="1720913955709" duration="7109000" />
       <workItem from="1720921225225" duration="437000" />
       <workItem from="1720921666812" duration="19575000" />
-      <workItem from="1721155047886" duration="7880000" />
+      <workItem from="1721155047886" duration="9536000" />
     </task>
     <task id="LOCAL-00001" summary="Created Category and Rating models">
       <option name="closed" value="true" />
