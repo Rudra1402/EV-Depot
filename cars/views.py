@@ -22,12 +22,12 @@ def carindex(request):
         'cars': cars,
         'form': car_form
     }
-    return render(request, 'carindex.html', context)
+    return render(request, 'cars/carindex.html', context)
 
 
 def carById(request, id):
     car = get_object_or_404(Cars, id=id)
-    return render(request, 'car.html', {'car': car})
+    return render(request, 'cars/car.html', {'car': car})
 
 
 def deleteCar(request, id):
