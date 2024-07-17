@@ -1,7 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
 from .models import Rating, Category
 from .forms import CategoryForm, RatingForm
+from cars.models import Cars
+from bikes.models import Bikes
+from .forms import CarsForm, BikesForm
+
+def common_form_view(request, app_name):
+    if app_name == 'cars':
+        FormClass = CarsForm
+    elif app_name == 'bikes':
+        FormClass = BikesForm
+    else:
+        return redirect('error_page')  # Or handle error appropriately
+    if request.method == 'POST':
+        form = FormClass(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            if app_name == 'cars':
+                Cars.objects.create(**data)
+            elif app_name == 'bikes':
+                Bikes.objects.create(**data)
+            return render(request, 'form_success.html', {'form': form})
+    else:
+        form = FormClass()
+
+    return render(request, 'common_form.html', {'form': form, 'app_name': app_name})
+
 
 
 class RatingListView(ListView):
