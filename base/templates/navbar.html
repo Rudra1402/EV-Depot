@@ -18,3 +18,36 @@
         <a href="/users/register/" class="text-white font-semibold text-lg leading-none">Profile</a>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const dropdownButton = document.querySelector('.dropdown button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', () => {
+            dropdownContent.classList.add('hidden');
+        });
+    });
+</script>
+
+<style>
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown-content {
+        background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
+    }
+</style>
