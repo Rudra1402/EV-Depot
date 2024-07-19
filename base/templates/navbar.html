@@ -1,10 +1,53 @@
 {% load static %}
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+</head>
 <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">
-    <img src="{% static "logo.png" %}" class="h-10 w-auto">
+    <a href="/"><img src="{% static "logo.png" %}" class="h-10 w-auto"></a>
     <div class="flex items-center justify-center gap-x-8">
         <a href="/" class="text-white font-semibold text-lg leading-none">Home</a>
         <a href="#" class="text-white font-semibold text-lg leading-none">About</a>
-        <a href="/bikes" class="text-white font-semibold text-lg leading-none">Vehicles</a>
+        <div x-data="{ open: false }" class="relative">
+            <a href="#" @click="open = !open" class="text-white font-semibold text-lg leading-none cursor-pointer">Vehicles</a>
+            <div x-show="open" @click.away="open = false" class="absolute bg-white text-black mt-1 py-2 w-40 shadow-lg z-50">
+                <a href="/cars" class="block px-4 py-2 hover:bg-gray-200">Cars</a>
+                <a href="/bikes" class="block px-4 py-2 hover:bg-gray-200">Bikes</a>
+                <a href="/trucks" class="block px-4 py-2 hover:bg-gray-200">Trucks</a>
+            </div>
+        </div>
         <a href="/users/register/" class="text-white font-semibold text-lg leading-none">Profile</a>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const dropdownButton = document.querySelector('.dropdown button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', () => {
+            dropdownContent.classList.add('hidden');
+        });
+    });
+</script>
+
+<style>
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown-content {
+        background-color: rgba(255, 255, 255, 0.9); /* Translucent background */
+    }
+</style>
