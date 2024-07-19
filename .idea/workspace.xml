@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="Modified urls and integrated truckform in common form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trucks/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trucks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trucks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trucks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dharshan" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +64,7 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "git-widget-placeholder": "dharshan",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/dhars/Desktop/IDS Project",
+    "last_opened_file_path": "C:/Users/dhars/Desktop/IDS Project/trucks",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -82,11 +77,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dhars\Desktop\IDS Project\trucks" />
+      <recent name="C:\Users\dhars\Desktop\IDS Project\trucks\templates" />
       <recent name="E:\Chintan's project\EV-Depot\users\static" />
       <recent name="E:\Chintan's project\EV-Depot" />
       <recent name="E:\Chintan's project\EV-Depot\users\templates" />
-      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\bikes\static" />
-      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\base\templates" />
@@ -194,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721374198797</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modified urls and integrated truckform in common form">
+      <option name="closed" value="true" />
+      <created>1721375658973</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721375658973</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
