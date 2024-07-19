@@ -37,12 +37,12 @@ def index(request):
         'trucks': trucks,
         'form': truckForm
     }
-    return render(request, 'index.html', context)
+    return render(request, 'trucks/index.html', context)
 
 
 def truckById(request, id):
     truck = get_object_or_404(Trucks, id=id)
-    return render(request, 'truck.html', {'truck': truck})
+    return render(request, 'trucks/truck.html', {'truck': truck})
 
 
 def delete_truck(request, id):
@@ -74,4 +74,4 @@ def truck_list(request):
     context = {
         'trucks': trucks
     }
-    return render(request, 'index.html', context)
+    return render(request, 'trucks/index.html', context)

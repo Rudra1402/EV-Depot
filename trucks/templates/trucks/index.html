@@ -32,12 +32,12 @@
     <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-400 to-green-500" style="scrollbar-width: none;">
         <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
             Trucks
-            <div class="text-base flex">
-                (<div id="count">{{ trucks | length }}</div>)
-            </div>
-            {% if user.is_authenticated %}
-                <div>{{ user.username }}, {{ user.id }}</div>
-            {% endif %}
+{#            <div class="text-base flex">#}
+{#                (<div id="count">{{ trucks | length }}</div>)#}
+{#            </div>#}
+{#            {% if user.is_authenticated %}#}
+{#                <div>{{ user.username }}, {{ user.id }}</div>#}
+{#            {% endif %}#}
         </h1>
 
         <form method="get" action="{% url 'trucks:homepage' %}" class="flex flex-col items-center justify-start gap-3 w-full rounded-md px-6">
@@ -63,7 +63,7 @@
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if trucks %}
                 {% for truck in trucks %}
-                    {% comment %} <div 
+                    {% comment %} <div
                         class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white truck-item"
                         id="truck-{{truck.id}}"
                     >
@@ -77,7 +77,7 @@
                                     <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center">
                                         <i class="fa-solid fa-pen-to-square text-gray-100"></i>
                                     </div>
-                                    <div 
+                                    <div
                                     class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"
                                     onclick="deleteTruck({{ truck.id }},'{{truck.name}}')"
                                     >
