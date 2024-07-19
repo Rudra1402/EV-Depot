@@ -4,13 +4,15 @@ from .models import Rating, Category
 from .forms import CategoryForm, RatingForm
 from cars.models import Cars
 from bikes.models import Bikes
-from .forms import CarsForm, BikesForm
+from .forms import CarsForm, BikesForm, TruckForm
 
 def common_form_view(request, app_name):
     if app_name == 'cars':
         FormClass = CarsForm
     elif app_name == 'bikes':
         FormClass = BikesForm
+    elif app_name == 'trucks':
+        FormClass = TruckForm
     else:
         return redirect('error_page')  # Or handle error appropriately
     if request.method == 'POST':
