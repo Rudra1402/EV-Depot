@@ -1,16 +1,20 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
+
+from trucks.models import Trucks
 from .models import Rating, Category
 from .forms import CategoryForm, RatingForm
 from cars.models import Cars
 from bikes.models import Bikes
-from .forms import CarsForm, BikesForm
+from .forms import CarsForm, BikesForm, TruckForm
 
 def common_form_view(request, app_name):
     if app_name == 'cars':
         FormClass = CarsForm
     elif app_name == 'bikes':
         FormClass = BikesForm
+    elif app_name == 'trucks':
+        FormClass = TruckForm
     else:
         return redirect('error_page')  # Or handle error appropriately
     if request.method == 'POST':
@@ -21,6 +25,8 @@ def common_form_view(request, app_name):
                 Cars.objects.create(**data)
             elif app_name == 'bikes':
                 Bikes.objects.create(**data)
+            elif app_name == 'trucks':
+                Trucks.objects.create(**data)
             return render(request, 'form_success.html', {'form': form})
     else:
         form = FormClass()
