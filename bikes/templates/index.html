@@ -35,6 +35,9 @@
             <div class="text-base flex">
                 (<div id="count">{{ bikes | length }}</div>)
             </div>
+            {% if user.is_authenticated %}
+                <div>{{ user.username }}, {{ user.id }}</div>
+            {% endif %}
         </h1>
 
         <form method="get" action="{% url 'bikes:homepage' %}" class="flex flex-col items-center justify-start gap-3 w-full rounded-md px-6">
@@ -128,7 +131,7 @@
                             </div>
                         </div>
                     </div> {% endcomment %}
-                    {% include 'vehicle_card.html' with vehicle=bike %}
+                    {% include 'vehicle_card.html' with vehicle=bike user=user %}
                 {% endfor %}
             {% else %}
                 <p class="text-xl font-medium text-gray-700">No bikes available.</p>
