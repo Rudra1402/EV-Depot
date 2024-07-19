@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="Modified urls and integrated truckform in common form">
+    <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="Added template, styles for trucks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trucks/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/templates/trucks/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/templates/truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/templates/trucks/truck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/templates/vehicle_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/templates/trucks/vehicle_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dharshan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "dharshan",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/dhars/Desktop/IDS Project/trucks",
@@ -84,6 +88,7 @@
       <recent name="E:\Chintan's project\EV-Depot\users\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dhars\Desktop\IDS Project\trucks\templates\trucks" />
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\base\templates" />
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\base\templates\base" />
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\templates\cars" />
@@ -197,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721375658973</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added template, styles for trucks">
+      <option name="closed" value="true" />
+      <created>1721379809353</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721379809353</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +234,8 @@
     <MESSAGE value="Merge pull request #35 from Rudra1402/rudra&#10;&#10;updated bike model, authenticated users can only edit, delete bikes" />
     <MESSAGE value="form for register" />
     <MESSAGE value="Modified urls and integrated truckform in common form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified urls and integrated truckform in common form" />
+    <MESSAGE value="Added template, styles for trucks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added template, styles for trucks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
