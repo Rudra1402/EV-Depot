@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="form for register">
+    <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="Added template, styles for trucks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/templates/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/cars/car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/templates/carindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/cars/carindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evdepot/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/evdepot/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/templates/trucks/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/templates/truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/templates/trucks/truck.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/templates/vehicle_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/templates/trucks/vehicle_card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dharshan" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -64,28 +65,30 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "talhaseeb",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "dharshan",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Chintan's project/EV-Depot/users/static",
+    "last_opened_file_path": "C:/Users/dhars/Desktop/IDS Project/trucks",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dhars\Desktop\IDS Project\trucks" />
+      <recent name="C:\Users\dhars\Desktop\IDS Project\trucks\templates" />
       <recent name="E:\Chintan's project\EV-Depot\users\static" />
       <recent name="E:\Chintan's project\EV-Depot" />
       <recent name="E:\Chintan's project\EV-Depot\users\templates" />
-      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\bikes\static" />
-      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dhars\Desktop\IDS Project\trucks\templates\trucks" />
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\base\templates" />
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\base\templates\base" />
       <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\templates\cars" />
@@ -103,6 +106,7 @@
         <env name="DJANGO_SETTINGS_MODULE" value="evdepot.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (mySite24)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -182,7 +186,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720982798123</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modified urls and integrated truckform in common form">
+      <option name="closed" value="true" />
+      <created>1721374198797</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721374198797</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modified urls and integrated truckform in common form">
+      <option name="closed" value="true" />
+      <created>1721375658973</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721375658973</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added template, styles for trucks">
+      <option name="closed" value="true" />
+      <created>1721379809353</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721379809353</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,13 +231,28 @@
     <MESSAGE value="Created Category and Rating models" />
     <MESSAGE value="users registration model" />
     <MESSAGE value="users registration view" />
+    <MESSAGE value="Merge pull request #35 from Rudra1402/rudra&#10;&#10;updated bike model, authenticated users can only edit, delete bikes" />
     <MESSAGE value="form for register" />
-    <option name="LAST_COMMIT_MESSAGE" value="form for register" />
+    <MESSAGE value="Modified urls and integrated truckform in common form" />
+    <MESSAGE value="Added template, styles for trucks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added template, styles for trucks" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/manage.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/EV_Depot$settings.coverage" NAME="settings Coverage Results" MODIFIED="1720732415456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evdepot" />
     <SUITE FILE_PATH="coverage/EV_Depot1$manage.coverage" NAME="manage Coverage Results" MODIFIED="1719077208327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/EV_Depot$views.coverage" NAME="views Coverage Results" MODIFIED="1720797383670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
+    <SUITE FILE_PATH="coverage/IDS_Project$views.coverage" NAME="views Coverage Results" MODIFIED="1721372444502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trucks" />
+    <SUITE FILE_PATH="coverage/EV_Depot$settings.coverage" NAME="settings Coverage Results" MODIFIED="1720732415456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evdepot" />
     <SUITE FILE_PATH="coverage/EV_Depot1$urls.coverage" NAME="urls Coverage Results" MODIFIED="1719077003564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evdepot" />
+    <SUITE FILE_PATH="coverage/EV_Depot$views.coverage" NAME="views Coverage Results" MODIFIED="1720797383670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
   </component>
 </project>
