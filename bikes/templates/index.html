@@ -29,12 +29,15 @@
 {% endblock %}
 {% block body_block %}
 <div class="m-0 p-0 w-screen h-screen flex bg-[#f5f5f5]">
-    <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-300 to-green-400" style="scrollbar-width: none;">
+    <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-400 to-green-500" style="scrollbar-width: none;">
         <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
             Bikes
             <div class="text-base flex">
                 (<div id="count">{{ bikes | length }}</div>)
             </div>
+            {% if user.is_authenticated %}
+                <div>{{ user.username }}, {{ user.id }}</div>
+            {% endif %}
         </h1>
 
         <form method="get" action="{% url 'bikes:homepage' %}" class="flex flex-col items-center justify-start gap-3 w-full rounded-md px-6">
@@ -52,7 +55,7 @@
                 </div>
             </div>
             <div class="w-full flex items-center justify-end">
-            <button type="submit" class="px-4 py-2 rounded-md bg-blue-500 text-white font-medium hover:bg-blue-600 transition-colors duration-200">Apply Filters</button>
+            <button type="submit" class="px-4 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-200">Apply Filters</button>
             </div>
         </form>
 
@@ -128,7 +131,7 @@
                             </div>
                         </div>
                     </div> {% endcomment %}
-                    {% include 'vehicle_card.html' with vehicle=bike %}
+                    {% include 'vehicle_card.html' with vehicle=bike user=user %}
                 {% endfor %}
             {% else %}
                 <p class="text-xl font-medium text-gray-700">No bikes available.</p>
@@ -136,7 +139,7 @@
         </div>
     </div>
     <div class="border-l border-l-blue-300 w-1/2 h-full p-6 overflow-y-auto " style="scrollbar-width: none;">
-        <form method="post" enctype="multipart/form-data" class="p-6 rounded-md shadow-lg bg-gradient-to-t from-green-300 to-green-400 flex flex-col gap-4">
+        <form method="post" enctype="multipart/form-data" class="p-6 rounded-md shadow-lg bg-gradient-to-t from-green-400 to-green-500 flex flex-col gap-4">
             {% csrf_token %}
             <div class="flex items-center w-full gap-4">
                 <div class="w-1/2 flex flex-col gap-1">
