@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView
+
+from trucks.models import Trucks
 from .models import Rating, Category
 from .forms import CategoryForm, RatingForm
 from cars.models import Cars
@@ -23,6 +25,8 @@ def common_form_view(request, app_name):
                 Cars.objects.create(**data)
             elif app_name == 'bikes':
                 Bikes.objects.create(**data)
+            elif app_name == 'trucks':
+                Trucks.objects.create(**data)
             return render(request, 'form_success.html', {'form': form})
     else:
         form = FormClass()
