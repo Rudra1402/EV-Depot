@@ -1,0 +1,6 @@
+<!-- base/templates/base/common_form.html -->
+<form method="post" action="{% url 'base:common_form' app_name %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>

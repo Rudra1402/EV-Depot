@@ -3,6 +3,77 @@
 {#<!DOCTYPE html>#}
 {#<html lang="en">#}
 {% load static %}
+{% block animation_block %}
+        @keyframes slide-in-left {
+        0% {
+            transform: translateX(-100%);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-bottom {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    body {
+        overflow: hidden; /* Prevent scrolling during animation */
+        background-color: black; /* Black background during entire animation */
+    }
+
+    .logo-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black; /* Ensure black background */
+        z-index: 9999; /* Ensure the logo covers everything */
+    }
+
+    .logo {
+        width: 300px; /* Increased size of the logo */
+        height: auto;
+        animation: slide-in-left 2s forwards;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .slide-in-bottom {
+        animation: slide-in-bottom 1s forwards;
+    }
+{% endblock %}
+{% block ani_script %}
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('animationend', () => {
+            logo.parentElement.classList.add('hidden');
+            document.querySelector('.homepage-content').classList.add('slide-in-bottom');
+            document.body.style.overflow = 'auto'; /* Restore scrolling after animation */
+        });
+    });
+    {% endblock %}
+
+{% block logo %} <img src="{% static 'logo.png' %}" alt="Logo" class="logo">{% endblock %}
 {##}
 {#<head>#}
 {#    <meta charset="UTF-8">#}
@@ -117,6 +188,7 @@
             </div>
         </div>
             <!-- Ratings Section -->
+{% comment %} <section id="ratings-section" class="bg-gray-100 py-12">
 <section id="ratings-section" class="bg-gray-100 py-12">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-8">Customer Ratings</h2>
@@ -156,7 +228,8 @@
             {% endfor %}
         </div>
     </div>
-</section>
+</section> {% endcomment %}
+{% comment %} </section> {% endcomment %}
 
         {% endblock %}
 {#        <div class="bg-[#0B391C] py-4 px-20">#}

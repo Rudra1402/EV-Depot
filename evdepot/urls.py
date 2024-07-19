@@ -19,11 +19,13 @@ from django.urls import path, include
 from base import views as base_views
 
 urlpatterns = [
-    path('', base_views.home, name='home'),
+    #path('', base_views.home, name='home'),
+    path('', include('base.urls')),
     path('bikes/', include('bikes.urls')),
     path('cars/', include('cars.urls')),
     path('trucks/', include('trucks.urls')),
     path('categories/', include('base.urls')),
     path('ratings/', include('base.urls')),
     path('admin/', admin.site.urls),
+    path('users/', include('users.urls')),
 ]

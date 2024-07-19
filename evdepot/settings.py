@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'trucks.apps.TrucksConfig',
     'bikes.apps.BikesConfig',
     'cars.apps.CarsConfig',
+    'users',
     # 'categories.apps.CategoriesConfig',
     # 'ratings.apps.RatingsConfig',
 ]
@@ -127,3 +128,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
