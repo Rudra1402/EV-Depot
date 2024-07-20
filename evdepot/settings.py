@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'cars.apps.CarsConfig',
     'users',
     'firebase_admin',
+    'orders.apps.OrdersConfig',
     # 'categories.apps.CategoriesConfig',
     # 'ratings.apps.RatingsConfig',
 ]
