@@ -1,176 +1,174 @@
-<!-- base/templates/home.html -->
 {% extends 'base.html' %}
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
 {% load static %}
-{##}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    <title>Welcome to EV Depot</title>#}
-{#    <meta charset="UTF-8">#}
-{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
-{#    <title>Bikes</title>#}
-{#    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">#}
-{#    <link rel="preconnect" href="https://fonts.googleapis.com">#}
-{#    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>#}
-{#    <link#}
-{#        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"#}
-{#        rel="stylesheet">#}
-{#    <script src="https://cdn.tailwindcss.com"></script>#}
-{#    <!-- Add any necessary CSS or styling -->#}
-{#</head>#}
-{#<style>#}
-{#    #middle-container {#}
-{#        position: relative;#}
-{#        background-image: url('../static/ecar.png');#}
-{#        background-size: cover;#}
-{#        background-position: center;#}
-{#        color: white;#}
-{#        display: flex;#}
-{#        justify-content: space-between;#}
-{#        align-items: center;#}
-{#    }#}
-{##}
-{#    .overlay {#}
-{#        position: absolute;#}
-{#        top: 0;#}
-{#        left: 0;#}
-{#        width: 100%;#}
-{#        height: 100%;#}
-{#        background: linear-gradient(to left, rgba(11, 156, 57, 0.50), #1F9F4E99);#}
-{#        z-index: 1;#}
-{#    }#}
-{#</style>#}
+{% block animation_block %}
+    @keyframes slide-in-left {
+        0% {
+            transform: translateX(-100%);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 1;
+        }
+    }
 
-{#<body class="w-screen h-screen bg-[#f5f5f5]">#}
-{#    <div class="h-full w-full flex flex-col overflow-y-auto" style="scrollbar-width: none;">#}
-{#        <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">#}
-{#            <img src="{% static "logo.png" %}" class="h-10 w-auto">#}
-{#            <div class="flex items-center justify-center gap-x-8">#}
-{#                <a href="#" class="text-white font-semibold text-lg leading-none">Home</a>#}
-{#                <a href="#" class="text-white font-semibold text-lg leading-none">About</a>#}
-{#                <a href="#" class="text-white font-semibold text-lg leading-none">Vehicles</a>#}
-{#                <a href="#" class="text-white font-semibold text-lg leading-none">Profile</a>#}
-{#            </div>#}
-{#        </nav>#}
+    @keyframes slide-in-bottom {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
-        {% block body_block %}
-        <div id="middle-container" class="bg-[#0B391CAA] z-2 relative h-80 py-8 px-32 text-white">
-            <div class="overlay"></div>
-            <div class="flex flex-col gap-y-3 z-10 text-white">
-                <div class="font-bold text-base tracking-wide">For Every Buyer, For Every Seller, For Every Business!
-                </div>
-                <div class="text-3xl font-bold">Your one-stop platform<br>for buying and selling<br>eco-friendly electric
-                    vehicles</div>
+    body {
+        overflow: hidden; /* Prevent scrolling during animation */
+        background-color: black; /* Black background during entire animation */
+    }
+
+    .logo-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black; /* Ensure black background */
+        z-index: 9999; /* Ensure the logo covers everything */
+    }
+
+    .logo {
+        width: 300px; /* Increased size of the logo */
+        height: auto;
+        animation: slide-in-left 2s forwards;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .slide-in-bottom {
+        animation: slide-in-bottom 1s forwards;
+    }
+{% endblock %}
+{% block ani_script %}
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('animationend', () => {
+            logo.parentElement.classList.add('hidden');
+            document.querySelector('.homepage-content').classList.add('slide-in-bottom');
+            document.body.style.overflow = 'auto'; /* Restore scrolling after animation */
+        });
+    });
+{% endblock %}
+
+{% block logo %} <img src="{% static 'logo.png' %}" alt="Logo" class="logo">{% endblock %}
+
+{% block body_block %}
+    <div id="middle-container" class="bg-[#0B391CAA] z-20 relative h-80 py-8 px-32 text-white">
+        <div class="overlay"></div>
+        <div class="flex flex-col gap-y-3 z-10 text-white">
+            <div class="font-bold text-base tracking-wide">For Every Buyer, For Every Seller, For Every Business!
             </div>
-            <div class="flex flex-col items-start gap-y-8 z-10">
-                <div class="text-base font-bold">
-                    Embrace the future of transportation with our<br>comprehensive marketplace designed to connect<br>buyers
-                    and
-                    sellers of electric bikes, cars, and more.<br>Join us in promoting sustainable
-                    transportation<br>solutions
-                    and
-                    explore a wide range of e-vehicles<br>tailored to your needs.
-                </div>
-                <div class="flex items-center justify-start gap-x-6">
-                    <button class="text-white px-10 py-3 font-bold bg-[#0B391C] rounded-lg">Explore More</button>
-                    <button class="text-white px-10 py-3 font-bold bg-[#0B391C] rounded-lg">About Us</button>
-                </div>
+            <div class="text-3xl font-bold">Your one-stop platform<br>for buying and selling<br>eco-friendly electric
+                vehicles</div>
+        </div>
+        <div class="flex flex-col items-start gap-y-8 z-10">
+            <div class="text-base font-bold">
+                Embrace the future of transportation with our<br>comprehensive marketplace designed to connect<br>buyers
+                and
+                sellers of electric bikes, cars, and more.<br>Join us in promoting sustainable
+                transportation<br>solutions
+                and
+                explore a wide range of e-vehicles<br>tailored to your needs.
+            </div>
+            <div class="flex items-center justify-start gap-x-6">
+                <button class="text-white px-10 py-3 font-bold bg-[#0B391C] rounded-lg">Explore More</button>
+                <button class="text-white px-10 py-3 font-bold bg-[#0B391C] rounded-lg">About Us</button>
             </div>
         </div>
-        <div id="cards-container" class="flex items-center justify-center gap-6 flex-wrap my-8 w-full">
-            <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
-                <img src="{% static "card_ecar.png" %}" class="w-[55%]">
-                <div class="flex flex-col gap-y-5 py-2 justify-between">
-                    <div class="font-semibold leading-5 px-1">
-                        Drive into the future with electric cars – save money, protect the environment, and enjoy cutting-edge technology
-                    </div>
-                    <button class="text-white py-3 leading-none w-5/6 mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>
+    </div>
+    <div id="cards-container" class="flex items-center justify-center gap-6 flex-wrap my-8 w-full">
+        <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
+            <img src="{% static "card_ecar.png" %}" class="w-[55%]">
+            <div class="flex flex-col gap-y-5 py-2 justify-between">
+                <div class="font-semibold leading-5 px-1">
+                    Drive into the future with electric cars – save money, protect the environment, and enjoy cutting-edge technology
                 </div>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
-                <img src="{% static "card_etruck.png" %}" class="w-[55%]">
-                <div class="flex flex-col gap-y-5 py-2 justify-between">
-                    <div class="font-semibold leading-5 px-1">
-                       Transform your fleet with electric trucks – reduce costs, increase efficiency, and drive sustainability
-                    </div>
-                    <button class="text-white w-5/6 py-3 leading-none mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>
-                </div>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
-                <img src="{% static "card_ebike.png" %}" class="w-[55%]">
-                <div class="flex flex-col gap-y-5 py-2 justify-between">
-                    <div class="font-semibold leading-5 px-1">
-                        Revolutionize your ride with electric bikes – enjoy effortless commuting, save money, and go green
-                    </div>
-                    <button class="text-white py-3 leading-none w-5/6 mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>
-                </div>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
-                <img src="{% static "card_ratings.png" %}" class="w-[55%]">
-                <div class="flex flex-col gap-y-5 py-2 justify-between">
-                    <div class="font-semibold leading-5 px-1">
-                       See what our customers are saying – check out our reviews and ratings to hear firsthand experiences
-                    </div>
-                    <button class="text-white w-5/6 py-3 leading-none mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>
-                </div>
+<!--                <button class="text-white py-3 leading-none w-5/6 mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>-->
+                    <button class="text-white w-5/6 py-3 leading-none mx-auto font-bold bg-[#0B391C] rounded-lg"><a href="/cars" >Cars</a></button>
+
             </div>
         </div>
-            <!-- Ratings Section -->
+        <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
+            <img src="{% static "card_etruck.png" %}" class="w-[55%]">
+            <div class="flex flex-col gap-y-5 py-2 justify-between">
+                <div class="font-semibold leading-5 px-1">
+                   Transform your fleet with electric trucks – reduce costs, increase efficiency, and drive sustainability
+                </div>
+<!--                <button class="text-white w-5/6 py-3 leading-none mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>-->
+                    <button class="text-white w-5/6 py-3 leading-none mx-auto font-bold bg-[#0B391C] rounded-lg"><a href="/trucks" >Trucks</a></button>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
+            <img src="{% static "card_ebike.png" %}" class="w-[55%]">
+            <div class="flex flex-col gap-y-5 py-2 justify-between">
+                <div class="font-semibold leading-5 px-1">
+                    Revolutionize your ride with electric bikes – enjoy effortless commuting, save money, and go green
+                </div>
+<!--                <button class="text-white py-3 leading-none w-5/6 mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>-->
+                    <button class="text-white w-5/6 py-3 leading-none mx-auto font-bold bg-[#0B391C] rounded-lg"><a href="/bikes" >Bikes</a></button>
+
+            </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-5 flex gap-5 w-2/5">
+            <img src="{% static "card_ratings.png" %}" class="w-[55%]">
+            <div class="flex flex-col gap-y-5 py-2 justify-between">
+                <div class="font-semibold leading-5 px-1">
+                   See what our customers are saying – check out our reviews and ratings to hear firsthand experiences
+                </div>
+                <button class="text-white w-5/6 py-3 leading-none mx-auto font-bold bg-[#0B391C] rounded-lg">Explore</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- Ratings Section -->
+{% comment %} <section id="ratings-section" class="bg-gray-100 py-12">
 <section id="ratings-section" class="bg-gray-100 py-12">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold mb-8">Customer Ratings</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {% for rating in ratings %}
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="text-xl font-semibold mb-2">{{ rating.car.name }}</h3>
-                <p class="text-gray-600 mb-4">{{ rating.comment }}</p>
-                <div class="flex items-center">
-                    <span class="text-gray-700">Rating:</span>
-                    <div class="ml-2">
-                        <!-- Example: Display the numerical rating -->
-                        <span class="text-gray-700">Rating: {{ rating.rating }}</span>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="{% static 'user_icon.png' %}" alt="User" class="w-10 h-10 rounded-full mr-4">
+                        <div>
+                            <h3 class="text-lg font-semibold">{{ rating.user }}</h3>
+                            <p class="text-gray-600 text-sm">{{ rating.date_created }}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-800 mb-4">{{ rating.comment }}</p>
+                    <div class="flex items-center">
+                        {% for i in "12345" %}
+                            {% if i <= rating.rating %}
+                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.562 4.826a1 1 0 00.95.69h5.056c.969 0 1.371 1.24.588 1.81l-4.096 2.98a1 1 0 00-.364 1.118l1.561 4.826c.3.921-.755 1.688-1.54 1.118l-4.096-2.98a1 1 0 00-1.176 0l-4.096 2.98c-.784.57-1.838-.197-1.539-1.118l1.562-4.826a1 1 0 00-.365-1.118l-4.095-2.98c-.783-.57-.38-1.81.588-1.81h5.055a1 1 0 00.951-.69L9.049 2.927z"/></svg>
+                            {% else %}
+                                <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.562 4.826a1 1 0 00.95.69h5.056c.969 0 1.371 1.24.588 1.81l-4.096 2.98a1 1 0 00-.364 1.118l1.561 4.826c.3.921-.755 1.688-1.54 1.118l-4.096-2.98a1 1 0 00-1.176 0l-4.096 2.98c-.784.57-1.838-.197-1.539-1.118l1.562-4.826a1 1 0 00-.365-1.118l-4.095-2.98c-.783-.57-.38-1.81.588-1.81h5.055a1 1 0 00.951-.69L9.049 2.927z"/></svg>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-            </div>
-            {% empty %}
-            <p>No ratings available.</p>
             {% endfor %}
         </div>
     </div>
 </section>
-
-<!-- Categories Section -->
-<section id="categories-section" class="bg-gray-200 py-12">
-    <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-8">Explore Categories</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% for category in categories %}
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <h3 class="text-xl font-semibold mb-2">{{ category.name }}</h3>
-                <p class="text-gray-600 mb-4">{{ category.description }}</p>
-                <a href="{% url 'categories-detail' category.pk %}" class="text-blue-500 hover:underline">Learn more</a>
-            </div>
-            {% empty %}
-            <p>No categories available.</p>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-        {% endblock %}
-{#        <div class="bg-[#0B391C] py-4 px-20">#}
-{#            <div class="bg-black rounded-lg py-4 px-10 flex items-center justify-between">#}
-{#                <img src="{% static "logo.png" %}" class="h-10 w-auto">#}
-{#                <div class="flex items-center justify-center gap-x-6">#}
-{#                    <img src="{% static "twitter.png" %}" class="h-6 w-auto">#}
-{#                    <img src="{% static "insta.png" %}" class="h-6 w-6">#}
-{#                    <img src="{% static "fb.png" %}" class="h-6 w-auto">#}
-{#                    <img src="{% static "linkedin.png" %}" class="h-6 w-auto">#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</body>#}
-
-{#</html>#}
+{% endcomment %}
+{% endblock %}
