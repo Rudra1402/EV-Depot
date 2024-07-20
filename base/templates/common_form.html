@@ -6,7 +6,11 @@
     <!-- Container for centering the form -->
     <div class="w-full max-w-3xl p-6 bg-white rounded-md shadow-lg overflow-y-auto" style="scrollbar-width: none; max-height: calc(100vh - 4rem);">
         <h1 class="text-2xl font-bold mb-6 text-gray-800">Add {{ app_name }}</h1>
+<<<<<<< HEAD
+        <form method="post" action="{% url app_name|add:':homepage' %}" enctype="multipart/form-data" class="p-6 rounded-md bg-gradient-to-t from-green-400 to-green-500 flex flex-col gap-4">
+=======
         <form method="post" action="{% url 'base:common_form' app_name %}" enctype="multipart/form-data" class="p-6 rounded-md bg-gradient-to-t from-green-400 to-green-500 flex flex-col gap-4">
+>>>>>>> 076f1ac4166fb7c9c850e28ec79c20b206274642
             {% csrf_token %}
             <div class="flex items-center w-full gap-4">
                 <div class="w-1/2 flex flex-col gap-1">
