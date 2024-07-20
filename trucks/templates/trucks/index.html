@@ -112,7 +112,7 @@
         <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if trucks %}
                 {% for truck in trucks %}
-                    {% include 'vehicle_card.html' with vehicle=truck user=user %}
+                    {% include 'trucks/vehicle_card.html' with vehicle=truck user=user %}
                 {% endfor %}
             {% else %}
                 <p class="text-xl font-medium text-gray-700">No trucks available.</p>
