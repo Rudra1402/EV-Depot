@@ -1,2 +1,4 @@
 *.sqlite3
 venv
+firebase_key.json
+.env
