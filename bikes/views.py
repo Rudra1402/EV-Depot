@@ -23,6 +23,7 @@ def index(request):
                     image_url = upload_image_to_firebase(image, 'bike_images')
                     bike.image = image_url
                     bike.user = Buyer.objects.get(pk=4)
+                    print(Buyer.objects.get(pk=4))
 
                 form.save()
                 return redirect('bikes:homepage')  # Redirect to the same page to clear the form
