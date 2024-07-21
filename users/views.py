@@ -44,6 +44,34 @@ def Register(request):
 
 # Created login function to check user login and password to redirect home or give errors if password incorrect.
 
+# def LoginUser(request):
+#     if request.method == "GET":
+#         return render(request, "login.html")
+#
+#     if request.method == "POST":
+#         username = request.POST['username']
+#         password = request.POST['password']
+#
+#         user = authenticate(request, username=username, password=password)
+#         if user is not None:
+#             login(request, user)
+#             print("from login", user)
+#             print("current: ", timezone.now())
+#
+#             # Set session variable
+#             request.session['last_login'] = str(timezone.now())
+#
+#             # Set a cookie (e.g., user_id)
+#             response = redirect('base:home')
+#             response.set_cookie('user_id', user.id, max_age=3600)  # Cookie valid for 1 hour
+#
+#             messages.success(request, "Logged in successfully!")
+#             return response
+#         else:
+#             messages.error(request, "Invalid username or password!")
+#
+#     return render(request, "login.html")
+
 def LoginUser(request):
     if request.method == "GET":
         return render(request, "login.html")
@@ -58,14 +86,20 @@ def LoginUser(request):
             print("from login", user)
             print("current: ", timezone.now())
 
-            # Set session variable
+            # Set session variables
             request.session['last_login'] = str(timezone.now())
+            request.session['user_id'] = user.id
+            last_login = request.session.get('last_login')
+            request.session['user_name'] = user.username
+
+            # Optionally, set a cookie (e.g., user_id)
+            response = redirect('base:home')
+            response.set_cookie('user_id', user.id, max_age=3600)  # Cookie valid for 1 hour
 
             messages.success(request, "Logged in successfully!")
-            return redirect('base:home')
+            return response
         else:
             messages.error(request, "Invalid username or password!")
-            return redirect('users:login')
 
     return render(request, "login.html")
 
