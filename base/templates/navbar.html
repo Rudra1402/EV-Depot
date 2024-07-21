@@ -16,9 +16,10 @@
             </div>
         </div>
 
-        <!-- Conditional Login/Logout Buttons -->
+        <!-- Conditional Profile/Login/Logout Buttons -->
         {% if user.is_authenticated %}
-            <!-- User is logged in, show Logout button -->
+            <!-- User is logged in, show Profile and Logout buttons -->
+            <a href="{% url 'users:profile' %}" class="text-white font-semibold text-lg leading-none">Profile</a>
             <a href="{% url 'users:logout' %}" class="text-white font-semibold text-lg leading-none">Logout</a>
         {% else %}
             <!-- User is not logged in, show Login/Register buttons -->
