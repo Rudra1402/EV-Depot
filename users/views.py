@@ -111,4 +111,11 @@ def LogoutUser(request):
 
 @login_required
 def profile(request):
-    return render(request, 'profile.html')
+    visit_counts = request.visit_counts
+    most_visited_app = max(visit_counts, key=visit_counts.get)
+
+    context = {
+        'visit_counts': visit_counts,
+        'most_visited_app': most_visited_app,
+    }
+    return render(request, 'profile.html', context)
