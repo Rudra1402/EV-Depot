@@ -46,7 +46,9 @@ def index(request):
         bikeForm = BikeForm()
         context = {
             'bikes': bikes,
-            'form': bikeForm
+            'form': bikeForm,
+            'visit_counts': request.visit_counts,
+            'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
         }
         return render(request,'index.html', context)
     except Exception as e:

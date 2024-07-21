@@ -35,7 +35,9 @@ def index(request):
     truckForm = TruckForm()
     context = {
         'trucks': trucks,
-        'form': truckForm
+        'form': truckForm,
+        'visit_counts': request.visit_counts,
+        'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
     }
     return render(request, 'trucks/index.html', context)
 

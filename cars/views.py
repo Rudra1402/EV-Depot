@@ -20,7 +20,9 @@ def carindex(request):
     car_form = CarForm()
     context = {
         'cars': cars,
-        'form': car_form
+        'form': car_form,
+        'visit_counts': request.visit_counts,
+        'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
     }
     return render(request, 'cars/carindex.html', context)
 
