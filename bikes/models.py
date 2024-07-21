@@ -21,6 +21,7 @@ class Bikes(models.Model):
     isNew = models.BooleanField(default=True)
     createdAt = models.DateField(default=timezone.now)
     user = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='bikes')
+    purchasedBy = models.ForeignKey(Buyer, on_delete=models.SET_NULL, null=True, blank=True, related_name='purchased_bikes')
 
     def __str__(self):
         return self.name
