@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block body_block %}
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold">Profile</h1>
+    <p>Welcome, {{ user.username }}!</p>
+    <p>Email: {{ user.email }}</p>
+    <p>First Name: {{ user.buyer.firstname }}</p>
+    <p>Last Name: {{ user.buyer.lastname }}</p>
+    <p>Mobile: {{ user.buyer.mobile }}</p>
+    <p>Address: {{ user.buyer.address }}</p>
+    <p>City: {{ user.buyer.city }}</p>
+</div>
+{% endblock %}
