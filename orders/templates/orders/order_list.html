@@ -1,0 +1,102 @@
+<!-- orders/templates/orders/order_list.html -->
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+<h1 class="text-3xl font-semibold text-gray-800 mb-4">My Orders</h1>
+
+{#<h2 class="text-2xl font-semibold text-gray-800 mb-4">Car Orders</h2>#}
+{#<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">#}
+{#    {% for order in car_orders %}#}
+{#    <div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white vehicle-item" id="car-{{ order.id }}">#}
+{#        <img src="{{ order.car.image }}" alt="{{ order.car.name }}" class="w-full min-h-80 max-h-full object-cover">#}
+{#        <div class="p-4 flex flex-col gap-y-4">#}
+{#            <div class="flex items-center justify-between gap-5">#}
+{#                <a href="{% url "cars:carbyid" id=order.car.id %}" class="text-gray-800">#}
+{#                    <h2 class="text-2xl font-semibold text-gray-800">{{ order.car.name }}</h2>#}
+{#                </a>#}
+{#                <form method="post" action="{% url 'orders:delete_car_order' order.id %}" onsubmit="return confirm('Are you sure you want to delete this order?');">#}
+{#                    {% csrf_token %}#}
+{#                    <button type="submit" class="bg-red-600 hover:bg-red-800 transition text-white py-2 px-4 rounded">Cancel Order</button>#}
+{#                </form>#}
+{#            </div>#}
+{#            <div class="grid grid-cols-2 gap-4">#}
+{#                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">#}
+{#                    <div class="text-gray-600">Price</div>#}
+{#                    <div class="text-lg font-medium text-gray-800">${{ order.car.price }}</div>#}
+{#                </div>#}
+{#                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">#}
+{#                    <div class="text-gray-600">Ordered At</div>#}
+{#                    <div class="text-lg font-medium text-gray-800">{{ order.created_at|date:"F j, Y" }}</div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    {% empty %}#}
+{#    <p>No car orders.</p>#}
+{#    {% endfor %}#}
+{#</div>#}
+{##}
+{#<h2 class="text-2xl font-semibold text-gray-800 mb-4">Bike Orders</h2>#}
+{#<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">#}
+{#    {% for order in bike_orders %}#}
+{#    <div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white vehicle-item" id="bike-{{ order.id }}">#}
+{#        <img src="{{ order.bike.image }}" alt="{{ order.bike.name }}" class="w-full min-h-80 max-h-full object-cover">#}
+{#        <div class="p-4 flex flex-col gap-y-4">#}
+{#            <div class="flex items-center justify-between gap-5">#}
+{#                <a href="{% url "bikes:bikebyid" id=order.bike.id %}" class="text-gray-800">#}
+{#                    <h2 class="text-2xl font-semibold text-gray-800">{{ order.bike.name }}</h2>#}
+{#                </a>#}
+{#                <form method="post" action="{% url 'orders:delete_bike_order' order.id %}" onsubmit="return confirm('Are you sure you want to delete this order?');">#}
+{#                    {% csrf_token %}#}
+{#                    <button type="submit" class="bg-red-600 hover:bg-red-800 transition text-white py-2 px-4 rounded">Cancel Order</button>#}
+{#                </form>#}
+{#            </div>#}
+{#            <div class="grid grid-cols-2 gap-4">#}
+{#                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">#}
+{#                    <div class="text-gray-600">Price</div>#}
+{#                    <div class="text-lg font-medium text-gray-800">${{ order.bike.price }}</div>#}
+{#                </div>#}
+{#                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">#}
+{#                    <div class="text-gray-600">Ordered At</div>#}
+{#                    <div class="text-lg font-medium text-gray-800">{{ order.created_at|date:"F j, Y" }}</div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    {% empty %}#}
+{#    <p>No bike orders.</p>#}
+{#    {% endfor %}#}
+{#</div>#}
+
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">Truck Orders</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for order in truck_orders %}
+    <div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white vehicle-item" id="truck-{{ order.id }}">
+        <img src="{{ order.truck.image }}" alt="{{ order.truck.name }}" class="w-full min-h-80 max-h-full object-cover">
+        <div class="p-4 flex flex-col gap-y-4">
+            <div class="flex items-center justify-between gap-5">
+                <a href="{% url "trucks:truckbyid" id=order.truck.id %}" class="text-gray-800">
+                    <h2 class="text-2xl font-semibold text-gray-800">{{ order.truck.name }}</h2>
+                </a>
+                <form method="post" action="{% url 'orders:delete_truck_order' order.id %}" onsubmit="return confirm('Are you sure you want to delete this order?');">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-red-600 hover:bg-red-800 transition text-white py-2 px-4 rounded">Cancel Order</button>
+                </form>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                    <div class="text-gray-600">Price</div>
+                    <div class="text-lg font-medium text-gray-800">${{ order.truck.price }}</div>
+                </div>
+                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                    <div class="text-gray-600">Ordered At</div>
+                    <div class="text-lg font-medium text-gray-800">{{ order.created_at|date:"F j, Y" }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No truck orders.</p>
+    {% endfor %}
+</div>
+{% endblock %}
