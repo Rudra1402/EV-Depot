@@ -4,6 +4,10 @@
     <h1 class="text-2xl font-bold">Profile</h1>
     <p>Welcome, {{ user.username }}!</p>
     <p>Email: {{ user.email }}</p>
-    <!-- Add more user information here -->
+    <p>First Name: {{ user.buyer.firstname }}</p>
+    <p>Last Name: {{ user.buyer.lastname }}</p>
+    <p>Mobile: {{ user.buyer.mobile }}</p>
+    <p>Address: {{ user.buyer.address }}</p>
+    <p>City: {{ user.buyer.city }}</p>
 </div>
 {% endblock %}

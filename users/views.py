@@ -21,6 +21,7 @@ def Register(request):
     if request.method == 'POST':
         username = request.POST['username']
         firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
         email = request.POST['email']
         password = request.POST['password']
         mobile = request.POST['mobile']
@@ -34,7 +35,7 @@ def Register(request):
         else:
             try:
                 user = User.objects.create_user(username=username, email=email, password=password)
-                Buyer.objects.create(username=user, firstname=firstname, email=email, mobile=mobile, address=address, city=city)
+                Buyer.objects.create(username=user, firstname=firstname, lastname=lastname, email=email, mobile=mobile, address=address, city=city)
                 messages.success(request, "Account created successfully!")
                 return redirect('base:home')
             except IntegrityError:
