@@ -68,6 +68,30 @@ def delete_bike(request, id):
         print(f"Received {request.method} request, only DELETE is allowed")
         raise Http404("Only DELETE method is allowed")
 
+
+def edit_bike(request, id):
+    bike = get_object_or_404(Bikes, id=id)
+
+    if request.method == 'POST':
+        form = BikeForm(request.POST, request.FILES, instance=bike)
+        if form.is_valid():
+            if 'image' in request.FILES:
+                image = request.FILES['image']
+                image_url = upload_image_to_firebase(image, 'bike_images')
+                bike.image = image_url
+            form.save()
+            return redirect('bikes:homepage')
+    else:
+        form = BikeForm(instance=bike)
+        form.fields['image'].initial = None
+
+    context = {
+        'form': form,
+        'bike': bike,
+    }
+    return render(request, 'edit_bike.html', context)
+
+
 def bike_list(request):
     bikes = Bikes.objects.all()
 
