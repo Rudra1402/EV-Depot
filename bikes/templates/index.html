@@ -15,11 +15,11 @@
         transform: translateY(-6px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
-    .bike-item img {
+    {% comment %} .bike-item img {
         transition: transform 0.3s;
     }
     .bike-item:hover img {
-        transform: scale(1.05);
+        transform: scale(1.05); {% endcomment %}
     }
 </style>
 <script>
@@ -112,7 +112,7 @@
         </h1>
 
         
-        <div class="flex flex-col gap-y-5 w-full max-w-xl">
+        <div class="flex flex-col gap-y-5 w-full">
             {% if bikes %}
                 {% for bike in bikes %}
                     {% include 'vehicle_card.html' with vehicle=bike user=user %}
