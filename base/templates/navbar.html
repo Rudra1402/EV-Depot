@@ -15,25 +15,18 @@
                 <a href="/trucks" class="block px-4 py-2 hover:bg-gray-200">Trucks</a>
             </div>
         </div>
-        <a href="/users/register/" class="text-white font-semibold text-lg leading-none">Profile</a>
+
+        <!-- Conditional Login/Logout Buttons -->
+        {% if user.is_authenticated %}
+            <!-- User is logged in, show Logout button -->
+            <a href="{% url 'users:logout' %}" class="text-white font-semibold text-lg leading-none">Logout</a>
+        {% else %}
+            <!-- User is not logged in, show Login/Register buttons -->
+            <a href="{% url 'users:login' %}" class="text-white font-semibold text-lg leading-none">Login</a>
+            <a href="{% url 'users:register' %}" class="text-white font-semibold text-lg leading-none">Register</a>
+        {% endif %}
     </div>
 </nav>
-
-{% comment %} <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const dropdownButton = document.querySelector('.dropdown button');
-        const dropdownContent = document.querySelector('.dropdown-content');
-
-        dropdownButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            dropdownContent.classList.toggle('hidden');
-        });
-
-        document.addEventListener('click', () => {
-            dropdownContent.classList.add('hidden');
-        });
-    });
-</script> {% endcomment %}
 
 <style>
     .dropdown-content a {

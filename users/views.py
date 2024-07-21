@@ -10,6 +10,8 @@ from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChan
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Buyer
+from .forms import UserLoginForm
+
 
 # Created Register function to collect data like username,firstname and email which helps to register as user.
 def Register(request):
@@ -41,6 +43,7 @@ def Register(request):
         return render(request, "register.html")
 
 # Created login function to check user login and password to redirect home or give errors if password incorrect.
+
 def LoginUser(request):
     if request.method == "GET":
         return render(request, "login.html")
@@ -66,4 +69,7 @@ def LoginUser(request):
 
     return render(request, "login.html")
 
-
+def LogoutUser(request):
+    logout(request)
+    messages.success(request, "You have been logged out.")
+    return redirect('users:login')
