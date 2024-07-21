@@ -53,6 +53,7 @@ def index(request):
         return render(request,'index.html', context)
     except Exception as e:
         print(str(e))
+        
 
 def bikeById(request, id):
     bike = get_object_or_404(Bikes, id=id)

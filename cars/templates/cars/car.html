@@ -109,6 +109,40 @@
             </div>
         </div>
     </div>
+    <!-- <div class="flex">
+        <div class="message-list">
+            {% for message in messages %}
+                <div class="message-item" data-id="{{ message.id }}">
+                    {{ message.content|slice:":50" }}{% if message.content|length > 50 %}...{% endif %}
+                </div>
+            {% empty %}
+                <p>No messages yet.</p>
+            {% endfor %}
+        </div>
+        <div class="message-content">
+            {% if messages %}
+                <div class="message" data-id="{{ messages.last.id }}">
+                    <div class="message-content-wrapper {% if message.sender == user %}sent{% else %}received{% endif %}">
+                        <p>{{ messages.last.content }}</p>
+                        <p class="message-time">{{ messages.last.created_at }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <p>Select a message to view.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if not is_owner %}
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Send</button>
+        </form>
+    {% else %}
+        <p class="mt-4 text-gray-600">You are the owner of this car. You can view messages sent to you.</p>
+    {% endif %}
+</div> -->
 </body>
 
 </html>
