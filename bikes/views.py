@@ -4,38 +4,55 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
 from django.db.models import Q
 
+from users.models import Buyer
+from .utils import upload_image_to_firebase
+
 from bikes.models import Bikes
 from .forms import BikeForm
 # Create your views here.
 def index(request):
-    if request.method == 'POST':
-        form = BikeForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('bikes:homepage')  # Redirect to the same page to clear the form
-    else:
-        form = BikeForm()
+    try:
+        if request.method == 'POST':
+            form = BikeForm(request.POST, request.FILES)
+            print(request.POST, request.FILES)
+            if form.is_valid():
+                bike = form.save(commit=False)
+                
+                if 'image' in request.FILES:
+                    image = request.FILES['image']
+                    image_url = upload_image_to_firebase(image, 'bike_images')
+                    bike.image = image_url
+                    bike.user = Buyer.objects.get(pk=4)
 
-    bikes = Bikes.objects.all()
+                form.save()
+                return redirect('bikes:homepage')  # Redirect to the same page to clear the form
+        else:
+            form = BikeForm()
 
-    latest = request.GET.get('latest')
-    if latest:
-        bikes = bikes.order_by('-createdAt')
+        bikes = Bikes.objects.all()
 
-    sort = request.GET.get('sort')
-    if sort == 'name':
-        bikes = bikes.order_by('name')
+        latest = request.GET.get('latest')
+        if latest:
+            bikes = bikes.order_by('-createdAt')
 
-    query = request.GET.get('query')
-    if query:
-        bikes = bikes.filter(name__icontains=query)
+        sort = request.GET.get('sort')
+        if sort == 'name':
+            bikes = bikes.order_by('name')
 
-    bikeForm = BikeForm()
-    context = {
-        'bikes': bikes,
-        'form': bikeForm
-    }
-    return render(request,'index.html', context)
+        query = request.GET.get('query')
+        if query:
+            bikes = bikes.filter(name__icontains=query)
+
+        bikeForm = BikeForm()
+        context = {
+            'bikes': bikes,
+            'form': bikeForm,
+            'visit_counts': request.visit_counts,
+            'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
+        }
+        return render(request,'index.html', context)
+    except Exception as e:
+        print(str(e))
 
 def bikeById(request, id):
     bike = get_object_or_404(Bikes, id=id)
@@ -50,6 +67,30 @@ def delete_bike(request, id):
     else:
         print(f"Received {request.method} request, only DELETE is allowed")
         raise Http404("Only DELETE method is allowed")
+
+
+def edit_bike(request, id):
+    bike = get_object_or_404(Bikes, id=id)
+
+    if request.method == 'POST':
+        form = BikeForm(request.POST, request.FILES, instance=bike)
+        if form.is_valid():
+            if 'image' in request.FILES:
+                image = request.FILES['image']
+                image_url = upload_image_to_firebase(image, 'bike_images')
+                bike.image = image_url
+            form.save()
+            return redirect('bikes:homepage')
+    else:
+        form = BikeForm(instance=bike)
+        form.fields['image'].initial = None
+
+    context = {
+        'form': form,
+        'bike': bike,
+    }
+    return render(request, 'edit_bike.html', context)
+
 
 def bike_list(request):
     bikes = Bikes.objects.all()
