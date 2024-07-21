@@ -107,3 +107,7 @@ def LogoutUser(request):
     logout(request)
     messages.success(request, "You have been logged out.")
     return redirect('users:login')
+
+@login_required
+def profile(request):
+    return render(request, 'profile.html')
