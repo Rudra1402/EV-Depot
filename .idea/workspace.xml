@@ -8,6 +8,10 @@
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evdepot/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/evdepot/settings.py" afterDir="false" />
 =======
       <change afterPath="$PROJECT_DIR$/users/migrations/0009_buyer_lastname.py" afterDir="false" />
@@ -18,6 +22,7 @@
       <change beforePath="$PROJECT_DIR$/users/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/register.html" afterDir="false" />
 >>>>>>> 0a49f9b0d3919fcfa43d72034a67fc94a4f095bd
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+>>>>>>> 74f3e59bdbee3e93f71a1836da6913b9cc862a31
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,8 +187,12 @@
       <workItem from="1721536598023" duration="10070000" />
 =======
       <workItem from="1721536598023" duration="11982000" />
+<<<<<<< HEAD
+      <workItem from="1721588486190" duration="6559000" />
+=======
       <workItem from="1721588486190" duration="5761000" />
 >>>>>>> 0a49f9b0d3919fcfa43d72034a67fc94a4f095bd
+>>>>>>> 74f3e59bdbee3e93f71a1836da6913b9cc862a31
     </task>
     <task id="LOCAL-00001" summary="Created Category and Rating models">
       <option name="closed" value="true" />
