@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_head %}
+<script src="{% static 'script.js' %}"></script>
+<script>
+    const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
+</script>
+{% endblock %}
+{% block body_block %}
+<div class="m-0 p-0 w-screen h-screen flex justify-center p-6 bg-[#f5f5f5]">
+    <div class="w-full max-w-3xl p-6 bg-white rounded-md shadow-lg overflow-y-auto" style="scrollbar-width: none; max-height: calc(100vh - 4rem);">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Edit Truck Details</h1>
+        <form method="post" action="{% url 'trucks:edit_truck' truck.id %}" enctype="multipart/form-data" class="p-6 rounded-md bg-gradient-to-tr from-green-400 to-green-300 flex flex-col gap-4">
+            {% csrf_token %}
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_name" class="block text-gray-800">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_companyName" class="block text-gray-800">Company Name</label>
+                    {{ form.companyName }}
+                </div>
+            </div>
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_modelType" class="block text-gray-800">Model Type</label>
+                    {{ form.modelType }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_manufacturingYear" class="block text-gray-800">Manufacturing Year</label>
+                    {{ form.manufacturingYear }}
+                </div>
+            </div>
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_price" class="block text-gray-800">Price</label>
+                    {{ form.price }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_image" class="block text-gray-800">Image URL</label>
+                    {{ form.image }}
+                </div>
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="id_description" class="block text-gray-800">Description</label>
+                {{ form.description }}
+            </div>
+            <div class="flex items-center justify-start gap-3 px-1">
+                {{ form.isNew }}
+                <label for="id_isNew" class="block text-gray-800">Is New</label>
+            </div>
+            <div class="w-full flex justify-end">
+                <button type="submit" class="w-fit mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

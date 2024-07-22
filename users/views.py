@@ -12,8 +12,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Buyer
 from .forms import UserLoginForm
 
-
-# Created Register function to collect data like username,firstname and email which helps to register as user.
 def Register(request):
     if request.method == 'GET':
         return render(request, "register.html")
@@ -43,36 +41,6 @@ def Register(request):
                 return redirect('users:register')
         return render(request, "register.html")
 
-# Created login function to check user login and password to redirect home or give errors if password incorrect.
-
-# def LoginUser(request):
-#     if request.method == "GET":
-#         return render(request, "login.html")
-#
-#     if request.method == "POST":
-#         username = request.POST['username']
-#         password = request.POST['password']
-#
-#         user = authenticate(request, username=username, password=password)
-#         if user is not None:
-#             login(request, user)
-#             print("from login", user)
-#             print("current: ", timezone.now())
-#
-#             # Set session variable
-#             request.session['last_login'] = str(timezone.now())
-#
-#             # Set a cookie (e.g., user_id)
-#             response = redirect('base:home')
-#             response.set_cookie('user_id', user.id, max_age=3600)  # Cookie valid for 1 hour
-#
-#             messages.success(request, "Logged in successfully!")
-#             return response
-#         else:
-#             messages.error(request, "Invalid username or password!")
-#
-#     return render(request, "login.html")
-
 def LoginUser(request):
     if request.method == "GET":
         return render(request, "login.html")
@@ -87,15 +55,13 @@ def LoginUser(request):
             print("from login", user)
             print("current: ", timezone.now())
 
-            # Set session variables
             request.session['last_login'] = str(timezone.now())
             request.session['user_id'] = user.id
             last_login = request.session.get('last_login')
             request.session['user_name'] = user.username
 
-            # Optionally, set a cookie (e.g., user_id)
             response = redirect('base:home')
-            response.set_cookie('user_id', user.id, max_age=3600)  # Cookie valid for 1 hour
+            response.set_cookie('user_id', user.id, max_age=3600)
 
             messages.success(request, "Logged in successfully!")
             return response
@@ -119,3 +85,29 @@ def profile(request):
         'most_visited_app': most_visited_app,
     }
     return render(request, 'profile.html', context)
+
+@login_required
+def UpdateProfile(request):
+    if request.method == 'POST':
+        user = request.user
+        buyer = get_object_or_404(Buyer, username=user)
+
+        buyer.firstname = request.POST['firstname']
+        buyer.lastname = request.POST['lastname']
+        buyer.mobile = request.POST['mobile']
+        buyer.address = request.POST['address']
+        buyer.city = request.POST['city']
+        buyer.save()
+
+        messages.success(request, "Profile updated successfully!")
+        return redirect('users:profile')
+    else:
+        return render(request, 'update_profile.html')
+
+@login_required
+def DeleteProfile(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        messages.success(request, "Profile deleted successfully!")
+        return redirect('users:register')

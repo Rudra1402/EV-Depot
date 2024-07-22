@@ -53,6 +53,7 @@ class Buyer(models.Model):
     address = models.CharField(max_length=100, null=False)
     city = models.CharField(max_length=100, null=False)
     points = models.PositiveIntegerField(default =0)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.username} - {self.email}"

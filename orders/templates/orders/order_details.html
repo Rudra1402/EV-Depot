@@ -1,0 +1,56 @@
+<!-- orders/templates/orders/order_details.html -->
+{% extends "base.html" %}
+{% block body_block %}
+<h1 class="text-3xl font-semibold text-center text-blue-800 mb-6">{{ vehicle.name }} Details</h1>
+
+<div class="border border-gray-200 shadow-lg bg-white p-6 rounded-lg">
+    <div class="flex flex-col md:flex-row justify-between items-start">
+        <div class="text-left">
+            <h2 class="text-2xl font-semibold text-gray-800">{{ vehicle.name }}</h2>
+            <p class="text-gray-600">Price: ${{ vehicle.price }}</p>
+            <p class="text-gray-600">Posted At: {{ vehicle.created_at|date:"F j, Y" }}</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+            <div class="flex items-center space-x-2">
+                <div class="text-2xl text-yellow-500">
+                    {% for i in "01234" %}
+                        {% if i|add:1 <= avg_rating %}
+                        <i class="fas fa-star"></i>
+                        {% else %}
+                        <i class="far fa-star"></i>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <p class="text-gray-600">({{ review_ratings|length }} reviews)</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-xl font-semibold text-gray-800 mt-6">Reviews and Ratings</h2>
+    {% for review_rating in review_ratings %}
+    <div class="border-b border-gray-200 py-4">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+            <p><b>{{ review_rating.user.username }}:</b></p>
+        </div>
+        <p class="mt-1">{{ review_rating.review }}</p>
+        <div class="flex items-center space-x-2 mt-1">
+            <div class="text-yellow-500">
+                {% for i in "01234" %}
+                    {% if i|add:1 <= review_rating.rating %}
+                    <i class="fas fa-star"></i>
+                    {% else %}
+                    <i class="far fa-star"></i>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <p class="text-gray-600">Reviewed At: {{ review_rating.created_at|date:"F j, Y" }}</p>
+        </div>
+    </div>
+    {% empty %}
+    <p>No reviews yet.</p>
+    {% endfor %}
+
+    <a href="{% url 'orders:order_list' %}" class="bg-blue-600 hover:bg-blue-800 transition text-white py-2 px-4 rounded mt-6 block text-center">Back to Orders</a>
+</div>
+{% endblock %}

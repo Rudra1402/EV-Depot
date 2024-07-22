@@ -93,6 +93,8 @@
             </div>
             <div class="flex items-center justify-end gap-3 w-full">
                 <button class="bg-orange-600 hover:bg-red-600 transition text-white py-2 px-4 rounded">Message Owner</button>
+                <!-- bikes.html -->
+                <a href="{% url 'trucks:purchase_truck' truck.id %}" class="bg-orange-600 hover:bg-red-600 transition text-white py-2 px-4 rounded inline-block">Purchase</a>
                 <form method="post" action="{% url 'orders:create_truck_order' truck.id %}">
                     {% csrf_token %}
                     <button type="submit" class="bg-orange-600 hover:bg-red-600 transition text-white py-2 px-4 rounded">Purchase</button>

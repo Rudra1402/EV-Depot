@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Rate Item</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      const vehicleTypeSelect = document.getElementById('id_vehicle_type');
+      const vehicleModelSelect = document.getElementById('id_vehicle_model');
+
+      vehicleTypeSelect.addEventListener('change', function() {
+        const vehicleType = vehicleTypeSelect.value;
+        fetch(`/ajax/load-vehicle-models/?vehicle_type=${vehicleType}`)
+          .then(response => response.json())
+          .then(data => {
+            let options = '<option value="">---------</option>';
+            data.forEach(vehicle => {
+              options += `<option value="${vehicle.id}">${vehicle.name}</option>`;
+            });
+            vehicleModelSelect.innerHTML = options;
+          });
+      });
+    });
+  </script>
+{% endblock %}

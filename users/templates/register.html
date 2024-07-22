@@ -4,8 +4,8 @@
 {% block body_block %}
 <div class="flex h-screen px-24 py-4" style="margin: 0;">
     <!-- Left side with Welcome Back message -->
-    <div class="w-1/2 flex flex-col items-center justify-center bg-[#0B391C] text-white p-8" style="border-radius: 15px 0px 0px 15px; height: auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)">
-        <h2 class="text-4xl font-bold mb-4">Welcome !!</h2>
+    <div class="w-1/2 flex flex-col items-center justify-center text-white p-8" style="background-image: url('{% static 'loginpage.jpg' %}'); background-size: cover; background-position: center; height: auto; border-radius: 15px 0px 0px 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)">
+        <h2 class="text-4xl font-bold mb-3">Welcome !!</h2>
         <p class="mb-8 text-lg">To keep connected with us please register with your personal info</p>
         <a href="{% url 'users:login' %}" class="bg-transparent border border-white rounded-lg py-2 px-4 text-white font-bold hover:bg-white hover:text-[#0B391C] transition duration-300">SIGN IN</a>
     </div>
