@@ -1,0 +1,10 @@
+<!-- orders/templates/orders/submit_review_rating.html -->
+{% extends "base.html" %}
+{% block body_block %}
+<h1 class="text-2xl font-semibold text-gray-800 mb-4">Submit Review and Rating for {{ vehicle_type|title }} {{ vehicle.name }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="bg-green-600 hover:bg-green-800 transition text-white py-2 px-4 rounded">Submit</button>
+</form>
+{% endblock %}
