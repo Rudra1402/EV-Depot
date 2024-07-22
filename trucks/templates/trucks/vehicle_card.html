@@ -9,9 +9,9 @@
             </a>
             {% if user.username|safe == vehicle.user.username|safe %}
                 <div class="flex items-center gap-2 px-2">
-                    <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                    <a href="{% url 'trucks:edit_truck' id=vehicle.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
                         <i class="fa-solid fa-pen-to-square text-gray-100"></i>
-                    </div>
+                    </a>
                     <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center"
                         onclick="deleteTruck({{ vehicle.id }},'{{ vehicle.name }}')">
                         <i class="fa-solid fa-trash text-gray-100"></i>
