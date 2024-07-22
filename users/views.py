@@ -37,7 +37,7 @@ def Register(request):
                 user = User.objects.create_user(username=username, email=email, password=password)
                 Buyer.objects.create(username=user, firstname=firstname, lastname=lastname, email=email, mobile=mobile, address=address, city=city)
                 messages.success(request, "Account created successfully!")
-                return redirect('base:home')
+                return redirect('base:login')
             except IntegrityError:
                 messages.warning(request, "Account already exists!")
                 return redirect('users:register')
