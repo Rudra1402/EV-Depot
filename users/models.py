@@ -47,14 +47,16 @@ from django.contrib.auth.hashers import make_password, check_password
 class Buyer(models.Model):
     username = models.OneToOneField(User, on_delete=models.CASCADE, max_length=80, unique=True, blank=True)
     firstname = models.CharField(max_length=80, blank=True)
+    lastname = models.CharField(max_length=80, blank=True)  # Added lastname field
     email = models.EmailField(max_length=80, unique=True)
     mobile = models.CharField(max_length=11, null=False)
     address = models.CharField(max_length=100, null=False)
     city = models.CharField(max_length=100, null=False)
+    points = models.PositiveIntegerField(default =0)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.username} - {self.email}"
 
     def _str_(self):
         return str(self.firstname)
-

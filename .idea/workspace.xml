@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="form for register">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+    <list default="true" id="2c66e7b4-d612-4458-868c-aeefd2003056" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,26 +15,13 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="CSS File" />
-        <option value="Setup Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
-  <component name="ProjectId" id="2iF8NIDXgBBpNMf5GovCyIV6MUj" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2jaSrCZwsSLDUtDp7J8XMo1zynr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -46,168 +31,80 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
     "Django Server.EV-Depot.executor": "Run",
-    "Django Server.EV_Depot.executor": "Run",
-    "Django Server.Unnamed.executor": "Run",
-    "Python.manage.executor": "Run",
+    "JavaScript Debug.profile.html.executor": "Run",
     "Python.settings.executor": "Run",
-    "Python.urls.executor": "Run",
-    "Python.views.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "chintan",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Chintan's project/EV-Depot",
-    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Chintan's project\EV-Depot\users\static" />
-      <recent name="E:\Chintan's project\EV-Depot" />
-      <recent name="E:\Chintan's project\EV-Depot\users\templates" />
-      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\bikes\static" />
-      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\SEM3\8347_InternetApplicationDistributedSystems\project\EV-Depot\cars\static" />
+      <recent name="D:\DUMP\Term3\Chintan Tripathi\IDS Project\EV-Depot\users\static" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="EV-Depot" type="Python.DjangoServer" factoryName="Django server">
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EV-Depot" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="evdepot.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/evdepot" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="localhost" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evdepot/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.settings" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="45c6dab9-95de-4a61-8300-983e6bcd15d8" name="Changes" comment="" />
-      <created>1719074923629</created>
+      <changelist id="2c66e7b4-d612-4458-868c-aeefd2003056" name="Changes" comment="" />
+      <created>1721623895531</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1719074923629</updated>
-      <workItem from="1719074924680" duration="7117000" />
-      <workItem from="1720732017205" duration="3688000" />
-      <workItem from="1720790453596" duration="9881000" />
-      <workItem from="1720913955709" duration="7109000" />
-      <workItem from="1720921225225" duration="437000" />
-      <workItem from="1720921666812" duration="19575000" />
-      <workItem from="1721155047886" duration="12982000" />
-      <workItem from="1721424559762" duration="4717000" />
-      <workItem from="1721459303509" duration="806000" />
-      <workItem from="1721484867450" duration="5491000" />
+      <updated>1721623895531</updated>
+      <workItem from="1721623898198" duration="8540000" />
     </task>
-    <task id="LOCAL-00001" summary="Created Category and Rating models">
-      <option name="closed" value="true" />
-      <created>1719081233749</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1719081233749</updated>
-    </task>
-    <task id="LOCAL-00002" summary="users registration model">
-      <option name="closed" value="true" />
-      <created>1720919503021</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1720919503021</updated>
-    </task>
-    <task id="LOCAL-00003" summary="users registration model">
-      <option name="closed" value="true" />
-      <created>1720919818178</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1720919818178</updated>
-    </task>
-    <task id="LOCAL-00004" summary="users registration view">
-      <option name="closed" value="true" />
-      <created>1720922183732</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1720922183732</updated>
-    </task>
-    <task id="LOCAL-00005" summary="form for register">
-      <option name="closed" value="true" />
-      <created>1720982798123</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1720982798123</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Category and Rating models" />
-    <MESSAGE value="users registration model" />
-    <MESSAGE value="users registration view" />
-    <MESSAGE value="form for register" />
-    <option name="LAST_COMMIT_MESSAGE" value="form for register" />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/EV_Depot$settings.coverage" NAME="settings Coverage Results" MODIFIED="1720732415456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evdepot" />
-    <SUITE FILE_PATH="coverage/EV_Depot1$manage.coverage" NAME="manage Coverage Results" MODIFIED="1719077208327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/EV_Depot$views.coverage" NAME="views Coverage Results" MODIFIED="1720797383670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
-    <SUITE FILE_PATH="coverage/EV_Depot1$urls.coverage" NAME="urls Coverage Results" MODIFIED="1719077003564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evdepot" />
+    <SUITE FILE_PATH="coverage/EV_Depot$settings.coverage" NAME="settings Coverage Results" MODIFIED="1721620620184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evdepot" />
   </component>
 </project>

@@ -78,9 +78,13 @@
                 <a href="{% url "trucks:truckbyid" id=order.truck.id %}" class="text-gray-800">
                     <h2 class="text-2xl font-semibold text-gray-800">{{ order.truck.name }}</h2>
                 </a>
-                <form method="post" action="{% url 'orders:delete_truck_order' order.id %}" onsubmit="return confirm('Are you sure you want to delete this order?');">
+                <form method="post" action="{% url 'orders:delete_truck_order' order.id %}" onsubmit="return confirm('Are you sure you want to cancel this order?');">
                     {% csrf_token %}
                     <button type="submit" class="bg-red-600 hover:bg-red-800 transition text-white py-2 px-4 rounded">Cancel Order</button>
+                </form>
+                <form method="post" action="{% url 'orders:submit_review_rating' 'trucks' 2%}" onsubmit="return confirm('Are you sure you want to review this order?');">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-red-600 hover:bg-red-800 transition text-white py-2 px-4 rounded">Review this</button>
                 </form>
             </div>
             <div class="grid grid-cols-2 gap-4">

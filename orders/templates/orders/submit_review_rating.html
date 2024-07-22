@@ -1,0 +1,21 @@
+<!-- orders/templates/orders/submit_review_rating.html -->
+{% extends "base.html" %}
+{% block body_block %}
+<h1 class="text-2xl font-semibold text-center text-gray-800 mb-4 bg-gradient-to-r from-green-400 to-blue-500 text-white p-4 rounded-lg shadow-md">Submit Review and Rating for {{ vehicle_type|title }} {{ vehicle.name }}</h1>
+<form method="post" class="space-y-4 flex flex-col items-center">
+    {% csrf_token %}
+    <div class="flex flex-col gap-4 w-full md:w-1/2">
+        <div class="flex flex-col">
+            <label for="id_rating" class="text-gray-600">Rating (1 to 5)</label>
+            <input type="number" id="id_rating" name="rating" min="1" max="5" placeholder="Rate between 1 and 5" class="p-2 border rounded-md" required>
+        </div>
+        <div class="flex flex-col">
+            <label for="id_review" class="text-gray-600">Review</label>
+            <textarea id="id_review" name="review" rows="8" placeholder="Write your review here..." class="p-2 border rounded-md" required></textarea>
+        </div>
+    </div>
+    <br>
+    <button type="submit" class="bg-green-600 hover:bg-green-800 transition text-white py-2 px-4 rounded">Submit your review!</button>
+    <br><br><br><br>
+</form>
+{% endblock %}
