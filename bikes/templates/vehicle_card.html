@@ -1,8 +1,8 @@
 {% load static %}
 
-<div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white bike-item" id="bike-{{ vehicle.id }}">
-    <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-full min-h-80 max-h-full object-cover">
-    <div class="p-4 flex flex-col gap-y-4">
+<div class="rounded-lg w-full flex items-center bg-white border border-gray-200 shadow-lg bike-item" id="bike-{{ vehicle.id }}">
+    <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-96 h-72 max-h-full object-cover">
+    <div class="p-4 flex-1 flex flex-col gap-y-4">
         <div class="flex items-center justify-between gap-5">
             <a href="{% url "bikes:bikebyid" id=vehicle.id %}" class="text-gray-800">
                 <h2 class="text-2xl font-semibold text-gray-800">{{ vehicle.name }}</h2>
