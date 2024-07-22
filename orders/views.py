@@ -38,6 +38,9 @@ def delete_truck_order(request, order_id):
 @login_required
 def submit_review_rating(request, vehicle_type, vehicle_id):
     vehicle_model = {'cars': Cars, 'bikes': Bikes, 'trucks': Trucks}.get(vehicle_type)
+    if vehicle_model is None:
+        return redirect('orders:order_list')  # Redirect to order list if vehicle_type is invalid
+
     vehicle = get_object_or_404(vehicle_model, id=vehicle_id)
     if request.method == 'POST':
         form = ReviewRatingForm(request.POST)
@@ -46,19 +49,33 @@ def submit_review_rating(request, vehicle_type, vehicle_id):
             review_rating.user = request.user
             setattr(review_rating, vehicle_type, vehicle)
             review_rating.save()
+            # Print statement for debugging
+            print(f"Review saved: {review_rating}")
             return redirect('orders:order_details', vehicle_type=vehicle_type, vehicle_id=vehicle_id)
     else:
         form = ReviewRatingForm()
     return render(request, 'orders/submit_review_rating.html',
                   {'form': form, 'vehicle_type': vehicle_type, 'vehicle': vehicle})
 
-
 def order_details(request, vehicle_type, vehicle_id):
     vehicle_model = {'cars': Cars, 'bikes': Bikes, 'trucks': Trucks}.get(vehicle_type)
     vehicle = get_object_or_404(vehicle_model, id=vehicle_id)
     review_ratings = vehicle.review_ratings.all()
-    return render(request, 'orders/order_details.html', {
+
+    # Calculate average rating
+    if review_ratings.exists():
+        total_rating = sum(r.rating for r in review_ratings)
+        avg_rating = total_rating / review_ratings.count()
+    else:
+        avg_rating = 0
+
+    context = {
         'vehicle': vehicle,
         'vehicle_type': vehicle_type,
         'review_ratings': review_ratings,
-    })
+        'avg_rating': avg_rating,
+    }
+    # Print statement for debugging
+    print(f"Reviews fetched: {review_ratings}")
+    return render(request, 'orders/order_details.html', context)
+
