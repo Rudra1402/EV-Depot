@@ -1,3 +1,27 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//     const messageItems = document.querySelectorAll('.message-item');
+//     const messageContent = document.querySelector('.message-content');
+
+//     messageItems.forEach(item => {
+//         item.addEventListener('click', () => {
+//             const messageId = item.getAttribute('data-id');
+//             fetch(`/messages/${messageId}/`)
+//                 .then(response => response.json())
+//                 .then(data => {
+//                     messageContent.innerHTML = `
+//                         <div class="message ${data.sender === '{{ user.id }}' ? 'sent' : 'received'}">
+//                             <div class="message-content-wrapper ${data.sender === '{{ user.id }}' ? 'sent' : 'received'}">
+//                                 <p>${data.content}</p>
+//                                 <p class="message-time">${data.created_at}</p>
+//                             </div>
+//                         </div>
+//                     `;
+//                 });
+//         });
+//     });
+// });
+
+
 function deleteCar(carId, carTitle) {
     if (window.confirm(`Are you sure you want to delete ${carTitle}`)) {
         fetch(`/cars/delete/${carId}`, {

@@ -1,3 +1,5 @@
+from django.utils import timezone
+from users.models import Buyer
 from django.db import models
 
 class Trucks(models.Model):
@@ -11,14 +13,15 @@ class Trucks(models.Model):
     ]
 
     name = models.CharField(max_length=200)
-    company_name = models.CharField(max_length=200)
-    model_type = models.CharField(max_length=100, choices=TRUCK_TYPES)
-    manufacturing_year = models.PositiveIntegerField()
+    companyName = models.CharField(max_length=200)
+    modelType = models.CharField(max_length=100, choices=TRUCK_TYPES)
+    manufacturingYear = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
     description = models.TextField(blank=True, null=True)
-    image = models.URLField()
-    is_new = models.BooleanField(default=True)
-    created_at = models.DateField(auto_now_add=True)
+    image = models.ImageField(upload_to='trucks/')
+    isNew = models.BooleanField(default=True)
+    createdAt = models.DateField(default=timezone.now)
+    user = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='trucks', default=1)
 
-    class Meta:
-        verbose_name_plural = "trucks"
+    def __str__(self):
+        return self.name
