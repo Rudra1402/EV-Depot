@@ -36,11 +36,11 @@ class Cars(models.Model):
     def __str__(self):
         return self.name
 
-<<<<<<< HEAD
+
 
 class Car:
     pass
-=======
+
 # class Message(models.Model):
 #     car = models.ForeignKey(Cars, on_delete=models.CASCADE, related_name='messages')
 #     sender = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='sent_messages')
@@ -53,4 +53,4 @@ class Car:
 
 #     def __str__(self):
 #         return f"{self.sender.username} to {self.recipient.username}: {self.content[:50]}"
->>>>>>> origin/main
+
