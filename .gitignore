@@ -2,4 +2,3 @@
 venv
 firebase_key.json
 .env
-db.sqlite3
