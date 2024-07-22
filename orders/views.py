@@ -46,7 +46,7 @@ def submit_review_rating(request, vehicle_type, vehicle_id):
             review_rating.user = request.user
             setattr(review_rating, vehicle_type, vehicle)
             review_rating.save()
-            return redirect('orders:order_details', vehicle_type, vehicle_id)
+            return redirect('orders:order_details', vehicle_type=vehicle_type, vehicle_id=vehicle_id)
     else:
         form = ReviewRatingForm()
     return render(request, 'orders/submit_review_rating.html',
