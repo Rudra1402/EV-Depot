@@ -2,7 +2,9 @@ from datetime import datetime, timedelta
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.urls import reverse
 
 from users.models import Buyer
 from .utils import upload_image_to_firebase
@@ -30,7 +32,7 @@ def index(request):
         else:
             form = BikeForm()
 
-        bikes = Bikes.objects.all()
+        bikes = Bikes.objects.filter(purchasedBy__isnull=True)
 
         latest = request.GET.get('latest')
         if latest:
@@ -113,3 +115,28 @@ def bike_list(request):
         'bikes': bikes
     }
     return render(request, 'index.html', context)
+
+
+#@login_required
+def purchase_bike(request, bike_id):
+    bike = get_object_or_404(Bikes, id=bike_id)
+    owner = bike.user
+    return render(request, 'purchase_bike.html', {'bike': bike, 'owner': owner})
+
+#@login_required
+def complete_purchase(request, bike_id):
+    bike = get_object_or_404(Bikes, id=bike_id)
+    buyer = Buyer.objects.get(username=request.user)
+    owner = bike.user
+
+    # Allocate points
+    buyer.points += 100  # or any logic to calculate points
+    buyer.save()
+    owner.points += 50  # or any logic to calculate points
+    owner.save()
+
+    # Mark the bike as purchased
+    bike.purchasedBy = buyer
+    bike.save()
+
+    return redirect(reverse('homepage'))  # or any page you want to redirect to

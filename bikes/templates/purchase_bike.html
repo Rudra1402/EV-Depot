@@ -36,7 +36,7 @@
         // Simulate payment processing
         alert('Payment successful!');
         // Redirect or handle points allocation
-        window.location.href = "{% url 'bikes:homepage' %}";
+        window.location.href = "{% url 'bikes:complete_purchase' bike.id %}";
     };
 </script>
 {% endblock %}
