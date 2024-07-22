@@ -3,3 +3,4 @@ from .models import Cars
 
 # Register your models here.
 admin.site.register(Cars)
+#admin.site.register(Message)

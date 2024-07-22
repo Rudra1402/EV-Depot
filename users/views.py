@@ -21,6 +21,7 @@ def Register(request):
     if request.method == 'POST':
         username = request.POST['username']
         firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
         email = request.POST['email']
         password = request.POST['password']
         mobile = request.POST['mobile']
@@ -34,7 +35,7 @@ def Register(request):
         else:
             try:
                 user = User.objects.create_user(username=username, email=email, password=password)
-                Buyer.objects.create(username=user, firstname=firstname, email=email, mobile=mobile, address=address, city=city)
+                Buyer.objects.create(username=user, firstname=firstname, lastname=lastname, email=email, mobile=mobile, address=address, city=city)
                 messages.success(request, "Account created successfully!")
                 return redirect('base:home')
             except IntegrityError:
@@ -107,3 +108,14 @@ def LogoutUser(request):
     logout(request)
     messages.success(request, "You have been logged out.")
     return redirect('users:login')
+
+@login_required
+def profile(request):
+    visit_counts = request.visit_counts
+    most_visited_app = max(visit_counts, key=visit_counts.get)
+
+    context = {
+        'visit_counts': visit_counts,
+        'most_visited_app': most_visited_app,
+    }
+    return render(request, 'profile.html', context)

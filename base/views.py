@@ -91,6 +91,14 @@ def load_vehicle_models(request):
 def home(request):
     return render(request, 'home.html')
 
+<<<<<<< HEAD
+=======
+
+def about(request):
+    return render(request, 'about.html')
+
+
+>>>>>>> origin/main
 class CategoryListView(ListView):
     model = Category
     template_name = 'categories/index.html'
