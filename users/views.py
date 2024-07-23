@@ -34,7 +34,7 @@ def Register(request):
             try:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 Buyer.objects.create(username=user, firstname=firstname, lastname=lastname, email=email, mobile=mobile, address=address, city=city)
-                messages.success(request, "Account created successfully!")
+                # messages.success(request, "Account created successfully!")
                 return redirect('base:login')
             except IntegrityError:
                 messages.warning(request, "Account already exists!")
@@ -63,7 +63,7 @@ def LoginUser(request):
             response = redirect('base:home')
             response.set_cookie('user_id', user.id, max_age=3600)
 
-            messages.success(request, "Logged in successfully!")
+            # messages.success(request, "Logged in successfully!")
             return response
         else:
             messages.error(request, "Invalid username or password!")
@@ -72,7 +72,7 @@ def LoginUser(request):
 
 def LogoutUser(request):
     logout(request)
-    messages.success(request, "You have been logged out.")
+    # messages.success(request, "You have been logged out.")
     return redirect('users:login')
 
 @login_required
@@ -99,7 +99,7 @@ def UpdateProfile(request):
         buyer.city = request.POST['city']
         buyer.save()
 
-        messages.success(request, "Profile updated successfully!")
+        # messages.success(request, "Profile updated successfully!")
         return redirect('users:profile')
     else:
         return render(request, 'update_profile.html')
@@ -109,5 +109,15 @@ def DeleteProfile(request):
     if request.method == 'POST':
         user = request.user
         user.delete()
-        messages.success(request, "Profile deleted successfully!")
+        # messages.success(request, "Profile deleted successfully!")
         return redirect('users:register')
+
+@login_required
+def messages(request, user_id):
+    seller = Buyer.objects.get(pk=user_id)
+    if seller is None:
+        return HttpResponse("<h2>Seller not found!</h2>")
+    context = {
+        'range': range(4)
+    }
+    return render(request, "messages.html", context)

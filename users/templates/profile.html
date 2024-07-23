@@ -33,11 +33,11 @@
                         <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>City:</strong> {{ user.buyer.city|capfirst }}</p>
                     </div>
                 </div>
-                <div class="border-t border-gray-200 pt-4 w-full">
+                {% comment %} <div class="border-t border-gray-200 pt-4 w-full">
                     <div class="flex flex-col gap-2">
                         <p class="text-gray-500 text-sm">Last Updated: {{ user.buyer.updated_at }}</p>
                     </div>
-                </div>
+                </div> {% endcomment %}
                 <div class="flex gap-4 mt-4">
                     <a href="{% url 'users:update_profile' %}" class="bg-blue-500 text-white px-4 py-2 rounded">Update Profile</a>
                     <form method="POST" action="{% url 'users:delete_profile' %}">
