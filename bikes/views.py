@@ -139,4 +139,4 @@ def complete_purchase(request, bike_id):
     bike.purchasedBy = buyer
     bike.save()
 
-    return redirect(reverse('homepage'))  # or any page you want to redirect to
+    return redirect(reverse('bikes:homepage'))  # or any page you want to redirect to
