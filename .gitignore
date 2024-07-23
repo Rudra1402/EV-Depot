@@ -2,3 +2,4 @@
 venv
 firebase_key.json
 .env
+myenv
