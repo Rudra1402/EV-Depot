@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_head %}
-<script src="{% static 'script.js' %}"></script>
+<<<<<<< HEAD
+<script src="{% static 'carscript.js' %}?v=1"></script>
+=======
+<script src="{% static 'carscript.js' %}"></script>
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
 <style>
+
     .poppins-regular {
         font-family: "Poppins", sans-serif;
         font-weight: 400;
@@ -15,154 +20,113 @@
         transform: translateY(-6px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
-    {% comment %} .car-item img {
+    .car-item img {
         transition: transform 0.3s;
     }
     .car-item:hover img {
         transform: scale(1.05);
-    } {% endcomment %}
+    }
 </style>
 <script>
+
     const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
 </script>
 
 {% endblock %}
+
 {% block body_block %}
-{% if error_message %}
-    <h1>{{error_message}}</h1>
-    {%endif%}
+
 <div class="m-0 p-0 w-screen h-screen flex bg-[#f5f5f5]">
-    <div class="border-r border-r-blue-300 w-1/3 h-full p-6 overflow-y-auto" style="scrollbar-width: none;">
-        <form method="get" action="{% url 'cars:homepage' %}" class="flex flex-col gap-6 w-full">
-            <!-- Filter Section Header -->
-            <div class="flex justify-start items-center gap-2">
-            <h2 class="text-xl font-semibold text-gray-800">Filter Options</h2>
-            <div>({{most_visited_app}} is the most visited!)</div>
-            </div>
-    
-            <!-- Filter Fields -->
-            <div class="flex flex-col gap-4 p-6 rounded-md shadow-lg bg-[#095358]">
-                <!-- Search Input -->
-                <div class="flex flex-col w-full">
-                    <label for="query" class="text-white mb-2">Search Cars</label>
-                    <input type="text" id="query" placeholder="Search cars" name="query" value="{{ request.GET.query }}"
-                        class="p-3 rounded-md border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-                </div>
-    
-                <!-- Latest Checkbox -->
-                <div class="flex items-center gap-3">
-                    <input type="checkbox" id="latest" name="latest" value="true" {% if request.GET.latest %}checked{% endif %}
-                        class="scale-125 text-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <label for="latest" class="text-white">Latest</label>
-                </div>
-    
-                <!-- Sort Checkbox -->
-                <div class="flex items-center gap-3">
-                    <input type="checkbox" id="sort" name="sort" value="name" {% if request.GET.sort == 'name' %}checked{% endif %}
-                        class="scale-125 text-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <label for="sort" class="text-white">Sort by Name (A-Z)</label>
-                </div>
-            </div>
-    
-            <!-- Apply Filters Button -->
-            <div class="w-full gap-3 flex justify-end mt-0">
-                
-                <button type="submit"
-                    class="px-6 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors duration-200">
-                    Apply Filters
-                </button>
-                <a href="{% url 'base:common_form' 'cars' %}" class="px-6 py-2 rounded-md bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors duration-200 text-center">
-                    Add Cars
-                </a>
-            </div>
-        </form>
-    </div>
-    <!--HELLU FROM TALHA-->
+    <div class="w-1/2 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-gradient-to-t from-green-300 to-green-400" style="scrollbar-width: none;">
+        <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-600">
 
 
-    <!-- Bike List Container on the Right -->
-    <div class="w-2/3 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-[#095358]" style="scrollbar-width: none;">
-        <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-50 pb-1 border-b-2 border-b-gray-200">
-            Cars
             <div class="text-base flex">
-                (<div id="count">{{ cars | length }}</div>)
+               Cars (<div id="count">{{ cars | length }}</div>)
             </div>
-            {% comment %} {% if user.is_authenticated %}
-                <div>{{ user.username }}, {{ user.id }}</div>
-            {% endif %} {% endcomment %}
         </h1>
-
-        
-        <div class="flex flex-col gap-y-5 w-full">
+        <a href="{% url 'base:common_form' 'cars' %}"><button>Open Common Form</button></a>
+        <div class="flex flex-col gap-y-5 w-full max-w-xl">
             {% if cars %}
                 {% for car in cars %}
                      <div
-                        class="rounded-lg w-full flex items-center bg-white border border-gray-200 shadow-lg car-item"
+                        class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white car-item"
                         id="car-{{car.id}}"
                     >
-                        <img src="{{ car.image }}" alt="{{ car.name }}" class="w-96 h-56 max-h-full object-cover">
-                        <div class="p-4 flex-1 flex flex-col gap-y-4">
+                        <img src="{{ car.image }}" alt="{{ car.name }}" class="w-full min-h-80 max-h-full object-cover">
+                        <div class="p-4 flex flex-col gap-y-4">
                             <div class="flex items-center justify-between gap-5">
                                 <a href="{% url "cars:car-by-id" id=car.id %}" class="text-gray-800">
                                     <h2 class="text-2xl font-semibold text-gray-800">{{ car.name }}</h2>
                                 </a>
+<<<<<<< HEAD
+                                <div class="flex items-center gap-2 px-2">
+                                    <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                                        <i class="fa-solid fa-pen-to-square text-gray-100"></i>
+=======
                                 {% if user.username|safe == car.user.username|safe %}
                                     <div class="flex items-center gap-2 px-2">
                                         <a href="{% url 'cars:edit-car' id=car.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
                                             <i class="fa-solid fa-pen-to-square text-gray-100"></i>
                                         </a>
                                         <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center"
-                                            onclick="deleteBike({{ car.id }},'{{ car.name }}')">
+                                            onclick="deleteCar({{ car.id }},'{{ car.name }}')">
                                             <i class="fa-solid fa-trash text-gray-100"></i>
                                         </div>
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
                                     </div>
-                                {% endif %}
+                                    <div
+                                    class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"
+                                    onclick="deleteCar({{ car.id }},'{{car.name}}')"
+                                    >
+                                        <i class="fa-solid fa-trash text-gray-100"></i>
+                                    </div>
+                                </div>
                             </div>
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Company</div>
                                     <div class="text-lg font-medium text-gray-800">{{ car.companyName }}</div>
                                 </div>
                                 {% if car.get_modelType_display %}
-                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Type</div>
                                         <div class="text-lg font-medium text-gray-800">{{ car.get_modelType_display }}</div>
                                     </div>
                                 {% else %}
-                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Type</div>
                                         <div class="text-lg font-medium text-gray-800">{{ car.modelType }}</div>
                                     </div>
                                 {% endif %}
                             </div>
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Year</div>
                                     <div class="text-lg font-medium text-gray-800">{{ car.manufacturingYear }}</div>
                                 </div>
-                                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Price</div>
                                     <div class="text-lg font-medium text-gray-800">${{ car.price }}</div>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 {% if car.isNew %}
-                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Condition</div>
                                         <div class="text-lg font-medium text-gray-800">New</div>
                                     </div>
                                 {% else %}
-                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                    <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                         <div class="text-gray-600">Condition</div>
                                         <div class="text-lg font-medium text-gray-800">Used</div>
                                     </div>
                                 {% endif %}
-                                <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                <div class="flex flex-col gap-y-1 bg-green-200 rounded-md px-4 py-2">
                                     <div class="text-gray-600">Posted</div>
                                     <div class="text-lg font-medium text-gray-800">{{ car.createdAt | timesince }} ago</div>
                                 </div>
                             </div>
-                            <div class="flex items-center justify-end py-2 px-3 bg-green-300 rounded shadow-md">Posted by&nbsp;<b>{{ car.user.firstname|capfirst }}</b></div>
                         </div>
                     </div>
 {#                    {% include 'vehicle_card.html' with vehicle=car %}#}
@@ -172,5 +136,52 @@
             {% endif %}
         </div>
     </div>
+    <div class="border-l border-l-blue-300 w-1/2 h-full p-6 overflow-y-auto " style="scrollbar-width: none;">
+        <form method="post" enctype="multipart/form-data" class="p-6 rounded-md shadow-lg bg-gradient-to-t from-green-300 to-green-400 flex flex-col gap-4">
+            {% csrf_token %}
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_name" class="block text-gray-700">Name</label>
+                    {{ form.name }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_companyName" class="block text-gray-700">Company Name</label>
+                    {{ form.companyName }}
+                </div>
+            </div>
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_modelType" class="block text-gray-700">Model Type</label>
+                    {{ form.modelType }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_manufacturingYear" class="block text-gray-700">Manufacturing Year</label>
+                    {{ form.manufacturingYear }}
+                </div>
+            </div>
+            <div class="flex items-center w-full gap-4">
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_price" class="block text-gray-700">Price</label>
+                    {{ form.price }}
+                </div>
+                <div class="w-1/2 flex flex-col gap-1">
+                    <label for="id_image" class="block text-gray-700">Image URL</label>
+                    {{ form.image }}
+                </div>
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="id_description" class="block text-gray-700">Description</label>
+                {{ form.description }}
+            </div>
+            <div class="flex itemx-center justify-start gap-3 px-1">
+                {{ form.isNew }}
+                <label for="id_isNew" class="block text-gray-700">Is New</label>
+            </div>
+            <div class="w-full flex justify-end">
+            <button type="submit" class="w-fit mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
-{% endblock %}
+{% endblock%}
+</div>

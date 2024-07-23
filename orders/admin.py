@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CarOrder, BikeOrder, TruckOrder, ReviewRating
+from .models import CarOrder, BikeOrder, TruckOrder
 
 @admin.register(CarOrder)
 class CarOrderAdmin(admin.ModelAdmin):
@@ -15,8 +15,3 @@ class BikeOrderAdmin(admin.ModelAdmin):
 class TruckOrderAdmin(admin.ModelAdmin):
     list_display = ('truck', 'user', 'ordered_at')
     search_fields = ('truck__name', 'user__username')
-
-@admin.register(ReviewRating)
-class ReviewRatingAdmin(admin.ModelAdmin):
-    list_display = ('user', 'bike', 'car', 'truck', 'created_at')
-    search_fields = ('user__username', 'truck__name', 'bike__name', 'car__name')

@@ -2,7 +2,7 @@ import os
 import firebase_admin
 from firebase_admin import credentials
 
-# Load environment variables from ..env file (if using python-dotenv)
+# Load environment variables from .env file (if using python-dotenv)
 from dotenv import load_dotenv
 load_dotenv()
 

@@ -1,35 +1,49 @@
-<!-- base/templates/ratings/index.html -->
-{% extends "base.html" %}
-{% load static %}
-{% block extra_head %}
-    <style>
-        .poppins-regular {
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        .rating-item {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .rating-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-    </style>
-{% endblock %}
+<!-- categories/index.html -->
+{% extends 'base.html' %}
 {% block content %}
-<div class="poppins-regular">
-    <h2 class="text-center">Ratings</h2>
-    <div class="rating-list">
-        {% for rating in ratings %}
-            <div class="rating-item p-4 bg-white rounded-lg shadow mb-4">
-                <h3>{{ rating.user.username }} - {{ rating.rating }} Stars</h3>
-                <p>{{ rating.comment }}</p>
-                <small>Posted {{ rating.date_created|timesince }} ago</small>
-            </div>
-        {% endfor %}
-    </div>
+<div class="container">
+  <h2>Categories</h2>
+  <ul class="category-list">
+    {% for category in categories %}
+      <li class="category-item">
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.description }}</p>
+      </li>
+    {% empty %}
+      <li>No categories found.</li>
+    {% endfor %}
+  </ul>
 </div>
 {% endblock %}
+
+
+{#{% load static %}#}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <title>Categories</title>#}
+{#    <link rel="stylesheet" href="{% static 'base/styles.css' %}">#}
+{#</head>#}
+{#<body>#}
+{#    <div class="container">#}
+{#        <h1>Categories</h1>#}
+{#        {% if categories %}#}
+{#            <div class="categories-list">#}
+{#                {% for category in categories %}#}
+{#                    <div class="category-item">#}
+{#                        <h2>{{ category.name }}</h2>#}
+{#                        <p>{{ category.description }}</p>#}
+{#                        <p><strong>Created At:</strong> {{ category.created_at }}</p>#}
+{#                        <p><strong>Last Updated:</strong> {{ category.updated_at }}</p>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        {% else %}#}
+{#            <p>No categories found.</p>#}
+{#        {% endif %}#}
+{#    </div>#}
+{#</body>#}
+{#</html>#}

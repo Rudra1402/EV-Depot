@@ -33,7 +33,7 @@ class BikesForm(forms.ModelForm):
             'manufacturingYear': forms.NumberInput(attrs={'class': 'px-3 py-3 rounded w-full','placeholder': 'Manufacturing year'}),
             'price': forms.NumberInput(attrs={'class': 'px-3 py-3 rounded w-full','placeholder': 'Price'}),
             'description': forms.Textarea(attrs={'class': 'px-3 py-3 rounded w-full', 'rows': 8,'placeholder': 'Description'}),
-            'image': forms.ClearableFileInput(attrs={'class': 'px-3 py-2.5 rounded w-full bg-white', 'placeholder': 'Image URL'}),
+            'image': forms.ClearableFileInput(attrs={'class': 'px-3 py-3 rounded w-full', 'placeholder': 'Image URL'}),
             'isNew': forms.CheckboxInput(attrs={'class': 'scale-125'}),
         }
 
@@ -62,44 +62,7 @@ class CategoryForm(forms.ModelForm):
         fields = ['name', 'description']
 
 
-# class RatingForm(forms.ModelForm):
-#     class Meta:
-#         model = Rating
-#         fields = ['user', 'car', 'rating', 'comment', 'is_approved']
-
 class RatingForm(forms.ModelForm):
-    VEHICLE_TYPE_CHOICES = [
-        ('car', 'Car'),
-        ('bike', 'Bike'),
-        ('truck', 'Truck'),
-    ]
-
-    vehicle_type = forms.ChoiceField(choices=VEHICLE_TYPE_CHOICES, required=True)
-    vehicle_model = forms.ChoiceField(choices=[], required=True)
-
     class Meta:
         model = Rating
-        fields = ['vehicle_type', 'vehicle_model', 'rating', 'comment']
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['vehicle_model'].choices = []
-
-    def clean(self):
-        cleaned_data = super().clean()
-        vehicle_type = cleaned_data.get('vehicle_type')
-        vehicle_model = cleaned_data.get('vehicle_model')
-
-        if vehicle_type == 'car':
-            vehicle_queryset = Cars.objects.filter(id=vehicle_model)
-        elif vehicle_type == 'bike':
-            vehicle_queryset = Bikes.objects.filter(id=vehicle_model)
-        elif vehicle_type == 'truck':
-            vehicle_queryset = Trucks.objects.filter(id=vehicle_model)
-        else:
-            vehicle_queryset = None
-
-        if not vehicle_queryset:
-            raise forms.ValidationError('Invalid vehicle model selected.')
-
-        return cleaned_data
+        fields = ['user', 'car', 'rating', 'comment', 'is_approved']
