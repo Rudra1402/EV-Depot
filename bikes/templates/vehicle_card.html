@@ -63,6 +63,14 @@
                 <div class="text-lg font-medium text-gray-800">{{ vehicle.createdAt | timesince }} ago</div>
             </div>
         </div>
+
         <div class="flex items-center justify-end p-2 rounded shadow-md">Seller&nbsp;<b>{{ vehicle.user.username|upper }}</b></div>
+
+        <div class="flex items-center justify-end py-2 px-3 bg-green-300 rounded shadow-md">Posted by&nbsp;<b>{{ vehicle.user.firstname|capfirst }}</b></div>
+        <div class="flex items-center gap-2 py-2 px-3">
+            <span class="text-gray-800">Average Rating:</span>
+            <span class="text-lg font-medium text-gray-800">{{ vehicle.average_rating|default:"No ratings yet" }}</span>
+        </div>
+
     </div>
 </div>
