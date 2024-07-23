@@ -77,12 +77,29 @@ def LogoutUser(request):
 
 @login_required
 def profile(request):
+    user = request.user
     visit_counts = request.visit_counts
     most_visited_app = max(visit_counts, key=visit_counts.get)
+
+    # Fetch the Buyer instance
+    try:
+        buyer = Buyer.objects.get(username=user)
+        points = buyer.points
+    except Buyer.DoesNotExist:
+        points = 0  # Default value if the Buyer instance is not found
+
+    # points = user.points
+    if points < 100:
+        badge = 'bronze_badge.png'
+    elif points < 150:
+        badge = 'silver_badge.png'
+    else:
+        badge = 'gold_badge.png'
 
     context = {
         'visit_counts': visit_counts,
         'most_visited_app': most_visited_app,
+        'badge': badge,
     }
     return render(request, 'profile.html', context)
 
