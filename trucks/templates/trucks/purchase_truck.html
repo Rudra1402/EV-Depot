@@ -1,0 +1,46 @@
+<!-- purchase_bike.html -->
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+<div class="purchase-details">
+    <h2>Truck Details</h2>
+    <p>Name: {{ truck.name }}</p>
+    <p>Company: {{ truck.companyName }}</p>
+    <p>Price: ${{ truck.price }}</p>
+
+    <h2>Owner Details</h2>
+    <p>Username: {{ owner.username }}</p>
+    <p>Email: {{ owner.email }}</p>
+    <p>City: {{ owner.city }}</p>
+    <button id="confirm-purchase">Confirm Purchase</button>
+</div>
+<div id="payment-modal" style="display:none;">
+    <h2>Make Payment</h2>
+    <!-- Dummy card payment form -->
+    <form id="payment-form">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" name="card-number" required>
+        <label for="expiry-date">Expiry Date</label>
+        <input type="text" id="expiry-date" name="expiry-date" required>
+        <label for="cvc">CVC</label>
+        <input type="text" id="cvc" name="cvc" required>
+        <button type="submit">Make Payment</button>
+    </form>
+</div>
+<script>
+    document.getElementById('confirm-purchase').onclick = function() {
+        document.getElementById('payment-modal').style.display = 'block';
+    };
+    document.getElementById('payment-form').onsubmit = function(event) {
+        event.preventDefault();
+        // Simulate payment processing
+        alert('Payment successful!');
+        // Redirect or handle points allocation
+        window.location.href = "{% url 'trucks:complete_purchase' bike.id %}";
+    };
+</script>
+{% endblock %}
+
+<!-- truck model is modified -->
+<!-- truck model gamification-->
+

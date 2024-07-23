@@ -33,69 +33,70 @@
 
 <div class="m-0 p-0 w-screen h-screen flex flex-col poppins-regular bg-[#f5f5f5]">
     <div class="flex flex-1 overflow-auto">
-        <div class="w-1/2 h-full flex items-center p-8 bg-gradient-to-t from-green-200 to-green-300">
+        <div class="w-1/2 h-full flex items-center p-8 bg-[#095358]">
             <img src="{{ bike.image }}" alt="{{ bike.name }}" class="rounded-lg w-full max-h-full bg-white">
         </div>
-        <div class="w-1/2 h-full overflow-y-auto p-8 flex flex-col items-start gap-y-4 bg-gradient-to-t from-green-200 to-green-300"
+        <div class="w-1/2 h-full overflow-y-auto p-8 flex flex-col items-start gap-y-4 bg-[#095358]"
             style="scrollbar-width: none;">
             <div class="flex items-center gap-x-6 justify-between w-full mb-2">
-                <div class="font-semibold text-3xl text-gray-700 leading-none pb-2 border-b-2 border-b-gray-700">{{ bike.name }}</div>
-                <div class="px-4 py-2 rounded-md bg-red-600 text-gray-50 cursor-pointer" onclick="history.back()">Go Back</div>
+                <div class="font-semibold text-3xl text-gray-100 leading-none pb-2 border-b-2 border-b-gray-300">{{ bike.name }}</div>
+                <div class="px-4 py-2 rounded-md bg-[#0008] text-gray-50 cursor-pointer" onclick="history.back()">Go Back</div>
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Company</div>
                     <div class="text-lg font-medium text-gray-100 w-full">{{ bike.companyName }}</div>
                 </div>
                 {% if bike.get_modelType_display %}
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Type</div>
                     <div class="text-lg font-medium text-gray-100 w-full">{{ bike.get_modelType_display }}</div>
                 </div>
                 {% else %}
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Type</div>
                     <div class="text-lg font-medium text-gray-100 w-full">{{ bike.modelType }}</div>
                 </div>
                 {% endif %}
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Year</div>
                     <div class="text-lg font-medium text-gray-100">{{ bike.manufacturingYear }}</div>
                 </div>
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Price</div>
                     <div class="text-lg font-medium text-gray-100">${{ bike.price }}</div>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
                 {% if bike.isNew %}
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Condition</div>
                     <div class="text-lg font-medium text-gray-100">New</div>
                 </div>
                 {% else %}
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Condition</div>
                     <div class="text-lg font-medium text-gray-100">Used</div>
                 </div>
                 {% endif %}
-                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Posted</div>
                     <div class="text-lg font-medium text-gray-100">{{ bike.createdAt | timesince }} ago</div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 bg-blue-500 gap-4 rounded-md px-4 pt-1 pb-5 w-full">
+            <div class="grid grid-cols-1 bg-[#0008] gap-4 rounded-md px-4 pt-2 pb-4 w-full">
                 <div class="text-gray-300">Description</div>
                 <div class="text-lg font-medium text-gray-100">{{ bike.description }}</div>
             </div>
-            <div class="flex items-center justify-end gap-3 w-full">
-                <button class="bg-orange-600 hover:bg-red-600 transition text-white py-2 px-4 rounded">Message Owner</button>
-                <!-- bikes.html -->
-                <a href="{% url 'bikes:purchase_bike' bike.id %}" class="bg-orange-600 hover:bg-red-600 transition text-white py-2 px-4 rounded inline-block">Purchase</a>
-
-            </div>
+            {% if user.is_authenticated %}
+                <div class="flex items-center justify-end gap-3 w-full">
+                    <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button>
+                    <!-- bikes.html -->
+                    <a href="{% url 'bikes:purchase_bike' bike.id %}" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>
