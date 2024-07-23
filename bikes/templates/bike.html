@@ -24,9 +24,23 @@
         .bike-item:hover img {
             transform: scale(1.05);
         }
+
+        .rating-stars input[type="radio"] {
+            display: none;
+        }
+
+        .rating-stars label {
+            font-size: 2em;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .rating-stars input[type="radio"]:checked ~ label {
+            color:gold;
+        }
     </style>
     <script>
-        const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
+        const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variabl
     </script>
 {% endblock %}
 {% block body_block %}
@@ -97,6 +111,36 @@
                     <a href="{% url 'bikes:purchase_bike' bike.id %}" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
                 </div>
             {% endif %}
+        <div>
+            <h3 class="text-xl font-semibold" style="color:yellow">Rate this bike</h3>
+            {% if user.is_authenticated %}
+                {% if user_rating %}
+                    <p style="color: white">You have already rated this bike: {{ user_rating.rating }} stars</p>
+                {% else %}
+                    <form method="post" action="{% url 'bikes:rate_bike' bike.id %}">
+                            {% csrf_token %}
+                            <div id="rating-stars" class="flex gap-1">
+                                {% for i in "12345" %}
+                                    <label>
+                                        <input type="radio" name="rating" value="{{ i }}" class="hidden">
+                                        <span class="text-2xl cursor-pointer" style="color: white;">★</span>
+                                    </label>
+                                {% endfor %}
+                            </div>
+                            <button type="submit" class="mt-2 bg-blue-500 text-white py-2 px-4 rounded">Submit Rate</button>
+                        </form>
+                {% endif %}
+            {% else %}
+                <p>You must be <a href="{% url 'login' %}">logged in</a> to rate.</p>
+            {% endif %}
+        </div>
+
+        <div>
+{#            <h3 class="text-xl font-semibold">Average Rating</h3>#}
+{#            <p>{{ bike.ratings.aggregate(Avg('rating'))['rating__avg']|default:"No ratings yet" }}</p>#}
+{#            <p>{{ vehicle.average_rating|default:"No ratings yet" }}</p>#}
+        </div>
+    </div>
         </div>
     </div>
 </div>
