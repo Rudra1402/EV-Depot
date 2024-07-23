@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extra_head %}
+<<<<<<< HEAD
 <script src="{% static 'carscript.js' %}?v=1"></script>
+=======
+<script src="{% static 'carscript.js' %}"></script>
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
 <style>
 
     .poppins-regular {
@@ -55,9 +59,21 @@
                                 <a href="{% url "cars:car-by-id" id=car.id %}" class="text-gray-800">
                                     <h2 class="text-2xl font-semibold text-gray-800">{{ car.name }}</h2>
                                 </a>
+<<<<<<< HEAD
                                 <div class="flex items-center gap-2 px-2">
                                     <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center">
                                         <i class="fa-solid fa-pen-to-square text-gray-100"></i>
+=======
+                                {% if user.username|safe == car.user.username|safe %}
+                                    <div class="flex items-center gap-2 px-2">
+                                        <a href="{% url 'cars:edit-car' id=car.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                                            <i class="fa-solid fa-pen-to-square text-gray-100"></i>
+                                        </a>
+                                        <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center"
+                                            onclick="deleteCar({{ car.id }},'{{ car.name }}')">
+                                            <i class="fa-solid fa-trash text-gray-100"></i>
+                                        </div>
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
                                     </div>
                                     <div
                                     class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"

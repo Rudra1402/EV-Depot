@@ -25,8 +25,15 @@ class Cars(models.Model):
     description = models.TextField(blank=True, null=True)
     image = models.URLField()
     isNew = models.BooleanField(default=True)
+<<<<<<< HEAD
     createdAt = models.DateField(auto_now_add=True)
 
+=======
+    createdAt = models.DateField(default=timezone.now)
+    user = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='cars')
+    purchasedBy = models.ForeignKey(Buyer, on_delete=models.SET_NULL, null=True, blank=True, related_name='purchased_cars')
+    
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
     class Meta:
         verbose_name_plural = "cars"
 

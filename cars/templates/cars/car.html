@@ -107,6 +107,38 @@
                 <div class="text-gray-300">Description</div>
                 <div class="text-lg font-medium text-gray-100">{{ car.description }}</div>
             </div>
+<<<<<<< HEAD
+=======
+            {% if user.is_authenticated and is_owner.username != user %}
+                <div class="flex items-center justify-end gap-3 w-full">
+                    <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button>
+                    <a href="{% url 'cars:purchase-car' car.id %}" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <!-- <div class="flex">
+        <div class="message-list">
+            {% for message in messages %}
+                <div class="message-item" data-id="{{ message.id }}">
+                    {{ message.content|slice:":50" }}{% if message.content|length > 50 %}...{% endif %}
+                </div>
+            {% empty %}
+                <p>No messages yet.</p>
+            {% endfor %}
+        </div>
+        <div class="message-content">
+            {% if messages %}
+                <div class="message" data-id="{{ messages.last.id }}">
+                    <div class="message-content-wrapper {% if message.sender == user %}sent{% else %}received{% endif %}">
+                        <p>{{ messages.last.content }}</p>
+                        <p class="message-time">{{ messages.last.created_at }}</p>
+                    </div>
+                </div>
+            {% else %}
+                <p>Select a message to view.</p>
+            {% endif %}
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
         </div>
     </div>
 </body>

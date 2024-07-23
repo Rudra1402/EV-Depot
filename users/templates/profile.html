@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body_block %}
+<div class="m-0 p-0 w-screen h-screen flex bg-[#f5f5f5]">
+    <div class="min-h-screen w-full flex items-start justify-center py-5 px-16 gap-5 bg-gray-100">
+        <div class="bg-white min-h-full shadow-md rounded-lg p-4 w-1/3">
+            <h1 class="text-3xl font-semibold text-center mb-6">Profile</h1>
+            {% if messages %}
+                <div class="mb-4">
+                    {% for message in messages %}
+                        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4" role="alert">
+                            <p>{{ message }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="flex flex-col items-center gap-6">
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center">
+                        <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center">
+                            <img src="{% static badge %}" alt="Badge" class="p-5 object-cover">
+                        </div>
+                    </div>
+                    <p class="text-lg font-medium">Welcome, {{ user.username }}!</p>
+                    <p class="text-gray-600 font-semibold">{{ user.email }}</p>
+                </div>
+                <div class="border-t border-gray-200 pt-4 w-full">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>First Name:</strong> {{ user.buyer.firstname|capfirst }}</p>
+                        <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>Last Name:</strong> {{ user.buyer.lastname|capfirst }}</p>
+                        <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>Mobile:</strong> {{ user.buyer.mobile }}</p>
+                        <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>Address:</strong> {{ user.buyer.address|capfirst }}</p>
+                        <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>City:</strong> {{ user.buyer.city|capfirst }}</p>
+                    </div>
+                </div>
+                {% comment %} <div class="border-t border-gray-200 pt-4 w-full">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-gray-500 text-sm">Last Updated: {{ user.buyer.updated_at }}</p>
+                    </div>
+                </div> {% endcomment %}
+                <div class="flex gap-4 mt-4">
+                    <a href="{% url 'users:update_profile' %}" class="bg-blue-500 text-white px-4 py-2 rounded">Update Profile</a>
+                    <form method="POST" action="{% url 'users:delete_profile' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Delete Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 w-2/3 min-h-full">
+            <div class="flex gap-1 text-lg leading-none">
+                Your most frequently visited vehicle is
+                {% if most_visited_app == 'bikes' %}
+                    <a href="{% url 'bikes:homepage' %}" class="font-semibold">{{ most_visited_app }}</a>
+                {% elif most_visited_app == 'cars' %}
+                    <a href="{% url 'cars:homepage' %}" class="font-semibold">{{ most_visited_app }}</a>
+                {% elif most_visited_app == 'trucks' %}
+                    <a href="{% url 'trucks:homepage' %}" class="font-semibold">{{ most_visited_app }}</a>
+                {% endif %}
+            </div>
+            <br>
+            <div class="flex flex-col gap-y-5 w-full">
+                {% if has_purchased_cars %}
+                <h2 class="text-xl font-semibold mb-2">Purchased Cars</h2>
+                    {% for car in purchased_cars %}
+                         <div
+                            class="rounded-lg w-full flex items-center bg-white border border-gray-200 shadow-lg car-item"
+                            id="car-{{car.id}}"
+                        >
+                            <img src="{{ car.image }}" alt="{{ car.name }}" class="w-96 h-56 max-h-full object-cover">
+                            <div class="p-4 flex-1 flex flex-col gap-y-4">
+                                <div class="flex items-center justify-between gap-5">
+                                    <a href="{% url "cars:car-by-id" id=car.id %}" class="text-gray-800">
+                                        <h2 class="text-2xl font-semibold text-gray-800">{{ car.name }}</h2>
+                                    </a>
+                                    {% if user.username|safe == car.user.username|safe %}
+                                        <div class="flex items-center gap-2 px-2">
+                                            <a href="{% url 'cars:edit-car' id=car.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                                                <i class="fa-solid fa-pen-to-square text-gray-100"></i>
+                                            </a>
+                                            <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center"
+                                                onclick="deleteCar({{ car.id }},'{{ car.name }}')">
+                                                <i class="fa-solid fa-trash text-gray-100"></i>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Company</div>
+                                        <div class="text-lg font-medium text-gray-800">{{ car.companyName }}</div>
+                                    </div>
+                                    {% if car.get_modelType_display %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Type</div>
+                                            <div class="text-lg font-medium text-gray-800">{{ car.get_modelType_display }}</div>
+                                        </div>
+                                    {% else %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Type</div>
+                                            <div class="text-lg font-medium text-gray-800">{{ car.modelType }}</div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Year</div>
+                                        <div class="text-lg font-medium text-gray-800">{{ car.manufacturingYear }}</div>
+                                    </div>
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Price</div>
+                                        <div class="text-lg font-medium text-gray-800">${{ car.price }}</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    {% if car.isNew %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Condition</div>
+                                            <div class="text-lg font-medium text-gray-800">New</div>
+                                        </div>
+                                    {% else %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Condition</div>
+                                            <div class="text-lg font-medium text-gray-800">Used</div>
+                                        </div>
+                                    {% endif %}
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Posted</div>
+                                        <div class="text-lg font-medium text-gray-800">{{ car.createdAt | timesince }} ago</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-end py-2 px-3 bg-green-300 rounded shadow-md">Posted by&nbsp;<b>{{ car.user.firstname|capfirst }}</b></div>
+                            </div>
+                        </div>
+    {#                    {% include 'vehicle_card.html' with vehicle=car %}#}
+                    {% endfor %}
+                {% else %}
+                    <p class="text-xl font-medium text-gray-700">No cars purchased.</p>
+                {% endif %}
+            </div>
+
+            <!-- BIKES -->
+            <br>
+            <div class="flex flex-col gap-y-5 w-full">
+                {% if has_purchased_bikes %}
+                <h2 class="text-xl font-semibold mb-2">Purchased Bikes</h2>
+                    {% for car in purchased_bikes %}
+                         <div
+                            class="rounded-lg w-full flex items-center bg-white border border-gray-200 shadow-lg car-item"
+                            id="car-{{car.id}}"
+                        >
+                            <img src="{{ car.image }}" alt="{{ car.name }}" class="w-96 h-56 max-h-full object-cover">
+                            <div class="p-4 flex-1 flex flex-col gap-y-4">
+                                <div class="flex items-center justify-between gap-5">
+                                    <a href="{% url "cars:car-by-id" id=car.id %}" class="text-gray-800">
+                                        <h2 class="text-2xl font-semibold text-gray-800">{{ car.name }}</h2>
+                                    </a>
+                                    {% if user.username|safe == car.user.username|safe %}
+                                        <div class="flex items-center gap-2 px-2">
+                                            <a href="{% url 'cars:edit-car' id=car.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                                                <i class="fa-solid fa-pen-to-square text-gray-100"></i>
+                                            </a>
+                                            <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center"
+                                                onclick="deleteCar({{ car.id }},'{{ car.name }}')">
+                                                <i class="fa-solid fa-trash text-gray-100"></i>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Company</div>
+                                        <div class="text-lg font-medium text-gray-800">{{ car.companyName }}</div>
+                                    </div>
+                                    {% if car.get_modelType_display %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Type</div>
+                                            <div class="text-lg font-medium text-gray-800">{{ car.get_modelType_display }}</div>
+                                        </div>
+                                    {% else %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Type</div>
+                                            <div class="text-lg font-medium text-gray-800">{{ car.modelType }}</div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Year</div>
+                                        <div class="text-lg font-medium text-gray-800">{{ car.manufacturingYear }}</div>
+                                    </div>
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Price</div>
+                                        <div class="text-lg font-medium text-gray-800">${{ car.price }}</div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    {% if car.isNew %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Condition</div>
+                                            <div class="text-lg font-medium text-gray-800">New</div>
+                                        </div>
+                                    {% else %}
+                                        <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                            <div class="text-gray-600">Condition</div>
+                                            <div class="text-lg font-medium text-gray-800">Used</div>
+                                        </div>
+                                    {% endif %}
+                                    <div class="flex flex-col gap-y-1 bg-green-300 rounded-md px-4 py-2">
+                                        <div class="text-gray-600">Posted</div>
+                                        <div class="text-lg font-medium text-gray-800">{{ car.createdAt | timesince }} ago</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-end py-2 px-3 bg-green-300 rounded shadow-md">Posted by&nbsp;<b>{{ car.user.firstname|capfirst }}</b></div>
+                            </div>
+                        </div>
+    {#                    {% include 'vehicle_card.html' with vehicle=car %}#}
+                    {% endfor %}
+                {% else %}
+                    <p class="text-xl font-medium text-gray-700">No bikes purchased.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

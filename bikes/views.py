@@ -86,4 +86,33 @@ def bike_list(request):
     context = {
         'bikes': bikes
     }
+<<<<<<< HEAD
     return render(request, 'index.html', context)
+=======
+    return render(request, 'index.html', context)
+
+
+@login_required
+def purchase_bike(request, bike_id):
+    bike = get_object_or_404(Bikes, id=bike_id)
+    owner = bike.user
+    return render(request, 'purchase_bike.html', {'bike': bike, 'owner': owner})
+
+@login_required
+def complete_purchase(request, bike_id):
+    bike = get_object_or_404(Bikes, id=bike_id)
+    buyer = Buyer.objects.get(username=request.user)
+    owner = bike.user
+
+    # Allocate points
+    buyer.points += 100  # or any logic to calculate points
+    buyer.save()
+    owner.points += 50  # or any logic to calculate points
+    owner.save()
+
+    # Mark the bike as purchased
+    bike.purchasedBy = buyer
+    bike.save()
+
+    return redirect(reverse('bikes:homepage'))  # or any page you want to redirect to
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
