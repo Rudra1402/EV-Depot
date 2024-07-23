@@ -9,8 +9,8 @@
 {% block body_block %}
 <div class="m-0 p-0 w-screen h-screen flex justify-center p-6 bg-[#f5f5f5]">
     <div class="w-full max-w-3xl p-6 bg-white rounded-md shadow-lg overflow-y-auto" style="scrollbar-width: none; max-height: calc(100vh - 4rem);">
-        <h1 class="text-2xl font-bold mb-6 text-gray-800">Edit Bike</h1>
-        <form method="post" action="{% url 'bikes:edit_bike' bike.id %}" enctype="multipart/form-data" class="p-6 rounded-md bg-gradient-to-tr from-green-400 to-green-300 flex flex-col gap-4">
+        <h1 class="text-2xl font-bold mb-6 text-gray-800">Edit Car</h1>
+        <form method="post" action="{% url 'cars:edit-car' car.id %}" enctype="multipart/form-data" class="p-6 rounded-md bg-gradient-to-tr from-green-400 to-green-300 flex flex-col gap-4">
             {% csrf_token %}
             <div class="flex items-center w-full gap-4">
                 <div class="w-1/2 flex flex-col gap-1">
