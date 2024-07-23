@@ -37,13 +37,14 @@ def carindex(request):
             form = CarForm(request.POST, request.FILES)
             print(request.POST, request.FILES)
             if form.is_valid():
+                user =request.user
                 car = form.save(commit=False)
                 
                 if 'image' in request.FILES:
                     image = request.FILES['image']
                     image_url = upload_image_to_firebase(image, 'bike_images')
                     car.image = image_url
-                    car.user = Buyer.objects.get(pk=4)
+                    car.user = Buyer.objects.get(username = user)
 
                 form.save()
                 return redirect('cars:homepage')  # Redirect to the same page to clear the form
