@@ -4,6 +4,7 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.urls import reverse
 
 from users.models import Buyer
 from .utils import upload_image_to_firebase
@@ -37,20 +38,21 @@ def carindex(request):
             form = CarForm(request.POST, request.FILES)
             print(request.POST, request.FILES)
             if form.is_valid():
+                user =request.user
                 car = form.save(commit=False)
                 
                 if 'image' in request.FILES:
                     image = request.FILES['image']
                     image_url = upload_image_to_firebase(image, 'bike_images')
                     car.image = image_url
-                    car.user = Buyer.objects.get(pk=4)
+                    car.user = Buyer.objects.get(username = user)
 
                 form.save()
                 return redirect('cars:homepage')  # Redirect to the same page to clear the form
         else:
             form = CarForm()
 
-        cars = Cars.objects.all()
+        cars = Cars.objects.filter(purchasedBy__isnull=True)
 
         latest = request.GET.get('latest')
         if latest:
@@ -78,28 +80,14 @@ def carindex(request):
 
 
 
-#@login_required
+@login_required
 def carById(request, id):
     car = get_object_or_404(Cars, id=id)
-    # messages = Message.objects.filter(car=car).order_by('-created_at')
-
-    # if request.method == 'POST':
-    #     form = MessageForm(request.POST)
-    #     if form.is_valid():
-    #         message = form.save(commit=False)
-    #         message.car = car
-    #         message.user = request.user
-    #         message.save()
-    #         return redirect('cars:car-by-id', id=id)
-    # else:
-    #     form = MessageForm()
-
-    # context = {
-    #     'car': car,
-    #     'messages': messages,
-    #     'form': form,
-    # }
-    return render(request, 'cars/car.html', {'car': car})
+    context = {
+        'car': car,
+        'is_owner': car.user
+    }
+    return render(request, 'cars/car.html', context)
 
 
 def deleteCar(request, id):
@@ -164,3 +152,27 @@ def car_list(request):
 #         'sender': message.sender.id
 #     }
 #     return JsonResponse(data)
+
+@login_required
+def purchase_car(request, car_id):
+    car = get_object_or_404(Cars, id=car_id)
+    owner = car.user
+    return render(request, 'cars/purchase_car.html', {'car': car, 'owner': owner})
+
+@login_required
+def complete_purchase(request, car_id):
+    car = get_object_or_404(Cars, id=car_id)
+    buyer = Buyer.objects.get(username=request.user)
+    owner = car.user
+
+    # Allocate points
+    buyer.points += 100  # or any logic to calculate points
+    buyer.save()
+    owner.points += 50  # or any logic to calculate points
+    owner.save()
+
+    # Mark the bike as purchased
+    car.purchasedBy = buyer
+    car.save()
+
+    return redirect(reverse('bikes:homepage'))  # or any page you want to redirect to

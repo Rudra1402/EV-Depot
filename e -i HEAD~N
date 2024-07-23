@@ -1,0 +1,4007 @@
+[33mcommit 668b4f945eb40873c3349d9283ff22ddef0ade29[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdivya[m[33m, [m[1;31morigin/divya[m[33m)[m
+Merge: 9197450 1cc1940
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Tue Jul 23 05:04:15 2024 -0400
+
+    latest pull request
+
+[33mcommit 9197450bbe142fda2cf95335c9581a7e7dc95d8c[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Tue Jul 23 04:57:57 2024 -0400
+
+    latest pull request
+
+[33mcommit a9dd84251adbc1c446e359b77f8fcb826fed55fe[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Tue Jul 23 04:53:45 2024 -0400
+
+    updated register view
+
+[33mcommit 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9[m[33m ([m[1;31morigin/main[m[33m)[m
+Merge: e28d11b f88193c
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Tue Jul 23 03:42:44 2024 -0400
+
+    Merge pull request #136 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit f88193cbb7e0a9a4c378da1dc147cdf400aee097[m
+Merge: b848510 e28d11b
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 03:42:14 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit b8485104c89e8fbbada81d0a89265393286c8f50[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 03:42:09 2024 -0400
+
+    Purchased vehicles on profile
+
+[33mcommit e28d11ba59ddff90ce5439f3e1e2ebc0c94b814b[m
+Merge: 9b8b8c3 cb5efd1
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Tue Jul 23 02:14:03 2024 -0400
+
+    Merge pull request #135 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit cb5efd1f21a5a527fad70f56b6c3bdd5cc332aa5[m
+Merge: c57ab1e 9b8b8c3
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 02:13:17 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit c57ab1e9d607081cdc276edf380f3fedf4436b5e[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 02:13:09 2024 -0400
+
+    Bikes purchase
+
+[33mcommit 9b8b8c3bb98337df30d5a22cfad1190cf01d49b4[m
+Merge: 7273785 71f792a
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Tue Jul 23 01:59:24 2024 -0400
+
+    Merge pull request #134 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit 72737856324c2218596c025c4e183787c6619635[m
+Merge: e1a9b16 805a9e1
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Tue Jul 23 01:58:26 2024 -0400
+
+    Merge pull request #133 from Rudra1402/talhaseeb
+    
+    car.html updated
+
+[33mcommit 71f792a1d92b65a6187163091262071be7617d4a[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 01:57:41 2024 -0400
+
+    purchase cars
+
+[33mcommit a6fd2c2a53775416644b65c503b711707aaaf646[m
+Merge: 805a9e1 e1a9b16
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 00:52:23 2024 -0400
+
+    Merge remote-tracking branch 'origin' into talhaseeb
+
+[33mcommit e1a9b16431dc4275e0e1a2598f3017e6d286b798[m
+Merge: cf597f1 e146c29
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Tue Jul 23 00:52:00 2024 -0400
+
+    Merge pull request #131 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit 198eb544a48319d066538d41e1bd2b291ea593d9[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Tue Jul 23 00:51:48 2024 -0400
+
+    team image updated
+
+[33mcommit 805a9e180a21f5779e78628135659e05d8e9ce9f[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 00:51:19 2024 -0400
+
+    car.html updated
+
+[33mcommit e146c2984b7c417dc52a62aac1475b7c16c0c970[m
+Merge: efc5ec4 cf597f1
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 00:31:35 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit efc5ec4fedc18b2db616d27ebad8198be4ddb4c9[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 00:31:31 2024 -0400
+
+    cars edit
+
+[33mcommit 7dd1947d9c5be52aa272ae2e19bf75a845619937[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Tue Jul 23 00:29:40 2024 -0400
+
+    aboutus page updated
+
+[33mcommit cf597f14811c73dcebffcfe3f41f4e5f3ac6c8be[m
+Merge: 64081a8 0b5e28c
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Tue Jul 23 00:09:25 2024 -0400
+
+    Merge pull request #130 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit 0b5e28cdc826b3fdf82d5adc6de55401a7f8476d[m
+Merge: ac3ec55 64081a8
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 00:07:59 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit 6520dd30694414f866e04743e98c27233f0b9c8d[m
+Merge: 26ace0d 08b43a4
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Tue Jul 23 00:07:55 2024 -0400
+
+    latest pull code
+
+[33mcommit ac3ec551cc87fb171d1deaca40980bd4a3b9922f[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 23 00:07:55 2024 -0400
+
+    cars layout
+
+[33mcommit 26ace0dc1d83e975de0b9654dbc2a214576626d7[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Tue Jul 23 00:07:14 2024 -0400
+
+    updated changes
+
+[33mcommit 64081a8df986c204667ae8106a1e8784d65a6557[m
+Merge: 9e1db31 08b43a4
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Tue Jul 23 00:06:32 2024 -0400
+
+    Merge pull request #129 from Rudra1402/divya
+    
+    Recent pull update
+
+[33mcommit 08b43a48aebdaaf4a241af4a9cc9e5d86ff91fc8[m
+Merge: e371883 9e1db31
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Tue Jul 23 00:05:53 2024 -0400
+
+    Merge pull request #128 from Rudra1402/main
+    
+    Updated code pull request
+
+[33mcommit 9e1db3183971dc98324c0c9c509ad94a8bd2defc[m
+Merge: 40bbbfe 4661c4d
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jul 23 00:03:48 2024 -0400
+
+    Merge pull request #127 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 4661c4d389cc40d1e899c8edc5a812bc4182a598[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jul 23 00:03:08 2024 -0400
+
+    main pull merge
+
+[33mcommit e3718836bdd9d1cb30fbef8016024ed7afbb1ce0[m
+Merge: 1978e88 40bbbfe
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Tue Jul 23 00:02:59 2024 -0400
+
+    Merge pull request #126 from Rudra1402/main
+    
+    Updated pull request
+
+[33mcommit 0e81490288a80994c5d4468a3484ef337cd30327[m
+Merge: ee2a0ef 40bbbfe
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jul 23 00:02:17 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit ee2a0effde814657e4aa7b7e2766786be1bc761e[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jul 23 00:02:07 2024 -0400
+
+    messages UI
+
+[33mcommit 40bbbfea678e363060b769d0b5935c7ef5618180[m
+Merge: 7cdf3a4 a450f00
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Mon Jul 22 23:58:27 2024 -0400
+
+    Merge pull request #125 from Rudra1402/dharshan
+    
+    Dharshan
+
+[33mcommit a450f006a25fd05db2f8757c718767ebb963c0e2[m
+Merge: 38d996c 7cdf3a4
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Tue Jul 23 03:53:08 2024 +0000
+
+    Resolve conflict
+
+[33mcommit 38d996c1102afb5f6b615b2ae20553a329160bb5[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 22 23:42:15 2024 -0400
+
+    Updated truck views and integrated purchase functionality
+
+[33mcommit 7cdf3a47607d9d45b37368d453a7a11f98a7f4f4[m
+Merge: 06d2f10 2de4a3a
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 21:16:15 2024 -0400
+
+    Merge pull request #123 from Rudra1402/Gull
+    
+    Truck model gamification
+
+[33mcommit 2de4a3acd640fd4e30b2dd662d209f5fe94af068[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 21:13:09 2024 -0400
+
+    Truck model gamification
+
+[33mcommit 06d2f103a27a57577f4ac942af40db8a38e0b852[m
+Merge: cc9cb2f d60c0b2
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Mon Jul 22 20:53:36 2024 -0400
+
+    Merge pull request #122 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit d60c0b28ca60e7a38a3e62234e4da87fd6b84fad[m
+Merge: 7dfcb4b cc9cb2f
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Mon Jul 22 20:53:06 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit 7dfcb4b814a1d90640a39fadbfc295a00065ce97[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Mon Jul 22 20:52:59 2024 -0400
+
+    gamification badges
+
+[33mcommit cc9cb2f92f431d5f22d46840a6546d2a47613ff2[m
+Merge: b3727fe 766ff2d
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 20:52:11 2024 -0400
+
+    Merge pull request #121 from Rudra1402/Gull
+
+[33mcommit 766ff2def75c84d719a38f0dbebbe46800e06108[m
+Merge: 7e31bab b3727fe
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 20:50:50 2024 -0400
+
+    conflicts resolved
+
+[33mcommit 7e31babfc6c633efe8ab5b50e3c1958c655722ea[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 20:41:39 2024 -0400
+
+    car model-gamification
+
+[33mcommit a4ca43e8711d604052d48a45fa00321b479a22b6[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 20:03:25 2024 -0400
+
+    car model
+
+[33mcommit 8ca390b8ba2e9c838f940c621bbb6635dc791aba[m
+Merge: 3c9569b b3727fe
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Mon Jul 22 19:54:38 2024 -0400
+
+    Merge pull request #119 from Rudra1402/main
+    
+    Merging main commits into branch 'dharshan'
+
+[33mcommit b3727fea8609ae2969806d322896f6b1a75de365[m
+Merge: 33c5eee 5c8cd0a
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 22 19:46:02 2024 -0400
+
+    Merge pull request #118 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 5c8cd0a137acd9dff2cf79adfb57f58a1fd4b897[m
+Merge: 1351f73 33c5eee
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 22 19:45:42 2024 -0400
+
+    conflicts resolved
+
+[33mcommit 1351f73e5655c551e7ce6e14878875f7e17c0829[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 22 19:43:58 2024 -0400
+
+    updated logic and UI
+
+[33mcommit 3c9569ba143fbd7fcdf78c45768b3fd617e359e9[m
+Merge: f33ad3d 33c5eee
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Mon Jul 22 19:15:34 2024 -0400
+
+    Merge pull request #117 from Rudra1402/main
+    
+    Merge main commits into branch 'dharshan'
+
+[33mcommit 37d03cbfc04fe1e597763b8ff83fe8b1cbc33b1d[m
+Merge: 3db7317 33c5eee
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 19:03:35 2024 -0400
+
+    purchase truck modifiedd
+
+[33mcommit 3db731706b37c6d9d66fe56b1a5a63eaafc756e5[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 18:58:52 2024 -0400
+
+    purchase truck modifiedd
+
+[33mcommit bea6b7ed302dc64b6525774fc9d831d6e7f0594c[m
+Merge: 22a6cbc 33c5eee
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Mon Jul 22 18:57:21 2024 -0400
+
+    Merge remote-tracking branch 'origin' into talhaseeb
+
+[33mcommit 33c5eeeca7d8ecfe31b651857c6facb4dfa0ea73[m
+Merge: 363d3b4 cca8df6
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Mon Jul 22 18:56:56 2024 -0400
+
+    Merge pull request #116 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit 23851148290c29edf226482b0be654dd01b7ba1f[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 18:55:16 2024 -0400
+
+    purchase truck modifiedd
+
+[33mcommit 22a6cbc21d74b52129dc6ad1dd0dc5fd31ad18f7[m
+Merge: cca8df6 363d3b4
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Mon Jul 22 18:55:04 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit cca8df6df10a12e77a31d529bf6990ab43b48cfa[m
+Merge: 3ce8895 40965ca
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Mon Jul 22 18:54:38 2024 -0400
+
+    db.sqlite3 G!
+
+[33mcommit 49af1c3dc6cf23ca0be9132d24a942f1f7381ddb[m
+Merge: 9473bed 3ce8895
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 18:52:56 2024 -0400
+
+    purchase trucks functionality -tbd
+
+[33mcommit 363d3b4ee8ad024396f141f9baa1e4f84e7e9b16[m
+Merge: 3ce8895 9473bed
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 18:52:06 2024 -0400
+
+    Merge pull request #115 from Rudra1402/Gull
+    
+    Gull
+
+[33mcommit 9473bed174937e6ca790b3ba2eda58cdc98164e4[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 18:43:22 2024 -0400
+
+    purchase trucks functionality -tbd
+
+[33mcommit 1d505ca03079732ffcc9bd8924069c6a180e9f66[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 18:23:58 2024 -0400
+
+    gamification car
+
+[33mcommit 3ce8895491bf7bbd71c99b46590ef1c7ee7ef5ad[m
+Merge: c05947a 7d61268
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 18:17:32 2024 -0400
+
+    Merge pull request #114 from Rudra1402/Gull
+    
+    Gull
+
+[33mcommit c05947ac356901d5a5ee1d0a0e349fd30a051d9d[m
+Merge: 8351800 36c1711
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 18:12:50 2024 -0400
+
+    Merge pull request #113 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit 36c171145997f3490922f9d93f029dca832ac171[m
+Merge: bbf187a 8351800
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 18:12:08 2024 -0400
+
+    Merge pull request #112 from Rudra1402/main
+    
+    merging main into deepika
+
+[33mcommit bbf187abbdc1c632ef7401bbff25b85fe4b4f292[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Mon Jul 22 18:10:04 2024 -0400
+
+    calculated average rating after reviewing
+
+[33mcommit 83518005a882e422c9101a5a306b5fa80ea22ecd[m
+Merge: bd972ea f33ad3d
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Mon Jul 22 18:02:05 2024 -0400
+
+    Merge pull request #111 from Rudra1402/dharshan
+    
+    Dharshan
+
+[33mcommit f33ad3d1df6289df8307d6766636cf8a5b58a94d[m
+Merge: 3227e6d bd972ea
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Mon Jul 22 18:01:36 2024 -0400
+
+    Merge pull request #110 from Rudra1402/main
+    
+    Merging main commits into branch 'dharshan'
+
+[33mcommit 3227e6dd8a13cf07df403211b7c0ce1c47076fd1[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 22 17:59:04 2024 -0400
+
+    Updated truck vehicle card template
+
+[33mcommit 9f040a30a9ee7034f64fd360c904b035d791297d[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 22 17:58:29 2024 -0400
+
+    Updated views and urls for trucks
+
+[33mcommit 6b60105367fb47ed5edf5b795d12b2f53a820b89[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 22 17:57:58 2024 -0400
+
+    Added edit truck functionality
+
+[33mcommit 0f6ac357d803372f7057d4d1f8e29ab00a5635f8[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 22 17:55:49 2024 -0400
+
+    Configured trucks image upload
+
+[33mcommit 7d612688194dfca26d8a7ade5b5109f2c68509e0[m
+Merge: 3c6f91d bd972ea
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 17:00:01 2024 -0400
+
+    <gamification addition>
+
+[33mcommit bd972eae8dad67b20bdff8cbcf913f86c9ea960a[m
+Merge: 1efe53b 1978e88
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Mon Jul 22 14:59:57 2024 -0400
+
+    Merge pull request #109 from Rudra1402/divya
+    
+    Merge pull request #108 from Rudra1402/main
+
+[33mcommit 1978e88c73711f9481cb96f3f120befb24e553c1[m
+Merge: ca5168f 1efe53b
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Mon Jul 22 14:59:38 2024 -0400
+
+    Merge pull request #108 from Rudra1402/main
+    
+    Latest pull with improved ui for ratings
+
+[33mcommit 0a2e39f59259261372e5f02f6bd68b610996e22f[m
+Merge: 812d131 1efe53b
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Mon Jul 22 14:27:14 2024 -0400
+
+    Merge pull request #107 from Rudra1402/main
+    
+    Merging main into branch 'dharshan'
+
+[33mcommit aadc38ee7599cc9fc92f9c5c9aaf151624cc48aa[m
+Merge: c7ad7b5 1efe53b
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 14:03:54 2024 -0400
+
+    Merge pull request #106 from Rudra1402/main
+    
+    merge main into 'deepika'
+
+[33mcommit 1efe53bb0b76891daaf24039e89c6c25f927935f[m
+Merge: d5317bd c7ad7b5
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 13:24:49 2024 -0400
+
+    Merge pull request #105 from Rudra1402/deepika
+    
+    improved rating review UI
+
+[33mcommit c7ad7b56090eb1c3a3fbf6ba4e828caf82ebfb54[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Mon Jul 22 13:23:27 2024 -0400
+
+    improved rating review UI
+
+[33mcommit d5317bd0f5a597746804afeefd7858798b8076a1[m
+Merge: f5a375f 2198ecd
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 11:31:26 2024 -0400
+
+    Merge pull request #104 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit 2198ecd8fd28b2c5c148207ce9b54686336564d8[m
+Merge: 0bba17d f5a375f
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 11:30:31 2024 -0400
+
+    Merge pull request #103 from Rudra1402/main
+    
+    merge main into deepika
+
+[33mcommit 3c6f91df392224d929d936c0635bdc1b45f2161f[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Mon Jul 22 10:31:42 2024 -0400
+
+    html update in gamification
+
+[33mcommit f5a375f6410925a8a6a4721250553d571bbe4035[m
+Merge: e8d0dec ca5168f
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Mon Jul 22 10:18:03 2024 -0400
+
+    Merge pull request #102 from Rudra1402/divya
+    
+    Updated code
+
+[33mcommit ca5168f96d6b4d8483b7f9405069aafc159591fc[m
+Merge: 1f141cf e8d0dec
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Mon Jul 22 10:17:20 2024 -0400
+
+    Merge pull request #101 from Rudra1402/main
+    
+    Merge pull request #100 from Rudra1402/divya
+
+[33mcommit 1f141cf36d72f4f3cb12dd8862ed323fe55017b2[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Mon Jul 22 10:14:59 2024 -0400
+
+    updated change
+
+[33mcommit c01703c322fa18ec5801cc5fd66e79ff2f4c78f9[m
+Merge: 9cc9127 4bd8efc
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Mon Jul 22 10:14:21 2024 -0400
+
+    Merge branch 'divya' of https://github.com/Rudra1402/EV-Depot into divya
+
+[33mcommit e8d0dec0b3bdfde54e8342ad391d4c14d96674b0[m
+Merge: 679f231 4bd8efc
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Mon Jul 22 10:03:34 2024 -0400
+
+    Merge pull request #100 from Rudra1402/divya
+    
+    Merge pull request #99 from Rudra1402/main
+
+[33mcommit 4bd8efc07908772c023168f832c0993081bf6176[m
+Merge: 8256918 679f231
+Author: Divya Patel <86878315+Th3MASTER007@users.noreply.github.com>
+Date:   Mon Jul 22 10:03:06 2024 -0400
+
+    Merge pull request #99 from Rudra1402/main
+    
+    Latest pull request
+
+[33mcommit 9cc912747ad20a7386ee0d5a7b15840fbcf8e4b3[m[33m ([m[1;32mchintan[m[33m)[m
+Merge: ab3b8ca b0b80d6
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 09:37:12 2024 -0400
+
+    updated commit
+
+[33mcommit 679f23130608385fec5fdaebe71bde49ec0c4beb[m
+Merge: e05a8b1 b0b80d6
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 09:36:28 2024 -0400
+
+    Merge pull request #98 from Rudra1402/chintan
+    
+    Merge pull request #97 from Rudra1402/main
+
+[33mcommit b0b80d60d75d69b73637875b9fe6d2ab6b952f7a[m
+Merge: 2ae1ed2 e05a8b1
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 09:36:05 2024 -0400
+
+    Merge pull request #97 from Rudra1402/main
+    
+    Updated pull before the profile improvement
+
+[33mcommit ab3b8caa832c4234a1d31513e733563323c017f7[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 09:35:22 2024 -0400
+
+    updated profile page with update and delete functionality and logi signup improvement
+
+[33mcommit d333654d0a22d55075b2ed6f9b2e12479c626801[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 08:24:39 2024 -0400
+
+    url modification
+
+[33mcommit 40965ca7fad01a3645b6c49ad9be128c416b1215[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Mon Jul 22 08:01:24 2024 -0400
+
+    db.sqlite file?
+
+[33mcommit e05a8b1c62eb23d074cd14dfb89a94bc9926159a[m
+Merge: d89ac1e 8256918
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 01:25:57 2024 -0400
+
+    Merge pull request #96 from Rudra1402/divya
+    
+    Merge pull request #95 from Rudra1402/main
+
+[33mcommit 8256918f9c22fed2819b1ee7140026bc84b76019[m
+Merge: 261c03e d89ac1e
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 01:25:32 2024 -0400
+
+    Merge pull request #95 from Rudra1402/main
+    
+    Latest pull with update
+
+[33mcommit d89ac1e739efc6e316efbf6ea620ffed9d22e6b1[m
+Merge: 740d8c7 2ae1ed2
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 01:25:01 2024 -0400
+
+    Merge pull request #94 from Rudra1402/chintan
+    
+    Merge pull request #93 from Rudra1402/main
+
+[33mcommit 2ae1ed23411c3f221ad8ca36ed45b9e342203663[m
+Merge: 02f5c9e 740d8c7
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 01:24:38 2024 -0400
+
+    Merge pull request #93 from Rudra1402/main
+    
+    Latest pull
+
+[33mcommit 986c69576f599d37edd93d43204aa3445a3f1d35[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Mon Jul 22 01:23:28 2024 -0400
+
+    latest pull
+
+[33mcommit 0bba17d58f7a1b715e4ad6b11d66b8090f136866[m
+Merge: 0b1a624 740d8c7
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 01:00:12 2024 -0400
+
+    Merge pull request #92 from Rudra1402/main
+    
+    merging into deepika
+
+[33mcommit 740d8c7819d90f037716949ae50f9e66496290d6[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Mon Jul 22 00:50:07 2024 -0400
+
+    resolved merge conflict and included db
+
+[33mcommit 642bac50e5e0d18e4b7b028037ffdfe834b59261[m
+Merge: 51afe87 0b1a624
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 00:16:00 2024 -0400
+
+    Merge pull request #91 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit 0b1a62497650c4562ebea4201ca018442f7850d4[m
+Merge: c2b051a 51afe87
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 22 04:08:08 2024 +0000
+
+    Resolved merge conflicts
+
+[33mcommit 51afe8728918230cffbc2c89c110b7ed78ceedee[m
+Merge: e2b7a4d 27503c5
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Sun Jul 21 22:44:20 2024 -0400
+
+    Merge pull request #89 from Rudra1402/talhaseeb
+    
+    bikes urls
+
+[33mcommit 27503c50346762d9f49d505a96684fa431a8e58f[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 22:43:11 2024 -0400
+
+    bikes urls
+
+[33mcommit b3528072a4a2a6a198d2512351f563f76f356703[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 21:40:32 2024 -0400
+
+    updated pull
+
+[33mcommit e2b7a4df2a46b7664ae7ccce173f5bc5fd8e861b[m
+Merge: e4fe0af 02f5c9e
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 21:39:09 2024 -0400
+
+    Merge pull request #88 from Rudra1402/chintan
+    
+    Chintan pull request
+
+[33mcommit 02f5c9ed5c2f988e720287e96f88712c095a1c80[m
+Merge: 4f5c605 e4fe0af
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 21:38:34 2024 -0400
+
+    Merge pull request #87 from Rudra1402/main
+    
+    Updated Pull request
+
+[33mcommit e4fe0af7fa52b865a1930c1c91c4d27708b0336f[m
+Merge: be35763 b05113b
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Sun Jul 21 21:27:56 2024 -0400
+
+    Merge pull request #86 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit b05113bba7005fff6bc11367ffd3d4c4dac742f0[m
+Merge: 9c5b1ad be35763
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:27:19 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit 9c5b1ad8c7311443a80437d32f3b02c867793360[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:27:14 2024 -0400
+
+    Performed migrations
+
+[33mcommit be35763c335f9513d8c434b185b2d6c001839012[m
+Merge: a21a76d a0d65b8
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Sun Jul 21 21:24:56 2024 -0400
+
+    Merge pull request #85 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit a0d65b8578eef4c1b325c18c261aa8b0d6d4555b[m
+Merge: e47e703 a21a76d
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:24:16 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit e47e703643f6291859042a35deeab33fb3549597[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:24:06 2024 -0400
+
+    conflicts resolved v2
+
+[33mcommit a21a76daa6bd0a978fa2fb7f7f77613139f55e88[m
+Merge: d0ae03b 1d30596
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Sun Jul 21 21:23:37 2024 -0400
+
+    Merge pull request #84 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit 1d30596f51ef6240a34349ec5b758c1210ab6dc2[m
+Merge: 10f79ed 710f79a
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:20:31 2024 -0400
+
+    conflicts resolved
+
+[33mcommit 710f79a59683c381d94af9c551d6f2ad9418e63d[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:11:38 2024 -0400
+
+    unknown commit
+
+[33mcommit c2b051a175632803455c34926d4530a3c88841c8[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Sun Jul 21 21:09:38 2024 -0400
+
+    submit review functionality for valid orders
+
+[33mcommit 10f79ed350e0e03dd790351b56d86960814d751d[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:08:13 2024 -0400
+
+    Stop tracking db.sqlite3
+
+[33mcommit 9eb68108b5ef852d277290341e9a13f920aae51d[m
+Merge: d419380 d0ae03b
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 21:06:25 2024 -0400
+
+    Stop tracking db.sqlite3
+
+[33mcommit d0ae03b58b09a16c7b58454535c77355fa341788[m
+Merge: 35b6224 22e03a4
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:49:04 2024 -0400
+
+    Merge pull request #83 from Rudra1402/Gull
+    
+    purchase page updated
+
+[33mcommit 22e03a42bcfca5f1cddd93c24ece3b3f86cc8507[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:47:23 2024 -0400
+
+    purchase page updated
+
+[33mcommit 35b6224531a2631cab97b85811645dc4070f956c[m
+Merge: 4264d82 6882d85
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:44:57 2024 -0400
+
+    Merge pull request #82 from Rudra1402/Gull
+    
+    Gull
+
+[33mcommit 6882d85ccd06ba9c9f07df7343298fd6938a745d[m
+Merge: 54caee1 4264d82
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:44:01 2024 -0400
+
+    Purchase
+
+[33mcommit 54caee158609643ba4121656dce88f24ec9400e4[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:41:15 2024 -0400
+
+    Purchase page
+
+[33mcommit 4264d8266012008305ad039112893c46622a9353[m
+Merge: f552359 4d9a783
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:36:59 2024 -0400
+
+    Merge pull request #81 from Rudra1402/Gull
+    
+    Gull
+
+[33mcommit 4d9a783e57a799cbef9e63c4330c2c7876699c46[m
+Merge: 64592f3 f552359
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:35:47 2024 -0400
+
+    Gamifications models
+
+[33mcommit 64592f33f936ce6a0f22b7d1f5fbe22b0386dc2b[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:33:58 2024 -0400
+
+    Gamification: Models
+
+[33mcommit f55235997bf4dbca96c2c3a6e8450613b1b22134[m
+Merge: ee63c3a 65496a4
+Author: Gulldaudi <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:22:44 2024 -0400
+
+    Merge pull request #80 from Rudra1402/Gull
+    
+    Gull
+
+[33mcommit 65496a4924344dbeecbf56b7efa59c226813c065[m
+Merge: c773a77 ee63c3a
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:19:43 2024 -0400
+
+    Gamification v0.2
+
+[33mcommit c773a77cfd8a7b650fbcadbf93749e42f44b4fd3[m
+Author: Gull <gulldaudi95@gmail.com>
+Date:   Sun Jul 21 19:15:36 2024 -0400
+
+    Gamification: Added models
+
+[33mcommit ee63c3af92377832dc06abd0042defc583ee9043[m
+Merge: 9a91cc3 19e446f
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 21 19:04:36 2024 -0400
+
+    Merge pull request #79 from Rudra1402/rudra
+    
+    bikes UI change
+
+[33mcommit 19e446fcfbe7fd7176ce299be744c0678b7857b2[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 19:04:00 2024 -0400
+
+    bikes UI change
+
+[33mcommit 9a91cc3a89a1b291dc0304c05d123a336649410d[m
+Merge: 6568e08 9e496b0
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 21 18:45:48 2024 -0400
+
+    Merge pull request #78 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 9e496b0e9b4ee388161474aec864d550790584dc[m
+Merge: e0f2ddc 6568e08
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 18:45:25 2024 -0400
+
+    conflict resolved
+
+[33mcommit e0f2ddc4b1528c6239285c327aaeb55ff125d7cd[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 18:43:15 2024 -0400
+
+    updated profile UI and minor logic change
+
+[33mcommit 4f5c60542f2f9cba08301429c39343fb1f974167[m
+Merge: 0abaf6a 6568e08
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 18:26:46 2024 -0400
+
+    Merge pull request #77 from Rudra1402/main
+    
+    Latest pull with login page improvement
+
+[33mcommit 6568e08b6a6bdc739e4f304c6402dea446a28067[m
+Merge: 0467af0 0abaf6a
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 18:26:09 2024 -0400
+
+    Merge pull request #76 from Rudra1402/chintan
+    
+    Login Page Improved
+
+[33mcommit 0abaf6a564893eb9e0513add865a86ce26d9d4b8[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 18:25:35 2024 -0400
+
+    login page improvement
+
+[33mcommit d419380a1535a313ecfb5d471e52b38f3161e9ec[m
+Merge: 8482311 ee660da
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 17:53:37 2024 -0400
+
+    Conflicts resolved
+
+[33mcommit 8482311995ee254d8228eb7a17803128abe8f7ce[m
+Merge: 848b2d8 0467af0
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 17:51:03 2024 -0400
+
+    Conflicts resolved
+
+[33mcommit 848b2d87ccaecb304ab6d7a07c84734c84722125[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 21 17:47:05 2024 -0400
+
+    Cars: Layout Updated
+
+[33mcommit a5008166b41342499676a9e0264506373135012c[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 17:36:12 2024 -0400
+
+    user database
+
+[33mcommit 076b698558e4151f69f2261c50f074b625d9379e[m
+Merge: 39c5ba8 0467af0
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 17:34:04 2024 -0400
+
+    conflicts
+
+[33mcommit 39c5ba874ef81f3393ed355d07d2f9a4fc73f6c2[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 17:33:18 2024 -0400
+
+    conflicts
+
+[33mcommit 0467af0a9e7463fa247b6ae6e38db70eb98b3b70[m
+Merge: 4a4b158 93db970
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 17:21:57 2024 -0400
+
+    Merge pull request #75 from Rudra1402/chintan
+    
+    Updated pull request
+
+[33mcommit 93db9702d5c55f583a02dbf7d93d8ed4fca5e080[m
+Merge: 9cc365a 74f3e59
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 17:20:45 2024 -0400
+
+    updated migrations for users
+
+[33mcommit c800b12838056da19bfa37f5e9f93f99466d77de[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Sun Jul 21 17:06:00 2024 -0400
+
+    modified review and rating form
+
+[33mcommit 74f3e59bdbee3e93f71a1836da6913b9cc862a31[m
+Merge: b2e9d0f 4a4b158
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 17:03:43 2024 -0400
+
+    Merge pull request #74 from Rudra1402/main
+    
+    Updated pull request with purchase user model
+
+[33mcommit 9cc365a4c56a9f756cbb3c7f6a95966716e872ca[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 17:02:23 2024 -0400
+
+    updated folder structure
+
+[33mcommit 4a4b15806b553a81f04bf2c449746e4a797c5e08[m
+Merge: 0a49f9b f015854
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 21 17:01:36 2024 -0400
+
+    Merge pull request #73 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit f015854a84cd0bb6e87002e12b5fc2a443f737cd[m
+Merge: 519c771 0a49f9b
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 17:01:09 2024 -0400
+
+    conflict resolved
+
+[33mcommit 519c771aa379d5373e2827c61baa047384c0a08a[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 16:58:55 2024 -0400
+
+    new purchasedBy field, about page
+
+[33mcommit 0a49f9b0d3919fcfa43d72034a67fc94a4f095bd[m
+Merge: 9c16bf4 b2e9d0f
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 16:40:51 2024 -0400
+
+    Merge pull request #72 from Rudra1402/chintan
+    
+    Profile page and first name, last name configuration
+
+[33mcommit b2e9d0f53bb4821967b2baeb9cd5a7f979bcf17b[m
+Merge: 8072a07 31f7040
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 16:39:44 2024 -0400
+
+    Merge branch 'chintan' of https://github.com/Rudra1402/EV-Depot into chintan
+
+[33mcommit 8072a073d9a86244dd7dc58052766df86b7880e5[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 16:38:46 2024 -0400
+
+    profile page updated
+
+[33mcommit 31f704074ed2b61ea47ec1c0cb822c49807015e3[m
+Merge: b234862 9c16bf4
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 15:22:21 2024 -0400
+
+    Merge pull request #71 from Rudra1402/main
+    
+    Updated pull request
+
+[33mcommit 9c16bf49639611ced4b3a8f92f5b824d85378bde[m
+Merge: 0c435ea b234862
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 15:21:16 2024 -0400
+
+    Merge pull request #70 from Rudra1402/chintan
+    
+    profile page updated
+
+[33mcommit b2348625af90fe244132f5d3c8d3fba6c8f72b67[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 15:20:24 2024 -0400
+
+    profile page updated
+
+[33mcommit d2bf06ec8767879991ed6564073239392b9b937f[m
+Merge: 32f5d5d 0c435ea
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sun Jul 21 16:44:18 2024 +0000
+
+    Resolved conflicts and merged main into deepika
+
+[33mcommit 0c435ea5f4cdf97e9b9f4a1be6616140004b6cc7[m
+Merge: ac77d4c 5408f3b
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 03:51:18 2024 -0400
+
+    Merge pull request #69 from Rudra1402/chintan
+    
+    Latest request
+
+[33mcommit 5408f3b0b214752d8fbe5fdc0e21ecdeb8c4aab7[m
+Merge: 59f8b2b ac77d4c
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 03:49:58 2024 -0400
+
+    Merge pull request #68 from Rudra1402/main
+    
+    Merge pull request #67 from Rudra1402/chintan
+
+[33mcommit 59f8b2b54ea5aa59d90173fad208e713bb0c61bb[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 03:49:25 2024 -0400
+
+    session storage configuration using sessionID
+
+[33mcommit ac77d4c91fcab628fc4428517cb386fabe35140a[m
+Merge: 8ead353 010e6e2
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 03:19:36 2024 -0400
+
+    Merge pull request #67 from Rudra1402/chintan
+    
+    Latest pull merge request
+
+[33mcommit 010e6e26eb9a3f66f384a70bfdfe8a36b2399af1[m
+Merge: b08bbfc 3e7ddbb
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 03:02:09 2024 -0400
+
+    updated commit with pull request
+
+[33mcommit 3e7ddbb23b29a32c81a8763946d486cf7aa1549a[m
+Merge: 720edb6 8ead353
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 02:57:19 2024 -0400
+
+    Merge pull request #66 from Rudra1402/main
+    
+    Pull Request after models modifications
+
+[33mcommit b08bbfc861b3bc85595775a3e34164ce7e61c487[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 21 02:56:21 2024 -0400
+
+    logout functionality created
+
+[33mcommit 8ead3533e02c4ebb41a14e1aa7725612ba07df42[m
+Merge: 38596cb 49d9bc1
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 21 02:46:14 2024 -0400
+
+    Merge pull request #65 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 49d9bc1a5a8982a5520676b9a5b28aeb1dcd87e7[m
+Merge: e8ae261 38596cb
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 02:45:45 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit e8ae2611a09d48e32e6bd2bab7f1b8d4b31dcf1c[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 21 02:45:32 2024 -0400
+
+    edit bikes
+
+[33mcommit 38596cbf326b624045b15408d6e0e672741c4c18[m[33m ([m[1;32mmain[m[33m)[m
+Merge: 3fc0055 b238e0d
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sat Jul 20 22:04:02 2024 -0400
+
+    Merge pull request #64 from Rudra1402/rudra
+    
+    visit counts using cookies
+
+[33mcommit b238e0da1c92d234e87da4a61c0806d436425393[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 22:03:30 2024 -0400
+
+    visit counts using cookies
+
+[33mcommit 3fc0055db1e8a2bf1573f301920ec9892be0c03a[m
+Merge: a4d64b6 812d131
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Sat Jul 20 19:16:49 2024 -0400
+
+    Merge pull request #63 from Rudra1402/dharshan
+    
+    Dharshan
+
+[33mcommit 812d131029af76248e9d3bfea84d969e00473eaa[m
+Merge: 7589dd4 a4d64b6
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Sat Jul 20 19:15:17 2024 -0400
+
+    Merge pull request #62 from Rudra1402/main
+    
+    Merge pull request #61 from Rudra1402/dharshan
+
+[33mcommit 7589dd438a573801d77ee3c455e7ce1b8326c8b4[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 19:13:05 2024 -0400
+
+    Included orders urls in main urls.py
+
+[33mcommit f3354a578eb45a6e585bd3e77146b5b421542870[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 19:12:13 2024 -0400
+
+    Created templates for orders model
+
+[33mcommit 42bce73a91bbceba80c6fbb8392d380f4104d3f1[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 19:09:14 2024 -0400
+
+    Made migrations in orders model
+
+[33mcommit c447f51be5fb9c7272fa115159a5ec27c311f13d[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 19:07:28 2024 -0400
+
+    Registered orders model in admin.py and settings.py
+
+[33mcommit 3c0025c31545a658e0ec1b046bc5016412d05ae7[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 19:03:58 2024 -0400
+
+    Created orders model
+
+[33mcommit e77f5bb908b23aa57efa08c9f996b62f002fa6f9[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 16:31:03 2024 -0400
+
+    Updated trucks page view
+
+[33mcommit a4d64b6bd96c7be37bc181b38f3ab78a6e215a05[m
+Merge: 3bd853c 75ba66b
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Sat Jul 20 14:23:16 2024 -0400
+
+    Merge pull request #61 from Rudra1402/dharshan
+    
+    Dharshan
+
+[33mcommit 75ba66ba566edab2bdf0269fa81640c1db1cf6ce[m
+Merge: b657e02 3bd853c
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Sat Jul 20 14:20:26 2024 -0400
+
+    Merge pull request #60 from Rudra1402/main
+    
+    Merging main commits into branch 'dharshan'
+
+[33mcommit b657e02d714b30daa5067c91dda48c817e387253[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 14:16:38 2024 -0400
+
+    Updated truck model form fields
+
+[33mcommit 6dcdeb7e2bd216b93640af4671f2bea8b902400b[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sat Jul 20 14:15:33 2024 -0400
+
+    Updated trucks model to upload images
+
+[33mcommit 720edb6d79aa51bad11da1acfe2d2e649f7c6d62[m
+Merge: f434924 3bd853c
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 13:06:34 2024 -0400
+
+    Merge pull request #59 from Rudra1402/main
+    
+    Merge pull request #58 from Rudra1402/chintan
+
+[33mcommit 3bd853c9107b09edcee54eb2c00ee22bce04ae6a[m
+Merge: c93f1a9 f434924
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 13:05:16 2024 -0400
+
+    Merge pull request #58 from Rudra1402/chintan
+    
+    Issue resolved
+
+[33mcommit f4349244730ec7b22cf54697ad1ffd289337baeb[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 13:02:22 2024 -0400
+
+    workspace issue resolved
+
+[33mcommit f12e5a10b6b7e02ddaa19d16fc86d87c04aeedaa[m
+Merge: 3a14ded c93f1a9
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 13:00:16 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1399/EV-Depot into chintan
+
+[33mcommit 3a14dede10f89c2b5ae3a84db0314b4b305be9d0[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 12:53:24 2024 -0400
+
+    merge conflict resolve
+
+[33mcommit 75429e1c3c7c26deb5b2aefcd45db559b19548e0[m
+Merge: e38659a c93f1a9
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Sat Jul 20 12:27:02 2024 -0400
+
+    Merge pull request #56 from Rudra1402/main
+    
+    Merging main commits into branch 'dharshan'
+
+[33mcommit c93f1a913564588e75f5397fc3ec6719d168b07a[m
+Merge: 1d1eae5 24f5545
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sat Jul 20 11:28:02 2024 -0400
+
+    Merge pull request #55 from Rudra1402/rudra
+    
+    db migrations
+
+[33mcommit 24f554532fdca15266a41a664a97b1bdfabf0097[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 11:27:25 2024 -0400
+
+    db migrations
+
+[33mcommit 3d144868fd5e931033bc6a7d7b78d2a83c943f64[m
+Merge: 527e746 3791c04
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 03:01:57 2024 -0400
+
+    updated config file
+
+[33mcommit 1d1eae57b6f073e077172ed4843c04f17b6d132b[m
+Merge: b93c828 3791c04
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 02:58:39 2024 -0400
+
+    Merge pull request #53 from Rudra1402/chintan
+    
+    Merge pull request #52 from Rudra1402/main
+
+[33mcommit 3791c0469afdfecf22a2ef56a22d38cad75809a1[m
+Merge: ef8e5a7 b93c828
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 20 02:58:16 2024 -0400
+
+    Merge pull request #52 from Rudra1402/main
+    
+    Updated pull request
+
+[33mcommit b93c828c20844e5e696eb9d719987a7163a61610[m
+Merge: f935e94 0856efe
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sat Jul 20 00:39:27 2024 -0400
+
+    Merge pull request #51 from Rudra1402/rudra
+    
+    secret key and minor changes
+
+[33mcommit 0856efe104b46e65e2d38e7d305197841cc768b6[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 00:38:54 2024 -0400
+
+    secret key and minor changes
+
+[33mcommit f935e947742007f0de9f915f62e15452bc67303e[m
+Merge: 076f1ac 662a6e2
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sat Jul 20 00:26:14 2024 -0400
+
+    Merge pull request #50 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 662a6e2a88863569c1097fcc3923ee6ee8500f9a[m
+Merge: 103ed69 076f1ac
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 00:25:32 2024 -0400
+
+    handled conflicts
+
+[33mcommit 103ed69af7fb5338cfd6eba94210e0f034e9ab40[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 00:13:40 2024 -0400
+
+    dynamic_form_url + firebase
+
+[33mcommit 29316a061a1efe29caef7db765b18767ea9cce9f[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 00:07:35 2024 -0400
+
+    added firebase.json to gitignore
+
+[33mcommit 20ef2badcce9c2ea3fbcd2b12b23e23df968381c[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 00:05:17 2024 -0400
+
+    firebase.json
+
+[33mcommit 006cb269f77cd4412e8f6d275d6414298994c19b[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 20 00:00:32 2024 -0400
+
+    deleted firebase_key.json
+
+[33mcommit a1377fa14db83fb43119d272c28d3dcd9b78e1ec[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Fri Jul 19 23:56:16 2024 -0400
+
+    firebase_json keys -> .env
+
+[33mcommit 4f15c29999eb9731cd8c24d94a22488fd6a214cd[m
+Merge: f792fc4 6d59724
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Fri Jul 19 23:39:05 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit f792fc45f59534686f6a35aa84afa53f80c477ee[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Fri Jul 19 23:38:52 2024 -0400
+
+    dynamic_form_url + firebase
+
+[33mcommit 527e74654f091bcb0e8844ce7f7e640dd148399a[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Fri Jul 19 17:44:21 2024 -0400
+
+    session-cookie added
+
+[33mcommit 076f1ac4166fb7c9c850e28ec79c20b206274642[m
+Merge: c311421 261c03e
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:32:18 2024 -0400
+
+    Merge pull request #49 from Rudra1402/divya
+    
+    Divya
+
+[33mcommit 6d597240d380935c536ccdc98b8ce3c739f21852[m
+Merge: d429862 7098839
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:32:18 2024 -0400
+
+    Merge pull request #49 from Rudra1402/divya
+    
+    Divya
+
+[33mcommit c311421017508651aa66dc3db08895222207f0ad[m
+Merge: f7f1238 e38659a
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:32:01 2024 -0400
+
+    Merge pull request #48 from Rudra1402/dharshan
+    
+    Delete .idea directory
+
+[33mcommit d429862e26308d3e8ec7282f09a28969ded55f4f[m
+Merge: b0c2f43 5b87259
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:32:01 2024 -0400
+
+    Merge pull request #48 from Rudra1402/dharshan
+    
+    Delete .idea directory
+
+[33mcommit f7f1238709a9f8d308145ccd4e51442899f4ea11[m
+Merge: 1e1e22a 9d988d3
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:31:42 2024 -0400
+
+    Merge pull request #47 from Rudra1402/Gull
+    
+    Delete .idea directory
+
+[33mcommit b0c2f43975106d2eb2dc6126396a13ef813c4b62[m
+Merge: c3abb73 07741f3
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:31:42 2024 -0400
+
+    Merge pull request #47 from Rudra1402/Gull
+    
+    Delete .idea directory
+
+[33mcommit 1e1e22a53b2232fbb83df7e2f13c8f654852687e[m
+Merge: f50289b ef8e5a7
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:31:24 2024 -0400
+
+    Merge pull request #46 from Rudra1402/chintan
+    
+    Delete .idea directory
+
+[33mcommit c3abb73db9968f3ff500dcded0a2fd50f8780735[m
+Merge: 43d7670 dbea33b
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:31:24 2024 -0400
+
+    Merge pull request #46 from Rudra1402/chintan
+    
+    Delete .idea directory
+
+[33mcommit f50289bda7d760b7cbb3b9e3621681368597fe26[m
+Merge: 9d95ef2 7facb3f
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:31:08 2024 -0400
+
+    Merge pull request #45 from Rudra1402/rudra
+    
+    Delete .idea directory
+
+[33mcommit 43d76701cbd5a11f9eacfd51f83666ee431f96fa[m
+Merge: d5ceddf 7080503
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:31:08 2024 -0400
+
+    Merge pull request #45 from Rudra1402/rudra
+    
+    Delete .idea directory
+
+[33mcommit ee660da641203dd59a95089ac64b01e9fe31d0e2[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:30:49 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 7facb3fc27c36e56aaeb0edf7f9d094d27e5d979[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:30:35 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 7080503a1e89ab0ae2fcca332a5ae3786c072723[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:30:35 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 261c03e3b05929368777814ccc9d4dc42758654e[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:30:15 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 709883925978ecafd456a10573712fc76ec48245[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:30:15 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit e38659a8838d0f47afa80d7875e58c96ac302540[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:30:00 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 5b87259e3bcb1ad1fc289d2219e1d9462365a7fa[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:30:00 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 32f5d5d803b09dcec9fe80bd2147f6da37e4237d[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:29:46 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit ef8e5a75eb19617c7f08cc8e956ec933b243436e[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:29:32 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit dbea33bd0b4d64e369b159f03cae259d478c2783[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:29:32 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 9d988d3026ea520923add836ec843df5afefaf12[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:29:13 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 07741f3bcba8b26bfae693fa6deaec111c0d6f59[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:29:13 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 9d95ef251c6799e40073b06cb38dbf0eb6fa1fc4[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:28:54 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit d5ceddfb3c7d2090ee178e5d2ce15b5cd14106fd[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:28:54 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 74c9c88f80d945f27a74cd27c68da1f9ef9ccf94[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Fri Jul 19 17:21:41 2024 -0400
+
+    firebase credentials to gitignore
+
+[33mcommit 7a3d88e84d11c8dfdbb903cfb11293d0f585d04b[m
+Merge: 2e341ec 6fdf034
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Fri Jul 19 17:20:24 2024 -0400
+
+    sqlite3 conflict resolved
+
+[33mcommit 2e341ec4938cf1640d9372e97e496b38f7e5a7e4[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Fri Jul 19 17:19:36 2024 -0400
+
+    Firebase Integration for Image Upload
+
+[33mcommit 3f2d1e155cb2747bfde6388d526dfeb1deb09bef[m
+Merge: 5be747f da65e15
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:17:31 2024 -0400
+
+    Merge pull request #44 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit 6fdf03478b2ab237a9aa0a1860b6883b4f82cdfb[m
+Merge: a3f1703 ca76546
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:17:31 2024 -0400
+
+    Merge pull request #44 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit da65e1541fc3f2c2f2d6567ee0c540431f46b504[m
+Merge: 5fa7e15 5be747f
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:16:54 2024 -0400
+
+    conflict resolved
+
+[33mcommit ca76546e74d833032d333d456355b9d22b282026[m
+Merge: 731c559 a3f1703
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:16:54 2024 -0400
+
+    conflict resolved
+
+[33mcommit 5fa7e1515d02a9d1301d244e493bcbc2dff416e5[m
+Merge: c2bb0a5 432dae9
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:14:59 2024 -0400
+
+    conflict resolved
+
+[33mcommit 731c5594c5133554082fb99b6c9ac2b6150b8d24[m
+Merge: 072e4ba 5d22227
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:14:59 2024 -0400
+
+    conflict resolved
+
+[33mcommit 5be747fe717e4ff193b002ae1f95d36f62f9d3e9[m
+Merge: f7a463b 6bae855
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 17:14:35 2024 -0400
+
+    Merge pull request #43 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit a3f1703337940ddfc2e83a434c101d798e315e46[m
+Merge: 8990eb3 d1b6745
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 17:14:35 2024 -0400
+
+    Merge pull request #43 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit 6bae8558a88cb2e72e8460cdc56804594d61273f[m
+Merge: 16c4bc3 f7a463b
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 17:13:32 2024 -0400
+
+    Merge pull request #42 from Rudra1402/main
+    
+    Merge pull request #41 from Rudra1402/deepika
+
+[33mcommit d1b674592a55bc55ded0ae17e6e705c5400f9899[m
+Merge: a579df9 8990eb3
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 17:13:32 2024 -0400
+
+    Merge pull request #42 from Rudra1402/main
+    
+    Merge pull request #41 from Rudra1402/deepika
+
+[33mcommit 16c4bc3b75cdae420365713bb0bf6a79522c4cb7[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Fri Jul 19 17:12:23 2024 -0400
+
+    linked buttons to different vehicles
+
+[33mcommit a579df9b723c03051d0287c6aaaa1837594c6b6a[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Fri Jul 19 17:12:23 2024 -0400
+
+    linked buttons to different vehicles
+
+[33mcommit c2bb0a500dad993a544a1607112e10de4d97c3c1[m
+Merge: 553bc31 f7a463b
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:12:22 2024 -0400
+
+    conflict resolved
+
+[33mcommit 072e4badd7031db666d8e2fb60a009ba6c6dd1ac[m
+Merge: 94bd9d3 8990eb3
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:12:22 2024 -0400
+
+    conflict resolved
+
+[33mcommit 432dae9886c8d8749fb319b8cb1bbe534465c3d8[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:08:31 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 5d222272934330442d4ed32b82d5992fbbfe223b[m
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 19 17:08:31 2024 -0400
+
+    Delete .idea directory
+
+[33mcommit 553bc31675b767f5785dee75b7f1c78de2476e57[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:06:34 2024 -0400
+
+    Layout Update for vehicles
+
+[33mcommit 94bd9d382146eae1fa71fce82547ab25e8d382c4[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:06:34 2024 -0400
+
+    Layout Update for vehicles
+
+[33mcommit 6b6c32dfb09912e42707c6e631ca7115c3dec8a4[m
+Merge: c158de6 4d918b2
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:05:30 2024 -0400
+
+    Layout Update for vehicles
+
+[33mcommit 2f285915e741b24eeece2cc85bbb266144f643e8[m
+Merge: c89a6c9 298eee6
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 17:05:30 2024 -0400
+
+    Layout Update for vehicles
+
+[33mcommit f7a463ba96b92306fa64883b9e4886d15023cd0a[m
+Merge: 4d918b2 feea01b
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 16:45:52 2024 -0400
+
+    Merge pull request #41 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit 8990eb31677f35613014c1470cb26afa382deae4[m
+Merge: 298eee6 472af52
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 16:45:52 2024 -0400
+
+    Merge pull request #41 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit feea01bee84ee28a0abd02147fc01eb6fd8a9607[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Fri Jul 19 16:44:23 2024 -0400
+
+    included vehicles dropdown in homepage
+
+[33mcommit 472af5229f8a2bde9343489a811e95a79545452c[m
+Author: Dipika2020 <deepikamalliga2020@gmail.com>
+Date:   Fri Jul 19 16:44:23 2024 -0400
+
+    included vehicles dropdown in homepage
+
+[33mcommit 42dd44ef069e96a8f971f896891444f1407748f1[m
+Merge: d8829ea 4d918b2
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 15:28:08 2024 -0400
+
+    Merge pull request #40 from Rudra1402/main
+    
+    merging main into branch deepika
+
+[33mcommit db7419c78ded57c4c48d16469c7780b1d6cd23aa[m
+Merge: 5137d73 298eee6
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Fri Jul 19 15:28:08 2024 -0400
+
+    Merge pull request #40 from Rudra1402/main
+    
+    merging main into branch deepika
+
+[33mcommit c158de68baa0c7fd69975dd6696beacf47b03b2f[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 15:27:18 2024 -0400
+
+    .idea folder
+
+[33mcommit c89a6c9b713ee2c18604c25b00166cf4353e633a[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 19 15:27:18 2024 -0400
+
+    .idea folder
+
+[33mcommit 9542c5ee6f3df6f89fc0d1ec79f3ec5b29ca3ace[m
+Merge: 36d8669 298eee6
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Fri Jul 19 13:03:51 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit 4d918b2afa1b2f16729375237deb408c82a61dab[m
+Merge: e57bdf9 9f9a6e1
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 05:55:03 2024 -0400
+
+    Merge pull request #39 from Rudra1402/dharshan
+    
+    Dharshan
+
+[33mcommit 298eee63d82aa047e4512881eb097db91306c4a9[m
+Merge: 5dc7ea6 5965b05
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 05:55:03 2024 -0400
+
+    Merge pull request #39 from Rudra1402/dharshan
+    
+    Dharshan
+
+[33mcommit 9f9a6e11c4496393d3887eb11ebe8d98478c8d47[m
+Merge: 9f68881 e57bdf9
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 05:54:25 2024 -0400
+
+    Merge pull request #38 from Rudra1402/main
+    
+    Merge main commits into branch 'dharshan'
+
+[33mcommit 5965b0511641d616eb38235934412b6204811239[m
+Merge: 513d274 5dc7ea6
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 05:54:25 2024 -0400
+
+    Merge pull request #38 from Rudra1402/main
+    
+    Merge main commits into branch 'dharshan'
+
+[33mcommit 9f6888164f57603fe8c7d73cde42d0d37c4249ab[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Fri Jul 19 05:51:01 2024 -0400
+
+    Resolved template render problem b/w models
+
+[33mcommit 513d27490be920ce60651faaff4d8b15aa7ac47f[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Fri Jul 19 05:51:01 2024 -0400
+
+    Resolved template render problem b/w models
+
+[33mcommit e57bdf906a832ac1be2f334b6b259d847dd97017[m
+Merge: 0162011 0955949
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 05:05:15 2024 -0400
+
+    Merge pull request #37 from Rudra1402/dharshan
+    
+    Added template, styles for trucks
+
+[33mcommit 5dc7ea6bfb392077ff09c28f0e9b5e79d6e99398[m
+Merge: c5bca64 ddc1cd6
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 05:05:15 2024 -0400
+
+    Merge pull request #37 from Rudra1402/dharshan
+    
+    Added template, styles for trucks
+
+[33mcommit 0955949ca7e5ce72f45b358230885e182cba9125[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Fri Jul 19 05:03:24 2024 -0400
+
+    Added template, styles for trucks
+
+[33mcommit ddc1cd65f759c0efc5bbcfbf50d2b4eba3c9664a[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Fri Jul 19 05:03:24 2024 -0400
+
+    Added template, styles for trucks
+
+[33mcommit 01620119800482a2daa7368742fe0d240fa5ee0c[m
+Merge: 2960fea 9d49ca7
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 03:57:15 2024 -0400
+
+    Merge pull request #36 from Rudra1402/dharshan
+    
+    Modified urls and integrated truckform in common form
+
+[33mcommit c5bca64e5d78cd31e165c2f4a59925720588ed18[m
+Merge: 2effd57 8593499
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 03:57:15 2024 -0400
+
+    Merge pull request #36 from Rudra1402/dharshan
+    
+    Modified urls and integrated truckform in common form
+
+[33mcommit 9d49ca709b02d250129569968deabc9923386939[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Fri Jul 19 03:54:12 2024 -0400
+
+    Modified urls and integrated truckform in common form
+
+[33mcommit 8593499598b72145a4e605146080cf56255d8fe3[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Fri Jul 19 03:54:12 2024 -0400
+
+    Modified urls and integrated truckform in common form
+
+[33mcommit 2960fea33e682e2af1ae6b8217dd60b3d781ec10[m
+Merge: 69dd526 d8829ea
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 04:22:20 2024 +0000
+
+    Merge remote-tracking branch 'origin/main' into dharshan
+
+[33mcommit 2effd579c6c2d213f18683e93da0965ab6d22d54[m
+Merge: 33ddb3f 5137d73
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Fri Jul 19 04:22:20 2024 +0000
+
+    Merge remote-tracking branch 'origin/main' into dharshan
+
+[33mcommit 69dd52645aeca412a4634d65a77245af4d448d30[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Thu Jul 18 23:55:11 2024 -0400
+
+    Created forms.py for trucks
+
+[33mcommit 33ddb3f4cde06f0fd4b542082f590b5dde93d949[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Thu Jul 18 23:55:11 2024 -0400
+
+    Created forms.py for trucks
+
+[33mcommit d8829ea37bd570270d02712cee4e8d1e6d8227cc[m
+Merge: 5eb25d4 7310367
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 18 23:28:14 2024 -0400
+
+    Merge pull request #35 from Rudra1402/rudra
+    
+    updated bike model, authenticated users can only edit, delete bikes
+
+[33mcommit 5137d73244e5d6aa3350fd859e346aecdaba54a0[m
+Merge: 5626890 58d93af
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 18 23:28:14 2024 -0400
+
+    Merge pull request #35 from Rudra1402/rudra
+    
+    updated bike model, authenticated users can only edit, delete bikes
+
+[33mcommit 36d866974969a2f844e68b4183007cc38dd275cd[m
+Merge: 58d93af 5626890
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 18 23:27:25 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit e62134b709aa722bad203e4fd9604ac87b8c69ad[m
+Merge: 4f1f831 d9369d9
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Thu Jul 18 23:27:18 2024 -0400
+
+    Merge remote-tracking branch 'origin/dharshan' into dharshan
+
+[33mcommit 36ce248cfa6e58632f3f155f21ab72ed74bad6e6[m
+Merge: 13099f6 0616c2a
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Thu Jul 18 23:27:18 2024 -0400
+
+    Merge remote-tracking branch 'origin/dharshan' into dharshan
+
+[33mcommit 7310367842b152f3b98ff5803fbfa6b9daa09632[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 18 23:26:39 2024 -0400
+
+    updated bike model, authenticated users can only edit, delete bikes
+
+[33mcommit 58d93af65fe3ec30909dbff297fc5f34bc87c5b6[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 18 23:26:39 2024 -0400
+
+    updated bike model, authenticated users can only edit, delete bikes
+
+[33mcommit 4f1f831aafc279c40afd2d7fee8694a15f43cf5c[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 15 00:16:30 2024 -0400
+
+    Created forms.py for trucks
+
+[33mcommit 13099f6d2476ec9451da54959bba98426950e3be[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 15 00:16:30 2024 -0400
+
+    Created forms.py for trucks
+
+[33mcommit fdcaf967cf3f90151072cb5cdb3f7c508dff1e39[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Thu Jul 18 21:59:05 2024 -0400
+
+    Basic Chat Prototype
+
+[33mcommit a3e086ce1bbf9569d7293f975bf9e626625438eb[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Thu Jul 18 21:59:05 2024 -0400
+
+    Basic Chat Prototype
+
+[33mcommit 5eb25d469f9b8578bec0a20549e6608dbc4d8f19[m
+Merge: 24fc092 d95999e
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 18 00:09:26 2024 -0400
+
+    Merge pull request #34 from Rudra1402/rudra
+    
+    bikes minor UI change
+
+[33mcommit 56268905728119053abefe88f4155fe0af91fe2b[m
+Merge: a3ba861 344138f
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 18 00:09:26 2024 -0400
+
+    Merge pull request #34 from Rudra1402/rudra
+    
+    bikes minor UI change
+
+[33mcommit d95999e3ecf25b46c84a43e04a1d4937a9500c70[m
+Merge: a47423e 24fc092
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 18 00:08:40 2024 -0400
+
+    purchase and message btns
+
+[33mcommit 344138f30a94ddb9709f53d75977173f81d13a62[m
+Merge: 0bcfaf2 a3ba861
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 18 00:08:40 2024 -0400
+
+    purchase and message btns
+
+[33mcommit a47423ea4dd63e0df674a4c5d43ad0e80ea22f26[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Wed Jul 17 23:41:01 2024 -0400
+
+    bikes minor UI change
+
+[33mcommit 0bcfaf2a0160c0ccb23427b05cdc34244f242e04[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Wed Jul 17 23:41:01 2024 -0400
+
+    bikes minor UI change
+
+[33mcommit 24fc0929b694e989b384a63a367c843b139ca89d[m
+Merge: ee67e21 baaa509
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Wed Jul 17 19:10:36 2024 -0400
+
+    Merge pull request #33 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit a3ba8612633466a7f6eb2bb7d39751ce8e73e50d[m
+Merge: 86ce8ef c4d831d
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Wed Jul 17 19:10:36 2024 -0400
+
+    Merge pull request #33 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit baaa509b5e63fc10b89482d7dff5660d07822e30[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Wed Jul 17 19:09:48 2024 -0400
+
+    common form functionality added
+
+[33mcommit c4d831df3bf6072d6e48ada054e44b8a594fa02f[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Wed Jul 17 19:09:48 2024 -0400
+
+    common form functionality added
+
+[33mcommit f4ed8da271dc0af6d140f397320dd853496845a4[m
+Merge: 96f3971 ee67e21
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Wed Jul 17 17:52:41 2024 -0400
+
+    conflicts resolved
+
+[33mcommit 00e37bbff680721491a5f99110082eb781a35975[m
+Merge: 37b230e 86ce8ef
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Wed Jul 17 17:52:41 2024 -0400
+
+    conflicts resolved
+
+[33mcommit 96f39715213c903247c0a337f8e0fca6b4c1e446[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Wed Jul 17 17:49:17 2024 -0400
+
+    Homepage: load-animation added
+
+[33mcommit 37b230ee750802cb12c9c806ceb688c34d1b2e46[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Wed Jul 17 17:49:17 2024 -0400
+
+    Homepage: load-animation added
+
+[33mcommit 16d75fe713e72b75f96d2d00b5d06cb566a079e6[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Wed Jul 17 14:25:42 2024 -0400
+
+    Made new changes into user app.
+
+[33mcommit ea3e38646acc56b78509c28e606cdd0ac12908f1[m
+Author: Th3MASTER007 <divyam1748@gmail.com>
+Date:   Wed Jul 17 14:25:42 2024 -0400
+
+    Made new changes into user app.
+
+[33mcommit ee67e21967f49c865642853e1eece6bb13783e85[m
+Merge: 053c27b a029c9b
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 10:36:50 2024 -0400
+
+    Merge pull request #32 from Rudra1402/chintan
+    
+    Merge pull request #31 from Rudra1402/main
+
+[33mcommit 86ce8ef36ab2ad4e9f98b69bad00fea1840f6f8c[m
+Merge: bc03bce 7a764d6
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 10:36:50 2024 -0400
+
+    Merge pull request #32 from Rudra1402/chintan
+    
+    Merge pull request #31 from Rudra1402/main
+
+[33mcommit a029c9bd4aca98bd22bcc05fa8d72ea1c206102b[m
+Merge: b7c04c6 053c27b
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 10:36:28 2024 -0400
+
+    Merge pull request #31 from Rudra1402/main
+    
+    Login Page view model
+
+[33mcommit 7a764d689299181feba1aa9aa5c63e17d0b3ae4f[m
+Merge: 71db709 bc03bce
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 10:36:28 2024 -0400
+
+    Merge pull request #31 from Rudra1402/main
+    
+    Login Page view model
+
+[33mcommit 053c27b488027209acd6492d07d8cca2acfa2b53[m
+Merge: dd3f83e b7c04c6
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 10:36:19 2024 -0400
+
+    Merge branch 'chintan' into main
+
+[33mcommit bc03bce31d1c7252e2a29e1e3eb5a73b31c40115[m
+Merge: 0805f1f 71db709
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 10:36:19 2024 -0400
+
+    Merge branch 'chintan' into main
+
+[33mcommit b7c04c6d7977b3921f9b9df39439155e62692682[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 02:25:35 2024 -0400
+
+    design issues fixed
+
+[33mcommit 71db709cbd2f5100b7b462cce7f5d75975887ee4[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 02:25:35 2024 -0400
+
+    design issues fixed
+
+[33mcommit 03eb6f76a0d3aec69b1dd40255b64f230c079cf3[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 01:39:40 2024 -0400
+
+    login template done
+
+[33mcommit 61c2fffb5e7b91c247cabc53dbd54008198effda[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 01:39:40 2024 -0400
+
+    login template done
+
+[33mcommit b82d89ec7a608a22a21f7f97b045065273dfb41b[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 01:30:48 2024 -0400
+
+    login view created
+
+[33mcommit 6153d41ae8abe232794ce3e8f4a945a460fc44ae[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 01:30:48 2024 -0400
+
+    login view created
+
+[33mcommit 09b8996a653826cf9c086cbd52ce20db56bd50f7[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 01:04:38 2024 -0400
+
+    validation added to registration
+
+[33mcommit 184e202d286f39beebcd5246b4077955c13d5ecc[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Wed Jul 17 01:04:38 2024 -0400
+
+    validation added to registration
+
+[33mcommit f3e9aef3c15713adc1bf0df79fc4378ad9979519[m
+Merge: 6997c18 ca86e61
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Tue Jul 16 22:27:34 2024 -0400
+
+    Merge branch 'chintan' of https://github.com/Rudra1402/EV-Depot into chintan
+
+[33mcommit 42bd2b49bd548609e18acedfc3e2e56d3fc5e12a[m
+Merge: b3cdd8b 6ddc22f
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Tue Jul 16 22:27:34 2024 -0400
+
+    Merge branch 'chintan' of https://github.com/Rudra1402/EV-Depot into chintan
+
+[33mcommit 6997c186ae9d577a61cb047bd44d492ef361a3ed[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Tue Jul 16 22:26:48 2024 -0400
+
+    login view
+
+[33mcommit b3cdd8bfd916c2ea3eee321e4fc36af9995cb2f0[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Tue Jul 16 22:26:48 2024 -0400
+
+    login view
+
+[33mcommit 46694e9c05ba90f7fd9b21a18c37f6bbd889be4e[m
+Merge: 901201e dd3f83e
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 16 14:11:44 2024 -0400
+
+    Merge remote-tracking branch 'origin' into talhaseeb
+
+[33mcommit d719351b63d6f8da871063dcd60344b2573f1066[m
+Merge: 960e2b3 0805f1f
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Tue Jul 16 14:11:44 2024 -0400
+
+    Merge remote-tracking branch 'origin' into talhaseeb
+
+[33mcommit dd3f83e362487f63a1b1fb2f4315c9c21f6cf3f5[m
+Merge: af618e1 c86dc05
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 15 23:38:07 2024 -0400
+
+    Merge pull request #30 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 0805f1fab99bcddbafa617e8d909b4f8927b98d2[m
+Merge: 9b537e2 b0ba9ad
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 15 23:38:07 2024 -0400
+
+    Merge pull request #30 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit c86dc0567825671ef0032896b0cf535d44dc44c1[m
+Merge: 53977da af618e1
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 15 23:37:38 2024 -0400
+
+    conflict resolved
+
+[33mcommit b0ba9ad82c2cb28de80a240e46dad931ec0c4706[m
+Merge: ebfaf6a 9b537e2
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 15 23:37:38 2024 -0400
+
+    conflict resolved
+
+[33mcommit 53977da0a086dd6bf8c7073c3f3a6521106c8267[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 15 23:32:00 2024 -0400
+
+    minor UI changes
+
+[33mcommit ebfaf6a282f758d6fc921a278a1322a6b226f81b[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 15 23:32:00 2024 -0400
+
+    minor UI changes
+
+[33mcommit ca86e6180478909687a536d1430794192221c0f1[m
+Merge: 1b8a204 af618e1
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 15 14:21:47 2024 -0400
+
+    Merge pull request #29 from Rudra1402/main
+    
+    Merge pull request #27 from Rudra1402/chintan
+
+[33mcommit 6ddc22fd25aacae2348ea8f2da9496b4ec33136d[m
+Merge: f7af4c8 9b537e2
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 15 14:21:47 2024 -0400
+
+    Merge pull request #29 from Rudra1402/main
+    
+    Merge pull request #27 from Rudra1402/chintan
+
+[33mcommit af618e1e6df1221a5f2bbfe838a0204a220c6bd1[m
+Merge: b0a39df 1b8a204
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 15 14:21:14 2024 -0400
+
+    Merge pull request #27 from Rudra1402/chintan
+    
+    Pull Request
+
+[33mcommit 9b537e258f31c36da684d0890d3aadfccca5d7ad[m
+Merge: 4a129be f7af4c8
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Mon Jul 15 14:21:14 2024 -0400
+
+    Merge pull request #27 from Rudra1402/chintan
+    
+    Pull Request
+
+[33mcommit d9369d9d1ee43326d4e5ebb597435aba6f3b973d[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 15 00:16:30 2024 -0400
+
+    Created forms.py for trucks
+
+[33mcommit 0616c2a8db85c6fc6afc702009099b18b9d7248b[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Mon Jul 15 00:16:30 2024 -0400
+
+    Created forms.py for trucks
+
+[33mcommit 6a85d102d2a4b578ac6f6e674116649c4cb57c97[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sun Jul 14 23:16:32 2024 -0400
+
+    Updated trucks urls.py
+
+[33mcommit e355bf3f45ddc7eea53c31cb51cb775ebe67f5cb[m
+Author: Reithub <dhurshashi.v@gmail.com>
+Date:   Sun Jul 14 23:16:32 2024 -0400
+
+    Updated trucks urls.py
+
+[33mcommit 7c8c4503955a47878d988e4f1596864d04bc8540[m
+Merge: fe0bb48 8527c58
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Sun Jul 14 22:50:11 2024 -0400
+
+    Merge pull request #28 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit f930b93d29cfeab8d708df14b086c24b18e45219[m
+Merge: 159b2d6 1609ef6
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Sun Jul 14 22:50:11 2024 -0400
+
+    Merge pull request #28 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit 901201efa5a6d47e92fef78c0ec07a7c2949a109[m
+Merge: d939477 b0a39df
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 14 18:34:52 2024 -0400
+
+    conflicts
+
+[33mcommit 960e2b34eb13c6cad1e4e42b4da60577e9ed38e1[m
+Merge: fcf49a8 4a129be
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 14 18:34:52 2024 -0400
+
+    conflicts
+
+[33mcommit d9394770054254377516cfe7afcc0bfdd0154b57[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 14 18:33:02 2024 -0400
+
+    workspace.xml
+
+[33mcommit fcf49a8b9edc661e62815f491866ce87ec1291ec[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Sun Jul 14 18:33:02 2024 -0400
+
+    workspace.xml
+
+[33mcommit 958d5813b2c5f6513520d9e9c903086fc3ae34bb[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 14 14:46:30 2024 -0400
+
+    form for register
+
+[33mcommit fc54ee04b9302a7ca672074540f379dd6077b4e6[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 14 14:46:30 2024 -0400
+
+    form for register
+
+[33mcommit 1b8a204b6ae2047a24a09ab50a46444543cdcdff[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 14 00:43:58 2024 -0400
+
+    updated register page
+
+[33mcommit f7af4c898de57b9cb64b1caf69a5f3bd60349c61[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sun Jul 14 00:43:58 2024 -0400
+
+    updated register page
+
+[33mcommit 7b4f5bd628caa18ac2d2f84bfd0fa0aca36f3b4d[m
+Merge: 45b9fa3 b0a39df
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 22:11:58 2024 -0400
+
+    Merge pull request #26 from Rudra1402/main
+    
+    Updated code
+
+[33mcommit 89b135cb245d1ad75ca686079dd323e70e49594d[m
+Merge: 4a6310e 4a129be
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 22:11:58 2024 -0400
+
+    Merge pull request #26 from Rudra1402/main
+    
+    Updated code
+
+[33mcommit 45b9fa3849a125d74e455473fda076583fc4c084[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 22:05:44 2024 -0400
+
+    updated ui of register page
+
+[33mcommit 4a6310e87d2e83449acd6ee957dccbbeae485ebc[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 22:05:44 2024 -0400
+
+    updated ui of register page
+
+[33mcommit b0a39dfc76532d15181bce813bf687f0d1d2246b[m
+Merge: aadac90 8527c58
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 22:05:27 2024 -0400
+
+    Merge pull request #25 from Rudra1402/deepika
+    
+    improved category and rating models with forms and updated templates
+
+[33mcommit 4a129be95a0a058132a11a3fd0e4baec194edb3b[m
+Merge: ec283e4 1609ef6
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 22:05:27 2024 -0400
+
+    Merge pull request #25 from Rudra1402/deepika
+    
+    improved category and rating models with forms and updated templates
+
+[33mcommit e2a7db541677395c2febe58e70fa78b5eb8ba153[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:57:38 2024 -0400
+
+    user register view template
+
+[33mcommit a8c294a77ef8aab3db7ce0ca8fad9e2935938866[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:57:38 2024 -0400
+
+    user register view template
+
+[33mcommit 70c380088196543e0672f698a8702e4bc852a7c0[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:53:38 2024 -0400
+
+    users registration view
+
+[33mcommit 1ac5736aff5722cee352a30a0d9e476d11cffbef[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:53:38 2024 -0400
+
+    users registration view
+
+[33mcommit aadac90f2817d97bf9b8083d3dce82c8d44976ee[m
+Merge: 848ccf9 b814aa2
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:41:16 2024 -0400
+
+    Merge pull request #23 from Rudra1402/chintan
+    
+    User model commit
+
+[33mcommit ec283e47b46d9a71ea47bc748e3ae8f54dfd671b[m
+Merge: bcd0082 f5f656b
+Author: Chintan Tripathi <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:41:16 2024 -0400
+
+    Merge pull request #23 from Rudra1402/chintan
+    
+    User model commit
+
+[33mcommit 8527c5865cd2c80def3d3d6028603657c90fd50a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:37:36 2024 -0400
+
+    added home view to retrieve and render all categories and ratings in 'home.html'
+
+[33mcommit 1609ef6f058f507f419e22d7a9328a64efb89bd0[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:37:36 2024 -0400
+
+    added home view to retrieve and render all categories and ratings in 'home.html'
+
+[33mcommit c47a1fc5e963d81e3863d428576c3389c28dbef4[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:32:17 2024 -0400
+
+    updated home.html to display the numerical rating value directly
+
+[33mcommit 0887761f1f416e0516a6b3f2ff4106e5dc42fbf8[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:32:17 2024 -0400
+
+    updated home.html to display the numerical rating value directly
+
+[33mcommit 9c253b1bb4dd6aa7160c3078bde41745209eb28d[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:17:46 2024 -0400
+
+    added ratings and categories sections to home page
+
+[33mcommit 54a02444290805534d239f74c4d930d143478d6a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:17:46 2024 -0400
+
+    added ratings and categories sections to home page
+
+[33mcommit b814aa2700e00ef74d2d4f74ca492700454558a7[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:16:02 2024 -0400
+
+    users registration model
+
+[33mcommit f5f656bee8a30f2d97faa4af0ebf75292389d496[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:16:02 2024 -0400
+
+    users registration model
+
+[33mcommit 61215dafa684575c7bfb8ed9fa13a586c219f9e4[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:11:42 2024 -0400
+
+    users registration model
+
+[33mcommit c19e0389ed1614d55dc2decadbbc00e81c411b84[m
+Author: chintan0513 <chintantripathi1310@gmail.com>
+Date:   Sat Jul 13 21:11:42 2024 -0400
+
+    users registration model
+
+[33mcommit 39d35feb7d3cbc3aecc148eb846025256e125a4a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:02:27 2024 -0400
+
+    improved category and rating models with forms and updated templates
+
+[33mcommit 3285a6c380f3aade1d54fd029e48da2dccc6fd4c[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jul 13 21:02:27 2024 -0400
+
+    improved category and rating models with forms and updated templates
+
+[33mcommit 848ccf94e433ea3688e66746f2296008fe4a3a0b[m
+Merge: 5ee1e8d e4ad7fc
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sat Jul 13 16:22:39 2024 -0400
+
+    Merge pull request #22 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit bcd0082f8ff873a0104dca94ae76f1faead54ddc[m
+Merge: 47d8e90 49ae447
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sat Jul 13 16:22:39 2024 -0400
+
+    Merge pull request #22 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit e4ad7fc00de1a4c41bfac08f5ee572a59a08ce73[m
+Merge: edf84f7 5ee1e8d
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 13 16:22:18 2024 -0400
+
+    db conflict resolved, added to gitignore
+
+[33mcommit 49ae4477dfd28d71f0e9f7f6ec7460969cc7c73d[m
+Merge: 300ff65 47d8e90
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 13 16:22:18 2024 -0400
+
+    db conflict resolved, added to gitignore
+
+[33mcommit edf84f7bf8b864f20dce451283baace68fbbcbeb[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 13 16:18:04 2024 -0400
+
+    bike filters
+
+[33mcommit 300ff652d5184d9725e62a40124ca25c73ca6298[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jul 13 16:18:04 2024 -0400
+
+    bike filters
+
+[33mcommit 5ee1e8d7abd40825fde34af5b415936b2497d00f[m
+Merge: 66e8665 15f4c8d
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 17:23:36 2024 -0400
+
+    Merge pull request #21 from Rudra1402/talhaseeb
+    
+    Homepage animations
+
+[33mcommit 47d8e90550843edd8e089c055cf51a0d3cb51068[m
+Merge: 6fabd4e cf4cbe0
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 17:23:36 2024 -0400
+
+    Merge pull request #21 from Rudra1402/talhaseeb
+    
+    Homepage animations
+
+[33mcommit 15f4c8da62a328621642cd93e9e24bf9d1e1ab87[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 17:22:44 2024 -0400
+
+    Homepage animations
+
+[33mcommit cf4cbe028565ecb459bd9bdcd3ece08ef00a2c88[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 17:22:44 2024 -0400
+
+    Homepage animations
+
+[33mcommit 66e8665f33fd7423e72175e9cdd57a3fcbbb9484[m
+Merge: e014caa afd5107
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 11:52:56 2024 -0400
+
+    Merge pull request #20 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit 6fabd4eb9e2a9b28081e28258e54d97ce861c7d9[m
+Merge: 8442d4e 4c0aaeb
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 11:52:56 2024 -0400
+
+    Merge pull request #20 from Rudra1402/talhaseeb
+    
+    Talhaseeb
+
+[33mcommit afd5107076cdc6eb0eedb7f46fc0f94a3a175bf7[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:52:11 2024 -0400
+
+    css updates for cars
+
+[33mcommit 4c0aaeb23e9bce07e1425925c909f0846c24f990[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:52:11 2024 -0400
+
+    css updates for cars
+
+[33mcommit d647377eeee6b373c90f68dd9cd9f6a280e679a8[m
+Merge: 95d2bc5 e014caa
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:47:21 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit c7a487138174d2c457c82a9fd8b13069c8ba1dfd[m
+Merge: 31745fc 8442d4e
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:47:21 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit e014caa35a4e643e528e0dacffaa3d74cad91f92[m
+Merge: 01cfe1d 1bdde2e
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 11:47:09 2024 -0400
+
+    Merge pull request #19 from Rudra1402/talhaseeb
+    
+    App:Car - Added tempaltes and Static files
+
+[33mcommit 8442d4efb2e6468d806bbcd7ef68821b1902b52a[m
+Merge: 6c3cf99 0b694c9
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 11:47:09 2024 -0400
+
+    Merge pull request #19 from Rudra1402/talhaseeb
+    
+    App:Car - Added tempaltes and Static files
+
+[33mcommit 95d2bc50e771c643bf2dec69cbe1286424aaecf5[m
+Merge: 1bdde2e 01cfe1d
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:46:16 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit 31745fcbf453f54871edec202d62456ed13a2f90[m
+Merge: 0b694c9 6c3cf99
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:46:16 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into talhaseeb
+
+[33mcommit 1bdde2eed94b338236ac0eb5f958da3596ca1784[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:45:48 2024 -0400
+
+    App:Car - Added tempaltes and Static files
+
+[33mcommit 0b694c92d5249687b7062823ff8f95dde1e473b8[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:45:48 2024 -0400
+
+    App:Car - Added tempaltes and Static files
+
+[33mcommit 01cfe1d1bc7c7baaca86b089759e66ebb852e7e5[m
+Merge: b3edfa2 3a158c1
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 11:15:28 2024 -0400
+
+    Merge pull request #18 from Rudra1402/talhaseeb
+    
+    App:Cars- updated models, views and urls
+
+[33mcommit 6c3cf998f1bc22b2b5a6194251c6798651358717[m
+Merge: 2578121 164fce7
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jul 12 11:15:28 2024 -0400
+
+    Merge pull request #18 from Rudra1402/talhaseeb
+    
+    App:Cars- updated models, views and urls
+
+[33mcommit 3a158c1cb35ace88437f6c001635c7ed5202a101[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:14:05 2024 -0400
+
+    App:Cars- updated models, views and urls
+
+[33mcommit 164fce78c8eb1d44e0550115d699c7c7864a9b04[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jul 12 11:14:05 2024 -0400
+
+    App:Cars- updated models, views and urls
+
+[33mcommit b3edfa240f07e212b023bde986475590e724094c[m
+Merge: 7b60529 1a274bd
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 11 18:35:29 2024 -0400
+
+    Merge pull request #17 from Rudra1402/rudra
+    
+    vehicle card template
+
+[33mcommit 25781211b788d29ba348194f5c0927e80ead543d[m
+Merge: b126ba3 b3da3e2
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 11 18:35:29 2024 -0400
+
+    Merge pull request #17 from Rudra1402/rudra
+    
+    vehicle card template
+
+[33mcommit 1a274bdc92b9a181e2e9ef6f3c904af5d85ed4f6[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 18:34:48 2024 -0400
+
+    vehicle card template
+
+[33mcommit b3da3e248c02d2a8ef3f14992d804faa7bccc834[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 18:34:48 2024 -0400
+
+    vehicle card template
+
+[33mcommit 7b60529a2a70ff43db5420437f87c405dc381d81[m
+Merge: cdd70c5 9518b55
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 11 18:09:13 2024 -0400
+
+    Merge pull request #16 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit b126ba39bd1f2012e2de9bdf065b9939313437e9[m
+Merge: 1a37c27 51f6b52
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Thu Jul 11 18:09:13 2024 -0400
+
+    Merge pull request #16 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 9518b55ee6e5102d1635296c0f942934d91e9d03[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 18:08:39 2024 -0400
+
+    included navbar and footer into base, extended base layout in bikes
+
+[33mcommit 51f6b5214f1ea76f58e6a35fce5568512e370dae[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 18:08:39 2024 -0400
+
+    included navbar and footer into base, extended base layout in bikes
+
+[33mcommit 65530089c8ae2987ea8493a4d3ddff2fa6563ae1[m
+Merge: 246c428 cdd70c5
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 17:47:52 2024 -0400
+
+    conflict resolved
+
+[33mcommit 903ca88367d600766f064918ff761fa9518819c2[m
+Merge: 091161d 1a37c27
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 17:47:52 2024 -0400
+
+    conflict resolved
+
+[33mcommit 246c428f6e71d87dcc13cc9b4b181b6f6af5df79[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 17:34:55 2024 -0400
+
+    updated delete bike flow and minor UI changes
+
+[33mcommit 091161d3399680c6f81c92fc882e094d9d99a3d8[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Thu Jul 11 17:34:55 2024 -0400
+
+    updated delete bike flow and minor UI changes
+
+[33mcommit cdd70c50f818531701aa874e4f08db27549e861c[m
+Merge: 5b43cb0 527a651
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Thu Jul 11 17:33:13 2024 -0400
+
+    Merge pull request #15 from Rudra1402/talhaseeb
+    
+    Base Layout Created
+
+[33mcommit 1a37c27748200ef25614cb16851468e42c534cb4[m
+Merge: 3e35b03 d12e89a
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Thu Jul 11 17:33:13 2024 -0400
+
+    Merge pull request #15 from Rudra1402/talhaseeb
+    
+    Base Layout Created
+
+[33mcommit 527a651af6c28efe89bbbaee9a5e41ab09657743[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Thu Jul 11 17:32:19 2024 -0400
+
+    Base Layout Created
+
+[33mcommit d12e89a52ec42394d04a840aea39586658ec6ff9[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Thu Jul 11 17:32:19 2024 -0400
+
+    Base Layout Created
+
+[33mcommit 5b43cb08339fcf576837756906edb7738f95cee7[m
+Merge: 2cf64f0 31aac25
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Wed Jul 10 19:42:12 2024 -0400
+
+    Merge pull request #14 from Rudra1402/rudra
+    
+    delete bike with icons
+
+[33mcommit 3e35b0350481b78dbbac3e4d908f4a3de538aab4[m
+Merge: b7d5528 7991b69
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Wed Jul 10 19:42:12 2024 -0400
+
+    Merge pull request #14 from Rudra1402/rudra
+    
+    delete bike with icons
+
+[33mcommit 31aac258b4a2c6e765a3f54916a7a0e468be8635[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Wed Jul 10 19:41:21 2024 -0400
+
+    delete bike with icons
+
+[33mcommit 7991b69f91961f2d59d509285ec78b10e8ccbb5a[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Wed Jul 10 19:41:21 2024 -0400
+
+    delete bike with icons
+
+[33mcommit 2cf64f050e3ebf16462164700e69e1509f3a7c1c[m
+Merge: f0b1f53 1b34f44
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jul 9 00:56:46 2024 -0400
+
+    Merge pull request #13 from Rudra1402/rudra
+    
+    new template: bike by id
+
+[33mcommit b7d55283b19946816a13b4391a6a702f3dea11f0[m
+Merge: 62ea1ca 1735fd3
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jul 9 00:56:46 2024 -0400
+
+    Merge pull request #13 from Rudra1402/rudra
+    
+    new template: bike by id
+
+[33mcommit 1b34f44d6867662d01f0b0782bc43c291649210e[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jul 9 00:56:09 2024 -0400
+
+    new template: bike by id
+
+[33mcommit 1735fd3cbae6ae313cd191197ea3b03e62269ad1[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jul 9 00:56:09 2024 -0400
+
+    new template: bike by id
+
+[33mcommit f0b1f53dff55f3ed65da8a2db7b5f86c12c6c997[m
+Merge: 270b2f4 5a9b8fd
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 8 00:26:28 2024 -0400
+
+    Merge pull request #12 from Rudra1402/rudra
+    
+    developed homepage UI
+
+[33mcommit 62ea1ca81020fd4a40a3b5eee39122eae237cfbd[m
+Merge: 921514c 6c28a2b
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 8 00:26:28 2024 -0400
+
+    Merge pull request #12 from Rudra1402/rudra
+    
+    developed homepage UI
+
+[33mcommit 5a9b8fdc528952d4ea42a7080ebbfa7ccd79d5b1[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 8 00:25:50 2024 -0400
+
+    developed homepage UI
+
+[33mcommit 6c28a2b6c718300ae9f1afc6e26a11faeb3ef07a[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 8 00:25:50 2024 -0400
+
+    developed homepage UI
+
+[33mcommit 270b2f419c53101f3ef09430585b3a9b7392d460[m
+Merge: 3e8c896 97d0aa2
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 7 20:03:02 2024 -0400
+
+    Merge pull request #11 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 921514cfdb4afa382523b1f5348397f194843683[m
+Merge: beaf468 ef3426c
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 7 20:03:02 2024 -0400
+
+    Merge pull request #11 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 97d0aa21c49f07fd336ba81b567b555799530ccf[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 20:02:42 2024 -0400
+
+    minor change
+
+[33mcommit ef3426c4e47a73d6ea2645f1e485b2783825f257[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 20:02:42 2024 -0400
+
+    minor change
+
+[33mcommit a463cd783cc6b5f73bb7b41779deb6afcf39f5b0[m
+Merge: e3e5de2 3e8c896
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 19:54:28 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit 1cb2be4efb30a076a407dcbc253af4e29ab6e25f[m
+Merge: 9f5b250 beaf468
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 19:54:28 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit e3e5de2c794b3d7d3425d5261296f20d6b6fcb4b[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 19:53:32 2024 -0400
+
+    updated model, view to intergate form
+
+[33mcommit 9f5b25092fd4b97e56840f553597813e9ec87da9[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 19:53:32 2024 -0400
+
+    updated model, view to intergate form
+
+[33mcommit 3e8c8961518ec1bac771973e923096248985a87e[m
+Merge: db1f886 4c56877
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 7 13:26:43 2024 -0400
+
+    Merge pull request #10 from Rudra1402/rudra
+    
+    Created ModelForm and integrated it in the UI
+
+[33mcommit beaf468e2d344c35d5b892facb32ecb68899a31d[m
+Merge: c7df90f 0f40584
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Sun Jul 7 13:26:43 2024 -0400
+
+    Merge pull request #10 from Rudra1402/rudra
+    
+    Created ModelForm and integrated it in the UI
+
+[33mcommit be106afe9ea3c2526d541764413fc4f0530fd3e8[m
+Merge: 4c56877 db1f886
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 13:25:55 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit f3dd18041b485e4285699cb31beb8aa7356c7f56[m
+Merge: 0f40584 c7df90f
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 13:25:55 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit 4c56877d3bb3d9d8790d3b560737de801b3a5cb5[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 13:25:25 2024 -0400
+
+    Created ModelForm and integrated it in the UI
+
+[33mcommit 0f4058450cfaf723888421b0cae5e36311673022[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sun Jul 7 13:25:25 2024 -0400
+
+    Created ModelForm and integrated it in the UI
+
+[33mcommit db1f886c88daf5d26444dacd4499ca8317a623b7[m
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Fri Jul 5 23:58:31 2024 -0400
+
+    Create README.md
+
+[33mcommit c7df90f8aec6d2bb196dbb7b410466e06626e4f6[m
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Fri Jul 5 23:58:31 2024 -0400
+
+    Create README.md
+
+[33mcommit bff754394c51d819f45f0e6a27762a7651b33465[m
+Merge: 45aae21 28c4e82
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jul 2 20:23:04 2024 -0400
+
+    Merge pull request #9 from Rudra1402/rudra
+    
+    enhanced UI of bikes page
+
+[33mcommit 88e6aeee7002f30331a8805f7be22af2bf1111c5[m
+Merge: 37eb65f 6110a36
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jul 2 20:23:04 2024 -0400
+
+    Merge pull request #9 from Rudra1402/rudra
+    
+    enhanced UI of bikes page
+
+[33mcommit 28c4e826628d9e2646a5f23b9a20cc9388a8f900[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jul 2 20:22:20 2024 -0400
+
+    enhanced UI of bikes page
+
+[33mcommit 6110a36256f3babc4e3375e6090c7abe586411da[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jul 2 20:22:20 2024 -0400
+
+    enhanced UI of bikes page
+
+[33mcommit 45aae21c02852b1de3c8f450ba1fc1d2bfe6df98[m
+Merge: 7bce0d4 fe0bb48
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Tue Jul 2 01:34:36 2024 -0400
+
+    Merge pull request #8 from Rudra1402:dharshan
+    
+    Updated trucks model
+
+[33mcommit 37eb65f16da6ee9b348564f1326005a9b5c58edf[m
+Merge: ef34098 159b2d6
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Tue Jul 2 01:34:36 2024 -0400
+
+    Merge pull request #8 from Rudra1402:dharshan
+    
+    Updated trucks model
+
+[33mcommit fe0bb483c3541734d2faadd5a42e616f5e52ef5f[m
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Tue Jul 2 01:10:55 2024 -0400
+
+    Updated trucks model
+
+[33mcommit 159b2d6668fb8a7b384bb8cbfe82bcf49ee70c8f[m
+Author: Dharshan Venkatesan <64127971+Dharshan-V21@users.noreply.github.com>
+Date:   Tue Jul 2 01:10:55 2024 -0400
+
+    Updated trucks model
+
+[33mcommit 7bce0d4331a39b78b205afd8d7ce10a7371ce1e4[m
+Merge: 0503c97 dcc5437
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 1 22:38:26 2024 -0400
+
+    Merge pull request #7 from Rudra1402/rudra
+    
+    Added dummy data to work on UI
+
+[33mcommit ef34098a3542c7c5607b32eab776f8b246d42555[m
+Merge: b314cf6 21d3721
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 1 22:38:26 2024 -0400
+
+    Merge pull request #7 from Rudra1402/rudra
+    
+    Added dummy data to work on UI
+
+[33mcommit dcc5437590fff60e917b00f0922d7b0cfbe78d28[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 1 22:37:28 2024 -0400
+
+    Added dummy data to work on UI
+
+[33mcommit 21d3721319eb035b3b3670a20a505735f9d6b164[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Mon Jul 1 22:37:28 2024 -0400
+
+    Added dummy data to work on UI
+
+[33mcommit 0503c972c749996b1a96aa3a73153ba2dab55fbe[m
+Merge: aa23e13 c220f77
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 1 22:10:37 2024 -0400
+
+    Merge pull request #6 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit b314cf603d88299567af7c753925ba90837608df[m
+Merge: 0cf12b3 602ae65
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Mon Jul 1 22:10:37 2024 -0400
+
+    Merge pull request #6 from Rudra1402/deepika
+    
+    Deepika
+
+[33mcommit c220f7782c3cfc7b4c1680acbdff47395aeeb1dd[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 02:31:02 2024 -0400
+
+    added templates and css for ratings and categories, updated URLs
+
+[33mcommit 602ae6598a94b83097e62a33306afc77246a0fae[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 02:31:02 2024 -0400
+
+    added templates and css for ratings and categories, updated URLs
+
+[33mcommit 8f79958e83cef8a6395e0624a504f880869437bb[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 02:18:19 2024 -0400
+
+    added home page view and template for root url
+
+[33mcommit 3ba884b29315a232119f3f7d526238dff2302250[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 02:18:19 2024 -0400
+
+    added home page view and template for root url
+
+[33mcommit d5f4a9a442dfdb88f8cfc5be6add332c0eb6013c[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 01:01:24 2024 -0400
+
+    changed meta options on cars
+
+[33mcommit 23faa443d786eecd144a9b3b26114d2fd7b11d97[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 01:01:24 2024 -0400
+
+    changed meta options on cars
+
+[33mcommit 7d5dd21787a6ea9f84bb21b2c250e03d82fca00a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 00:57:16 2024 -0400
+
+    added lists and filters
+
+[33mcommit 8d44086f73d449fae07076f90a472ef8dd076721[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 00:57:16 2024 -0400
+
+    added lists and filters
+
+[33mcommit 92bb93a4bdf9c4c501c5dbbaf9b7e2b6130539b1[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 00:00:52 2024 -0400
+
+    registered 'Cars' model in admin panel
+
+[33mcommit 087fcad1aabbe0d0bc7ebcf07b7edf33c958ab2a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Mon Jul 1 00:00:52 2024 -0400
+
+    registered 'Cars' model in admin panel
+
+[33mcommit 45ce1197f2111e8920c881506adae041152bcfdf[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sun Jun 30 23:33:14 2024 -0400
+
+    updated ratings and categories models and made migrations
+
+[33mcommit 50c7aed113f87ace4a1ad7f10ed3a0154bb2fa5d[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sun Jun 30 23:33:14 2024 -0400
+
+    updated ratings and categories models and made migrations
+
+[33mcommit aa23e13082010d2349bb7c9132f46d91b1b16d89[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 29 12:39:54 2024 -0400
+
+    moved categories and ratings model to base
+
+[33mcommit 0cf12b386d2cd196e28fdcd412b47086867dcd1f[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 29 12:39:54 2024 -0400
+
+    moved categories and ratings model to base
+
+[33mcommit ba8027ed1c08b9dacae659907515fd9c241814e5[m
+Merge: 73b43b6 2d71c11
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jun 25 23:48:11 2024 -0400
+
+    Merge pull request #5 from Rudra1402/rudra
+    
+    Added templates and css
+
+[33mcommit a8273dadbadfcf43576ba0adc28737b0a52d2e7e[m
+Merge: 53351af 0911c06
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jun 25 23:48:11 2024 -0400
+
+    Merge pull request #5 from Rudra1402/rudra
+    
+    Added templates and css
+
+[33mcommit 2d71c11f46eccf0383efbcf30ec2a16e7723857f[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jun 25 23:47:02 2024 -0400
+
+    Added templates and css
+
+[33mcommit 0911c06da25f9948d1b36b405d751016b34a8013[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jun 25 23:47:02 2024 -0400
+
+    Added templates and css
+
+[33mcommit 73b43b618b80c62b44059e4bdd7abe6e5b7a48e2[m
+Merge: d165d2b 5ab75a6
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jun 25 23:29:10 2024 -0400
+
+    Merge pull request #4 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 53351afccba73689135cef558a6c28515df00019[m
+Merge: c83efa2 fdeb23a
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Tue Jun 25 23:29:10 2024 -0400
+
+    Merge pull request #4 from Rudra1402/rudra
+    
+    Rudra
+
+[33mcommit 5ab75a68a56cae8195b3735e3ce715b19df99e94[m
+Merge: 5adee89 d165d2b
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jun 25 23:28:14 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit fdeb23a5942b0fdd1d51dba7d37e6928071b8dfe[m
+Merge: 5adee89 c83efa2
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jun 25 23:28:14 2024 -0400
+
+    Merge branch 'main' of https://github.com/Rudra1402/EV-Depot into rudra
+
+[33mcommit 5adee89ec174139234bebd43009394eb18877178[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Tue Jun 25 23:28:03 2024 -0400
+
+    created index view for bikes
+
+[33mcommit d165d2bab73196e6486c0d3f4916c4f7a3dbcb27[m
+Merge: afbb4ca 5ef0d03
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 17:14:33 2024 -0400
+
+    Merge pull request #3 from Dipika2020/main
+    
+    Added Categories and Rating Models
+
+[33mcommit c83efa2df9cbdd9e8a04fa6f0307b1e4d12a0a2e[m
+Merge: f09070c a8ce6a4
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 17:14:33 2024 -0400
+
+    Merge pull request #3 from Dipika2020/main
+    
+    Added Categories and Rating Models
+
+[33mcommit 5ef0d03885ac73f65c07f134b36e57e2e356c951[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:51:38 2024 -0400
+
+    Update models.py
+
+[33mcommit a8ce6a4f38c98f560deeb69542b0a7a61d1b7bc3[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:51:38 2024 -0400
+
+    Update models.py
+
+[33mcommit fbc2fb233881d334bdb728da7c837595d10e6156[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:29:45 2024 -0400
+
+    Add files via upload
+    
+    migrations done for category and ratings
+
+[33mcommit 3d860e638725d25bcb9f9ca0b8d984b5e9ff0da4[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:29:45 2024 -0400
+
+    Add files via upload
+    
+    migrations done for category and ratings
+
+[33mcommit eda24214050f99fe521591b0b527243608d59463[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:27:49 2024 -0400
+
+    Delete ratings/__pycache__/views.cpython-312
+
+[33mcommit 202bf395285b93eb293d38ebf65a49c0638f1ecb[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:27:49 2024 -0400
+
+    Delete ratings/__pycache__/views.cpython-312
+
+[33mcommit e813fbb08fdd5c845fa204667989802decb773bc[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:26:17 2024 -0400
+
+    Delete categories/__pycache__/views.cpython-312
+
+[33mcommit bc23248df1a686add41b28030e3e1747284ad9b1[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:26:17 2024 -0400
+
+    Delete categories/__pycache__/views.cpython-312
+
+[33mcommit ec72d48bcc37c0269fced164dd9a40563fde7593[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:23:05 2024 -0400
+
+    Add files via upload
+
+[33mcommit 88306ed4b0ec2cb01f59735bfc225a984ba7a01e[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:23:05 2024 -0400
+
+    Add files via upload
+
+[33mcommit d2e2dd5bde5fb5cf113ad019ad510fe22e844dc3[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:21:37 2024 -0400
+
+    Add files via upload
+    
+    configured urls for categories and ratings
+
+[33mcommit 1deb7b7a5a81c609160862f4fce9438bec99be39[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:21:37 2024 -0400
+
+    Add files via upload
+    
+    configured urls for categories and ratings
+
+[33mcommit ba1328d4624887117f628e5a5d2ece13528849b6[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:20:00 2024 -0400
+
+    Delete ratings/migrations/__pycache__/__init__.cpython-312
+
+[33mcommit b58a078aaddc9e01fa3396a5f5a07ccd6b5a4de9[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:20:00 2024 -0400
+
+    Delete ratings/migrations/__pycache__/__init__.cpython-312
+
+[33mcommit 767d1eb835262038606de1c9332561c3da916f65[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:18:58 2024 -0400
+
+    Add files via upload
+
+[33mcommit b8a363b311b7eac3db613a12146a032f3fc08e17[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:18:58 2024 -0400
+
+    Add files via upload
+
+[33mcommit b659f52f38db42b9ba17743c882a9d6ebbab4fb3[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:18:37 2024 -0400
+
+    Create __init__.cpython-312
+
+[33mcommit 2d718789ba2bb4ce449fa81834971fadd50c6b14[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:18:37 2024 -0400
+
+    Create __init__.cpython-312
+
+[33mcommit 6edb646c5fabc241013cd29fffa7c4ef66dde79d[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:17:57 2024 -0400
+
+    Delete ratings/migrations/__init__
+
+[33mcommit 9a6ebbe55afce8897e22853567beb50e6f02ee79[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:17:57 2024 -0400
+
+    Delete ratings/migrations/__init__
+
+[33mcommit 8f0c92148e1a3c1ac2f464d8e664aecc4930133d[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:17:35 2024 -0400
+
+    Add files via upload
+
+[33mcommit 98be6201186f7c75f74186532d6d2d59d293d7d2[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:17:35 2024 -0400
+
+    Add files via upload
+
+[33mcommit d113036f376aad042babc690ed4b26e3b9d92277[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:17:08 2024 -0400
+
+    Delete ratings/migrations/__init__.py
+
+[33mcommit 6a2ab4c935bce43cf5ed4adfcc953e37356f3d91[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:17:08 2024 -0400
+
+    Delete ratings/migrations/__init__.py
+
+[33mcommit 824521b265d406804c993d23c82adf36ce433093[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:16:43 2024 -0400
+
+    Add files via upload
+
+[33mcommit 7edfacaa31f58296118e5515d752e39907c9e538[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:16:43 2024 -0400
+
+    Add files via upload
+
+[33mcommit 255d70b346976e206d3cccea9f52ba66855b29b9[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:16:07 2024 -0400
+
+    Create __init__
+
+[33mcommit 73af75702ca14eedc78b25140c5d218fc9aa78ea[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:16:07 2024 -0400
+
+    Create __init__
+
+[33mcommit e6c2b1ae62e77b662f7fcf99c6e7c4151a40c3ae[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:15:23 2024 -0400
+
+    Add files via upload
+
+[33mcommit 2d8cb811ca3f45bcab836009076d730a20525b97[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:15:23 2024 -0400
+
+    Add files via upload
+
+[33mcommit 593c245c5bc565187c0e522e25d8d62eec09f5c3[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:14:59 2024 -0400
+
+    Create views.cpython-312
+
+[33mcommit 3e4ba79dfa8aa6cba6693e2435f6b07fb027212a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:14:59 2024 -0400
+
+    Create views.cpython-312
+
+[33mcommit ac169769621ddf96d0f8afb9678fde9a2f4705a2[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:14:02 2024 -0400
+
+    Add files via upload
+    
+    added rating model and view
+
+[33mcommit e1dfb9d2a956669920e469538fe5150684c0d577[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:14:02 2024 -0400
+
+    Add files via upload
+    
+    added rating model and view
+
+[33mcommit f1f0ed5efbd8d96e0287314e3ddc3f0bdf7bba7b[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:13:18 2024 -0400
+
+    Create views.py
+    
+    ratings view
+
+[33mcommit 29145596e1fa9443d0b0c739458597a8c587d1f8[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:13:18 2024 -0400
+
+    Create views.py
+    
+    ratings view
+
+[33mcommit 3b044a7ae684483505bb502eefc4fbc6b695b59d[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:11:09 2024 -0400
+
+    Add files via upload
+    
+    configurations done for category and ratings
+
+[33mcommit 350600d891207271b51c0ca42861904bfba831ce[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:11:09 2024 -0400
+
+    Add files via upload
+    
+    configurations done for category and ratings
+
+[33mcommit d23c93e4d57fe408331955ff3b1390a8901cdab0[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:07:44 2024 -0400
+
+    Add files via upload
+
+[33mcommit ba848918a31c148430c1a850e8a6570e4f08a511[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:07:44 2024 -0400
+
+    Add files via upload
+
+[33mcommit 6ddc981e14e8c7d0bd0da7b45889e421e979f42e[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:06:42 2024 -0400
+
+    Add files via upload
+
+[33mcommit edff23fb42ae3c79e2087e4d90b832abe6530985[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:06:42 2024 -0400
+
+    Add files via upload
+
+[33mcommit 0fe6783f98c8d41910dff039df2498cf2fc83113[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:06:17 2024 -0400
+
+    Create 0001_initial.cpython-312
+
+[33mcommit 1ddbaf9ef61f5fa2754ab1b5f6fc931d35daf6ea[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:06:17 2024 -0400
+
+    Create 0001_initial.cpython-312
+
+[33mcommit 3c5efb0e9eb8fac2e61f9a3b766a7a4e14877ff9[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:02:48 2024 -0400
+
+    Add files via upload
+
+[33mcommit 4604833887284c419dc57b54c694b4c58cf1191c[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:02:48 2024 -0400
+
+    Add files via upload
+
+[33mcommit b14fa65fd2b34ccb5dba5ea27832395f0165f0ab[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:02:21 2024 -0400
+
+    Create views.cpython-312
+
+[33mcommit 3629c77c47393d9dec993a975ff439efe7aa3675[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 16:02:21 2024 -0400
+
+    Create views.cpython-312
+
+[33mcommit de780c593b09165a0ba2529f64d203b5b1241f81[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:59:47 2024 -0400
+
+    Add files via upload
+
+[33mcommit f5976f0785f55804bd4b40159482f7122898b115[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:59:47 2024 -0400
+
+    Add files via upload
+
+[33mcommit 8040c3418615074823e0f9d8ab12aa615e4041f2[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:52 2024 -0400
+
+    Delete categories/migrations/views.py
+
+[33mcommit cc343e8a9f6da411a4146bf70b55086148d23878[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:52 2024 -0400
+
+    Delete categories/migrations/views.py
+
+[33mcommit 2369d255123c06431677632925603d66d63f1730[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:42 2024 -0400
+
+    Delete categories/migrations/urls.py
+
+[33mcommit fba4d2dd92e7dfb21036ec5bcf88593f045d162a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:42 2024 -0400
+
+    Delete categories/migrations/urls.py
+
+[33mcommit 2e26a6624145cda5850094e0cac977b6750922f5[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:28 2024 -0400
+
+    Delete categories/migrations/tests.py
+
+[33mcommit 76ce66e2ce9c3640d797d2622e44794518b44b2d[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:28 2024 -0400
+
+    Delete categories/migrations/tests.py
+
+[33mcommit 98b4790f0831a217921b4de261426ca6cc4d8c8a[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:18 2024 -0400
+
+    Delete categories/migrations/models.py
+
+[33mcommit 1aa13792404ab1842b14fc2a14bca82eb91f6486[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:18 2024 -0400
+
+    Delete categories/migrations/models.py
+
+[33mcommit 67f308588a0c158dc3216d7fd13390b181af9539[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:07 2024 -0400
+
+    Delete categories/migrations/apps.py
+
+[33mcommit 96fc5e405ee1ea6ecdf8f5bef1cbe5b822386f69[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:58:07 2024 -0400
+
+    Delete categories/migrations/apps.py
+
+[33mcommit 653b69be369761523b0ac27447d3d474e49f2130[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:57:49 2024 -0400
+
+    Delete categories/migrations/admin.py
+
+[33mcommit 49b48992874b8b19092f2144727a3d2a5855a260[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:57:49 2024 -0400
+
+    Delete categories/migrations/admin.py
+
+[33mcommit d88711f3c0a4cd2d9f900e5fc7dcf24a0bd4c495[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:05:04 2024 -0400
+
+    Delete categories/migrations/__init__.py
+
+[33mcommit c6a39be4c17eb810e3a16d9794a464e02e801de4[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:05:04 2024 -0400
+
+    Delete categories/migrations/__init__.py
+
+[33mcommit 7e30ee15728f04149685687973d57ab027c9425c[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:01:00 2024 -0400
+
+    Add files via upload
+    
+    added category model and view
+
+[33mcommit c6b996f9c2ce367371c29d78be79ddb695943279[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 15:01:00 2024 -0400
+
+    Add files via upload
+    
+    added category model and view
+
+[33mcommit 511a2b365c2d1a7cd5e53de156ecc936fbf65d46[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 14:57:51 2024 -0400
+
+    Add files via upload
+    
+    added category model and views
+
+[33mcommit 9d7070baf4ad0708e3fe4f5f07fb352ce58b3013[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 14:57:51 2024 -0400
+
+    Add files via upload
+    
+    added category model and views
+
+[33mcommit 74deedeb4bac6ba11317e1ee87923dc76b400282[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 14:55:08 2024 -0400
+
+    Create 0001_initial.py
+
+[33mcommit 5fdc7814fad6c93c2632e9d84f7555a90de14c85[m
+Author: Deepika Venkatesan <64186626+Dipika2020@users.noreply.github.com>
+Date:   Sat Jun 22 14:55:08 2024 -0400
+
+    Create 0001_initial.py
+
+[33mcommit afbb4ca342d7265b8c8264b3f81e9188d33a0df0[m
+Merge: 0853724 f1a3050
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jun 21 16:03:57 2024 -0400
+
+    Merge pull request #2 from Rudra1402/talhaseeb
+    
+    added car model and made migrations
+
+[33mcommit f09070c210eed0b6ec1eb1bbe2a4a8d78f09640b[m
+Merge: 274e02e 4c9be96
+Author: talhaseeb <52654397+talhaseeb@users.noreply.github.com>
+Date:   Fri Jun 21 16:03:57 2024 -0400
+
+    Merge pull request #2 from Rudra1402/talhaseeb
+    
+    added car model and made migrations
+
+[33mcommit f1a305065207d647af3f5a370531ecd3988ebb0f[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jun 21 16:02:42 2024 -0400
+
+    added car model and made migrations
+
+[33mcommit 4c9be964d77ae51b5387ce09bd43b29896d77bdd[m
+Author: talhaseeb <talhahaseeb2@gmail.com>
+Date:   Fri Jun 21 16:02:42 2024 -0400
+
+    added car model and made migrations
+
+[33mcommit 0853724136bc482137132103209df0e5b2d24f30[m
+Merge: e58fb3f 55d5372
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Wed Jun 19 00:32:59 2024 -0400
+
+    Merge pull request #1 from Rudra1402/rudra
+    
+    created Bikes model, performed migrations
+
+[33mcommit 274e02e805058da17c6e84588a94ce93be387a62[m
+Merge: e58fb3f 55d5372
+Author: Rudra Patel <78080396+Rudra1402@users.noreply.github.com>
+Date:   Wed Jun 19 00:32:59 2024 -0400
+
+    Merge pull request #1 from Rudra1402/rudra
+    
+    created Bikes model, performed migrations
+
+[33mcommit 55d537266974514ab4e07f69a1e1482c8164c285[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Wed Jun 19 00:31:31 2024 -0400
+
+    created Bikes model, performed migrations
+
+[33mcommit e58fb3f8dbd9e25b059629ed4cdb0f12818c74ca[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jun 8 19:55:25 2024 -0400
+
+    applications setup with urls
+
+[33mcommit 0b12837bb3ce77092d4cdd788b751e5d15a492f5[m
+Author: Rudra Patel <rudra.190410116095@gmail.com>
+Date:   Sat Jun 8 19:27:08 2024 -0400
+
+    Initial Project Commit
