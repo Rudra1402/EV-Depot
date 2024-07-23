@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from cars.models import Cars
 from bikes.models import Bikes
 from trucks.models import Trucks
+from django.core.exceptions import ValidationError
+
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -11,14 +13,18 @@ class Order(models.Model):
     class Meta:
         abstract = True
 
+
 class TruckOrder(Order):
     truck = models.ForeignKey('trucks.Trucks', on_delete=models.CASCADE)
+
 
 class BikeOrder(Order):
     bike = models.ForeignKey('bikes.Bikes', on_delete=models.CASCADE)
 
+
 class CarOrder(Order):
     car = models.ForeignKey('cars.Cars', on_delete=models.CASCADE)
+
 
 class ReviewRating(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -31,3 +37,7 @@ class ReviewRating(models.Model):
 
     def __str__(self):
         return f"{self.user.username}'s review on {self.car or self.bike or self.truck}"
+
+    def clean(self):
+        if self.rating is None or self.rating < 1 or self.rating > 5:
+            raise ValidationError('Rating must be between 1 and 5.')

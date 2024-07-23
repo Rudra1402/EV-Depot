@@ -38,11 +38,11 @@
                 </div>
                 <div class="flex items-center justify-center gap-2 w-full md:w-auto">
                     <input type="checkbox" id="latest" name="latest" value="true" {% if request.GET.latest %}checked{% endif %} class="scale-125 text-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <label for="latest" class="text-gray-700">Latest</label>
+                    <label for="latest" class="text-gray-100">Latest</label>
                 </div>
                 <div class="flex items-center justify-center gap-2 w-full md:w-auto">
                     <input type="checkbox" id="sort" name="sort" value="name" {% if request.GET.sort == 'name' %}checked{% endif %} class="scale-125 text-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <label for="sort" class="text-gray-700">Sort by Name (A-Z)</label>
+                    <label for="sort" class="text-gray-100">Sort by Name (A-Z)</label>
                 </div>
             </div>
             <div class="w-full flex items-center justify-end">
@@ -60,10 +60,10 @@
             </div>
     
             <!-- Filter Fields -->
-            <div class="flex flex-col gap-4 p-6 rounded-md shadow-lg bg-green-300">
+            <div class="flex flex-col gap-4 p-6 rounded-md shadow-lg bg-[#095358]">
                 <!-- Search Input -->
                 <div class="flex flex-col w-full">
-                    <label for="query" class="text-gray-600 mb-2">Search Bikes</label>
+                    <label for="query" class="text-gray-100 mb-2">Search Bikes</label>
                     <input type="text" id="query" placeholder="Search bikes" name="query" value="{{ request.GET.query }}"
                         class="p-3 rounded-md border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
@@ -72,14 +72,14 @@
                 <div class="flex items-center gap-3">
                     <input type="checkbox" id="latest" name="latest" value="true" {% if request.GET.latest %}checked{% endif %}
                         class="scale-125 text-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <label for="latest" class="text-gray-600">Latest</label>
+                    <label for="latest" class="text-gray-100">Latest</label>
                 </div>
     
                 <!-- Sort Checkbox -->
                 <div class="flex items-center gap-3">
                     <input type="checkbox" id="sort" name="sort" value="name" {% if request.GET.sort == 'name' %}checked{% endif %}
                         class="scale-125 text-blue-500 focus:ring-2 focus:ring-blue-500">
-                    <label for="sort" class="text-gray-600">Sort by Name (A-Z)</label>
+                    <label for="sort" class="text-gray-100">Sort by Name (A-Z)</label>
                 </div>
             </div>
     
@@ -100,8 +100,8 @@
 
 
     <!-- Bike List Container on the Right -->
-    <div class="w-2/3 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-green-300" style="scrollbar-width: none;">
-        <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-700 pb-1 border-b-2 border-b-gray-500">
+    <div class="w-2/3 h-full overflow-y-auto p-6 flex flex-col items-center gap-y-6 bg-[#095358]" style="scrollbar-width: none;">
+        <h1 class="text-3xl flex gap-2 font-medium justify-center items-end leading-none text-gray-100 pb-1 border-b-2 border-b-gray-500">
             Bikes
             <div class="text-base flex">
                 (<div id="count">{{ bikes | length }}</div>)
@@ -118,7 +118,7 @@
                     {% include 'vehicle_card.html' with vehicle=bike user=user %}
                 {% endfor %}
             {% else %}
-                <p class="text-xl font-medium text-gray-700">No bikes available.</p>
+                <p class="text-xl font-medium text-gray-100">No bikes available.</p>
             {% endif %}
         </div>
     </div>
