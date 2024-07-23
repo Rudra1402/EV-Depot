@@ -6,7 +6,7 @@
     <a href="/"><img src="{% static "logo.png" %}" class="h-10 w-auto"></a>
     <div class="flex items-center justify-center gap-x-8">
         <a href="/" class="text-white font-semibold text-lg leading-none">Home</a>
-        <a href="#" class="text-white font-semibold text-lg leading-none">About</a>
+        <a href="/about" class="text-white font-semibold text-lg leading-none">About</a>
         <div x-data="{ open: false }" class="relative">
             <a href="#" @click="open = !open" class="text-white font-semibold text-lg leading-none cursor-pointer">Vehicles</a>
             <div x-show="open" @click.away="open = false" class="absolute bg-white text-black mt-1 py-2 w-40 shadow-lg z-50">

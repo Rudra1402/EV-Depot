@@ -2,30 +2,57 @@
 {% extends "base.html" %}
 {% load static %}
 {% block body_block %}
-<div class="purchase-details">
-    <h2>Bike Details</h2>
-    <p>Name: {{ bike.name }}</p>
-    <p>Company: {{ bike.companyName }}</p>
-    <p>Price: ${{ bike.price }}</p>
- 
-    <h2>Owner Details</h2>
-    <p>Username: {{ owner.username }}</p>
-    <p>Email: {{ owner.email }}</p>
-    <p>City: {{ owner.city }}</p>
-    <button id="confirm-purchase">Confirm Purchase</button>
-</div>
-<div id="payment-modal" style="display:none;">
-    <h2>Make Payment</h2>
-    <!-- Dummy card payment form -->
-    <form id="payment-form">
-        <label for="card-number">Card Number</label>
-        <input type="text" id="card-number" name="card-number" required>
-        <label for="expiry-date">Expiry Date</label>
-        <input type="text" id="expiry-date" name="expiry-date" required>
-        <label for="cvc">CVC</label>
-        <input type="text" id="cvc" name="cvc" required>
-        <button type="submit">Make Payment</button>
-    </form>
+<div class="m-0 p-0 w-screen h-screen flex flex-col bg-[#f5f5f5]">
+    <div class="flex-col flex gap-4 flex-1 overflow-auto p-6 text-gray-100 bg-[#095358]">
+        <div class="w-full flex gap-4">
+        <div class="flex flex-col gap-y-3 w-1/2">
+            <h2 class="text-xl font-semibold">Bike Details</h2>
+            <div class="bg-[#0008] py-2 px-3 rounded">
+                <p class="text-gray-300">Name</p>
+                <p class="text-gray-100 text-lg">{{ bike.name }}</p>
+            </div>
+            <div class="bg-[#0008] py-2 px-3 rounded">
+            <p class="text-gray-300">Company</p>
+            <p class="text-gray-100 text-lg">{{ bike.companyName }}</p>
+            </div>
+            <div class="bg-[#0008] py-2 px-3 rounded">
+            <p class="text-gray-300">Price</p>
+            <p class="text-gray-100 text-lg">${{ bike.price }}</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-y-3 w-1/2">
+            <h2 class="text-xl font-semibold">Owner Details</h2>
+            <div class="bg-[#0008] py-2 px-3 rounded">
+            <p class="text-gray-300">Name</p>
+            <p class="text-gray-100 text-lg">{{ owner.firstname }}</p>
+            </div>
+            <div class="bg-[#0008] py-2 px-3 rounded">
+            <p class="text-gray-300">Email</p>
+            <p class="text-gray-100 text-lg">{{ owner.email }}</p>
+            </div>
+            <div class="bg-[#0008] py-2 px-3 rounded">
+            <p class="text-gray-300">City</p>
+            <p class="text-gray-100 text-lg">{{ owner.city }}</p>
+            </div>
+        </div>
+        </div>
+        <div class="w-full flex items-center justify-end">
+        <button id="confirm-purchase" class="w-fit py-2.5 px-8 bg-[#0008] rounded">Confirm Purchase</button>
+        </div>
+    </div>
+    <div id="payment-modal bg-[#095358]" style="display:none;">
+        <h2>Make Payment</h2>
+        <!-- Dummy card payment form -->
+        <form id="payment-form">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" required>
+            <label for="expiry-date">Expiry Date</label>
+            <input type="text" id="expiry-date" name="expiry-date" required>
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" required>
+            <button type="submit">Make Payment</button>
+        </form>
+    </div>
 </div>
 <script>
     document.getElementById('confirm-purchase').onclick = function() {
@@ -33,11 +60,11 @@
     };
     document.getElementById('payment-form').onsubmit = function(event) {
         event.preventDefault();
-        // Simulate payment processing
         alert('Payment successful!');
-        // Redirect or handle points allocation
         window.location.href = "{% url 'bikes:complete_purchase' bike.id %}";
     };
 </script>
 {% endblock %}
- 
+
+
+<!-- gamification model -->
