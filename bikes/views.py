@@ -140,13 +140,13 @@ def bike_list(request):
     return render(request, 'index.html', context)
 
 
-#@login_required
+@login_required
 def purchase_bike(request, bike_id):
     bike = get_object_or_404(Bikes, id=bike_id)
     owner = bike.user
     return render(request, 'purchase_bike.html', {'bike': bike, 'owner': owner})
 
-#@login_required
+@login_required
 def complete_purchase(request, bike_id):
     bike = get_object_or_404(Bikes, id=bike_id)
     buyer = Buyer.objects.get(username=request.user)
