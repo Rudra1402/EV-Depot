@@ -10,11 +10,13 @@ from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChan
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Buyer
+
 from cars.models import Cars
 from bikes.models import Bikes
 from trucks.models import Trucks
 from .forms import UserLoginForm
 
+# Created Register function to collect data like username,firstname and email which helps to register as user.
 def Register(request):
     if request.method == 'GET':
         return render(request, "register.html")
@@ -22,7 +24,6 @@ def Register(request):
     if request.method == 'POST':
         username = request.POST['username']
         firstname = request.POST['firstname']
-        lastname = request.POST['lastname']
         email = request.POST['email']
         password = request.POST['password']
         mobile = request.POST['mobile']
@@ -36,14 +37,15 @@ def Register(request):
         else:
             try:
                 user = User.objects.create_user(username=username, email=email, password=password)
-                Buyer.objects.create(username=user, firstname=firstname, lastname=lastname, email=email, mobile=mobile, address=address, city=city)
-                # messages.success(request, "Account created successfully!")
-                return redirect('base:login')
+                Buyer.objects.create(username=user, firstname=firstname, email=email, mobile=mobile, address=address, city=city)
+                messages.success(request, "Account created successfully!")
+                return redirect('base:home')
             except IntegrityError:
                 messages.warning(request, "Account already exists!")
                 return redirect('users:register')
         return render(request, "register.html")
 
+# Created login function to check user login and password to redirect home or give errors if password incorrect.
 def LoginUser(request):
     if request.method == "GET":
         return render(request, "login.html")
@@ -58,25 +60,17 @@ def LoginUser(request):
             print("from login", user)
             print("current: ", timezone.now())
 
+            # Set session variable
             request.session['last_login'] = str(timezone.now())
-            request.session['user_id'] = user.id
-            last_login = request.session.get('last_login')
-            request.session['user_name'] = user.username
 
-            response = redirect('base:home')
-            response.set_cookie('user_id', user.id, max_age=3600)
-
-            # messages.success(request, "Logged in successfully!")
-            return response
+            messages.success(request, "Logged in successfully!")
+            return redirect('base:home')
         else:
             messages.error(request, "Invalid username or password!")
+            return redirect('users:login')
 
     return render(request, "login.html")
 
-def LogoutUser(request):
-    logout(request)
-    # messages.success(request, "You have been logged out.")
-    return redirect('users:login')
 
 @login_required
 def profile(request):

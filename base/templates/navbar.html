@@ -6,7 +6,7 @@
     <a href="/"><img src="{% static "logo.png" %}" class="h-10 w-auto"></a>
     <div class="flex items-center justify-center gap-x-8">
         <a href="/" class="text-white font-semibold text-lg leading-none">Home</a>
-        <a href="/about" class="text-white font-semibold text-lg leading-none">About</a>
+        <a href="#" class="text-white font-semibold text-lg leading-none">About</a>
         <div x-data="{ open: false }" class="relative">
             <a href="#" @click="open = !open" class="text-white font-semibold text-lg leading-none cursor-pointer">Vehicles</a>
             <div x-show="open" @click.away="open = false" class="absolute bg-white text-black mt-1 py-2 w-40 shadow-lg z-50">
@@ -15,19 +15,25 @@
                 <a href="/trucks" class="block px-4 py-2 hover:bg-gray-200">Trucks</a>
             </div>
         </div>
-
-        <!-- Conditional Profile/Login/Logout Buttons -->
-        {% if user.is_authenticated %}
-            <!-- User is logged in, show Profile and Logout buttons -->
-            <a href="{% url 'users:profile' %}" class="text-white font-semibold text-lg leading-none">Profile</a>
-            <a href="{% url 'users:logout' %}" class="text-white font-semibold text-lg leading-none">Logout</a>
-        {% else %}
-            <!-- User is not logged in, show Login/Register buttons -->
-            <a href="{% url 'users:login' %}" class="text-white font-semibold text-lg leading-none">Login</a>
-            <a href="{% url 'users:register' %}" class="text-white font-semibold text-lg leading-none">Register</a>
-        {% endif %}
+        <a href="/users/register/" class="text-white font-semibold text-lg leading-none">Profile</a>
     </div>
 </nav>
+
+{% comment %} <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const dropdownButton = document.querySelector('.dropdown button');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownContent.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', () => {
+            dropdownContent.classList.add('hidden');
+        });
+    });
+</script> {% endcomment %}
 
 <style>
     .dropdown-content a {

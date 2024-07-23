@@ -1,17 +1,17 @@
 {% load static %}
 
-<div class="rounded-lg w-full flex items-center bg-white border border-gray-200 shadow-lg truck-item" id="truck-{{ vehicle.id }}">
-    <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-96 h-56 max-h-full object-cover">
-    <div class="p-4 flex-1 flex flex-col gap-y-4">
+<div class="rounded-lg overflow-hidden border border-gray-200 shadow-lg bg-white truck-item" id="truck-{{ vehicle.id }}">
+    <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-full min-h-80 max-h-full object-cover">
+    <div class="p-4 flex flex-col gap-y-4">
         <div class="flex items-center justify-between gap-5">
             <a href="{% url "trucks:truckbyid" id=vehicle.id %}" class="text-gray-800">
                 <h2 class="text-2xl font-semibold text-gray-800">{{ vehicle.name }}</h2>
             </a>
             {% if user.username|safe == vehicle.user.username|safe %}
                 <div class="flex items-center gap-2 px-2">
-                    <a href="{% url 'trucks:edit_truck' id=vehicle.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                    <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
                         <i class="fa-solid fa-pen-to-square text-gray-100"></i>
-                    </a>
+                    </div>
                     <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center"
                         onclick="deleteTruck({{ vehicle.id }},'{{ vehicle.name }}')">
                         <i class="fa-solid fa-trash text-gray-100"></i>
@@ -63,6 +63,6 @@
                 <div class="text-lg font-medium text-gray-800">{{ vehicle.createdAt | timesince }} ago</div>
             </div>
         </div>
-        <div class="flex items-center justify-end py-2 px-3 bg-green-300 rounded shadow-md">Posted by&nbsp;<b>{{ vehicle.user.firstname|capfirst }}</b></div>
+        <div class="flex items-center justify-end p-2 rounded shadow-md">Seller&nbsp;<b>{{ vehicle.user.username|upper }}</b></div>
     </div>
 </div>

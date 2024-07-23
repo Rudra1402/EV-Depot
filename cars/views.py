@@ -2,37 +2,45 @@ from datetime import datetime, timedelta
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
+<<<<<<< HEAD
+=======
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.urls import reverse
 
 from users.models import Buyer
 from .utils import upload_image_to_firebase
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
 # Create your views here.
 from cars.models import Cars
 from .forms import CarForm
 
 
-# def carindex(request):
-#     if request.method == 'POST':
-#         form = CarForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('cars:homepage')  # Redirect to the same page to clear the form
-#     else:
-#         form = CarForm()
-
-#     cars = Cars.objects.all().order_by('-createdAt')
-#     car_form = CarForm()
-#     context = {
-#         'cars': cars,
-#         'form': car_form,
-#         'visit_counts': request.visit_counts,
-#         'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
-#     }
-#     return render(request, 'cars/carindex.html', context)
-
 def carindex(request):
+<<<<<<< HEAD
+    if request.method == 'POST':
+        form = CarForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('cars:homepage')  # Redirect to the same page to clear the form
+    else:
+        form = CarForm()
+
+    cars = Cars.objects.all().order_by('-createdAt')
+    car_form = CarForm()
+    context = {
+        'cars': cars,
+        'form': car_form,
+        'visit_counts': request.visit_counts,
+        'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
+    }
+    return render(request, 'cars/carindex.html', context)
+
+
+def carById(request, id):
+    car = get_object_or_404(Cars, id=id)
+    return render(request, 'cars/car.html', {'car': car})
+=======
     try:
         if request.method == 'POST':
             form = CarForm(request.POST, request.FILES)
@@ -88,6 +96,7 @@ def carById(request, id):
         'is_owner': car.user
     }
     return render(request, 'cars/car.html', context)
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
 
 
 def deleteCar(request, id):
@@ -99,6 +108,8 @@ def deleteCar(request, id):
     else:
         print(f"Received {request.method} request, only DELETE is allowed")
         raise Http404("Only DELETE method is allowed")
+<<<<<<< HEAD
+=======
     
 def edit_car(request, id):
     car = get_object_or_404(Cars, id=id)
@@ -176,3 +187,4 @@ def complete_purchase(request, car_id):
     car.save()
 
     return redirect(reverse('bikes:homepage'))  # or any page you want to redirect to
+>>>>>>> 1cc19404698a0f8a9272e8c7568772b6e7e1d0f9
