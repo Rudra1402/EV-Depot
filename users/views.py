@@ -10,7 +10,11 @@ from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChan
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Buyer
+from cars.models import Cars
+from bikes.models import Bikes
+from trucks.models import Trucks
 from .forms import UserLoginForm
+from django.urls import reverse
 
 def Register(request):
     if request.method == 'GET':
@@ -27,9 +31,9 @@ def Register(request):
         city = request.POST['city']
 
         if len(mobile) != 10 or not mobile.isdigit():
-            messages.warning(request, "The phone number provided is not 10 digits!")
+            print("The phone number provided is not 10 digits!")
         elif mobile.startswith('0'):
-            messages.warning(request, "The phone number provided is not valid!")
+            print("The phone number provided is not valid!")
         else:
             try:
                 user = User.objects.create_user(username=username, email=email, password=password)
@@ -43,11 +47,13 @@ def Register(request):
 
 def LoginUser(request):
     if request.method == "GET":
-        return render(request, "login.html")
+        next_url = request.GET.get('next', reverse('base:home'))
+        return render(request, "login.html", {'next':next_url})
 
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
+        next_url = request.POST.get('next', reverse('base:home')) 
 
         user = authenticate(request, username=username, password=password)
         if user is not None:
@@ -60,13 +66,15 @@ def LoginUser(request):
             last_login = request.session.get('last_login')
             request.session['user_name'] = user.username
 
-            response = redirect('base:home')
+            # response = redirect('base:home')
+            response = redirect(next_url)
             response.set_cookie('user_id', user.id, max_age=3600)
 
             # messages.success(request, "Logged in successfully!")
             return response
         else:
             messages.error(request, "Invalid username or password!")
+            return render(request, "login.html",{'next': next_url})
 
     return render(request, "login.html")
 
@@ -85,6 +93,14 @@ def profile(request):
     try:
         buyer = Buyer.objects.get(username=user)
         points = buyer.points
+        purchased_cars = Cars.objects.filter(purchasedBy=buyer)
+        purchased_bikes = Bikes.objects.filter(purchasedBy=buyer)
+        #purchased_trucks = Trucks.objects.filter(purchasedBy=buyer)
+
+        # Check if any vehicles were purchased
+        has_purchased_cars = purchased_cars.exists()
+        has_purchased_bikes = purchased_bikes.exists()
+        #has_purchased_trucks = purchased_trucks.exists()
     except Buyer.DoesNotExist:
         points = 0  # Default value if the Buyer instance is not found
 
@@ -100,6 +116,12 @@ def profile(request):
         'visit_counts': visit_counts,
         'most_visited_app': most_visited_app,
         'badge': badge,
+        'purchased_cars': purchased_cars,
+        'purchased_bikes': purchased_bikes,
+        #'purchased_trucks': purchased_trucks,
+        'has_purchased_cars': has_purchased_cars,
+        'has_purchased_bikes': has_purchased_bikes,
+        #'has_purchased_trucks': has_purchased_trucks,
     }
     return render(request, 'profile.html', context)
 

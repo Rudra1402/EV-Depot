@@ -5,33 +5,33 @@
     <div class="flex-col flex gap-4 flex-1 overflow-auto p-6 text-gray-100 bg-[#095358]">
         <div class="w-full flex gap-4">
             <div class="flex flex-col gap-y-3 w-1/2">
-                <h2 class="text-xl font-semibold">Bike Details</h2>
+                <h2 class="text-xl font-semibold">Car Details</h2>
                 <div class="bg-[#0008] py-2 px-3 rounded">
                     <p class="text-gray-300">Name</p>
-                    <p class="text-gray-100 text-lg">{{ bike.name }}</p>
+                    <p class="text-gray-100 text-lg">{{ car.name }}</p>
                 </div>
                 <div class="bg-[#0008] py-2 px-3 rounded">
                     <p class="text-gray-300">Company</p>
-                    <p class="text-gray-100 text-lg">{{ bike.companyName }}</p>
+                    <p class="text-gray-100 text-lg">{{ car.companyName }}</p>
                 </div>
                 <div class="bg-[#0008] py-2 px-3 rounded">
                     <p class="text-gray-300">Price</p>
-                    <p class="text-gray-100 text-lg">${{ bike.price }}</p>
+                    <p class="text-gray-100 text-lg">${{ car.price }}</p>
                 </div>
             </div>
             <div class="flex flex-col gap-y-3 w-1/2">
                 <h2 class="text-xl font-semibold">Owner Details</h2>
                 <div class="bg-[#0008] py-2 px-3 rounded">
                     <p class="text-gray-300">Name</p>
-                    <p class="text-gray-100 text-lg">{{ bike.firstname }}</p>
+                    <p class="text-gray-100 text-lg">{{ owner.firstname }}</p>
                 </div>
                 <div class="bg-[#0008] py-2 px-3 rounded">
                     <p class="text-gray-300">Email</p>
-                    <p class="text-gray-100 text-lg">{{ bike.email }}</p>
+                    <p class="text-gray-100 text-lg">{{ owner.email }}</p>
                 </div>
                 <div class="bg-[#0008] py-2 px-3 rounded">
                     <p class="text-gray-300">City</p>
-                    <p class="text-gray-100 text-lg">{{ bike.city }}</p>
+                    <p class="text-gray-100 text-lg">{{ owner.city }}</p>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
     document.getElementById('payment-form').onsubmit = function(event) {
         event.preventDefault();
         alert('Payment successful!');
-        window.location.href = "{% url 'bikes:complete_purchase' bike.id %}";
+        window.location.href = "{% url 'cars:complete-purchase' car.id %}";
     };
 </script>
 {% endblock %}
