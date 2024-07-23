@@ -114,3 +114,25 @@ def truck_list(request):
         'trucks': trucks
     }
     return render(request, 'trucks/index.html', context)
+
+def purchase_truck(request, truck_id):
+    truck = get_object_or_404(Trucks, id=truck_id)
+    owner = truck.user
+    return render(request, 'purchase_truck.html', {'truck': truck, 'owner': owner})
+
+def complete_purchase(request, truck_id):
+    truck = get_object_or_404(Trucks, id=truck_id)
+    buyer = Buyer.objects.get(username=request.user)
+    owner = truck.user
+
+    # Allocate points
+    buyer.points += 100  # or any logic to calculate points
+    buyer.save()
+    owner.points += 50  # or any logic to calculate points
+    owner.save()
+
+    # Mark the truck as purchased
+    truck.purchasedBy = buyer
+    truck.save()
+
+    return redirect(reverse('trucks:homepage'))
