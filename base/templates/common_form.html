@@ -6,45 +6,45 @@
     <!-- Container for centering the form -->
     <div class="w-full max-w-3xl p-6 bg-white rounded-md shadow-lg overflow-y-auto" style="scrollbar-width: none; max-height: calc(100vh - 4rem);">
         <h1 class="text-2xl font-bold mb-6 text-gray-800">Add {{ app_name }}</h1>
-        <form method="post" action="{% url app_name|add:':homepage' %}" enctype="multipart/form-data" class="p-6 rounded-md bg-gradient-to-tr from-green-400 to-green-300 flex flex-col gap-4">
+        <form method="post" action="{% url app_name|add:':homepage' %}" enctype="multipart/form-data" class="p-6 rounded-md bg-gradient-to-t from-green-400 to-green-500 flex flex-col gap-4">
             {% csrf_token %}
             <div class="flex items-center w-full gap-4">
                 <div class="w-1/2 flex flex-col gap-1">
-                    <label for="id_name" class="block text-gray-800">Name</label>
+                    <label for="id_name" class="block text-gray-700">Name</label>
                     {{ form.name }}
                 </div>
                 <div class="w-1/2 flex flex-col gap-1">
-                    <label for="id_companyName" class="block text-gray-800">Company Name</label>
+                    <label for="id_companyName" class="block text-gray-700">Company Name</label>
                     {{ form.companyName }}
                 </div>
             </div>
             <div class="flex items-center w-full gap-4">
                 <div class="w-1/2 flex flex-col gap-1">
-                    <label for="id_modelType" class="block text-gray-800">Model Type</label>
+                    <label for="id_modelType" class="block text-gray-700">Model Type</label>
                     {{ form.modelType }}
                 </div>
                 <div class="w-1/2 flex flex-col gap-1">
-                    <label for="id_manufacturingYear" class="block text-gray-800">Manufacturing Year</label>
+                    <label for="id_manufacturingYear" class="block text-gray-700">Manufacturing Year</label>
                     {{ form.manufacturingYear }}
                 </div>
             </div>
             <div class="flex items-center w-full gap-4">
                 <div class="w-1/2 flex flex-col gap-1">
-                    <label for="id_price" class="block text-gray-800">Price</label>
+                    <label for="id_price" class="block text-gray-700">Price</label>
                     {{ form.price }}
                 </div>
                 <div class="w-1/2 flex flex-col gap-1">
-                    <label for="id_image" class="block text-gray-800">Image</label>
+                    <label for="id_image" class="block text-gray-700">Image URL</label>
                     {{ form.image }}
                 </div>
             </div>
             <div class="flex flex-col gap-1">
-                <label for="id_description" class="block text-gray-800">Description</label>
+                <label for="id_description" class="block text-gray-700">Description</label>
                 {{ form.description }}
             </div>
             <div class="flex items-center justify-start gap-3 px-1">
                 {{ form.isNew }}
-                <label for="id_isNew" class="block text-gray-800">Is New</label>
+                <label for="id_isNew" class="block text-gray-700">Is New</label>
             </div>
             <div class="w-full flex justify-end">
                 <button type="submit" class="w-fit mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>

@@ -1,6 +1,7 @@
 from django import forms
 from .models import Cars
 
+
 class CarForm(forms.ModelForm):
     class Meta:
         model = Cars
@@ -14,18 +15,6 @@ class CarForm(forms.ModelForm):
             'price': forms.NumberInput(attrs={'class': 'px-3 py-3 rounded w-full', 'placeholder': 'Price'}),
             'description': forms.Textarea(
                 attrs={'class': 'px-3 py-3 rounded w-full', 'rows': 8, 'placeholder': 'Description'}),
-            'image': forms.ClearableFileInput(attrs={
-                'multiple': False,
-                'class': 'px-3 py-3 rounded w-full',
-                'placeholder': 'Image URL'
-            }),
+            'image': forms.URLInput(attrs={'class': 'px-3 py-3 rounded w-full', 'placeholder': 'Image URL'}),
             'isNew': forms.CheckboxInput(attrs={'class': 'scale-125'}),
         }
-
-# class MessageForm(forms.ModelForm):
-#     class Meta:
-#         model = Message
-#         fields = ['content']
-#         widgets = {
-#             'content': forms.Textarea(attrs={'rows': 4, 'placeholder': 'Type your message...'}),
-#         }

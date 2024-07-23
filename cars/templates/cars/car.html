@@ -1,6 +1,18 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 {% load static %}
-{% block extra_head %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .poppins-regular {
             font-family: "Poppins", sans-serif;
@@ -25,14 +37,10 @@
             transform: scale(1.05);
         }
     </style>
-    <script>
-        const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
-    </script>
-{% endblock %}
-{% block body_block %}
+</head>
 
-<div class="m-0 p-0 w-screen h-screen flex flex-col poppins-regular bg-[#f5f5f5]">
-    {% comment %} <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">
+<body class="m-0 p-0 w-screen h-screen flex flex-col poppins-regular bg-[#f5f5f5]">
+    <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">
         <img src="{% static "logo.png" %}" class="h-10 w-auto">
         <div class="flex items-center justify-center gap-x-8">
             <a href="#" class="text-white font-semibold text-lg leading-none">Home</a>
@@ -40,108 +48,67 @@
             <a href="#" class="text-white font-semibold text-lg leading-none">Vehicles</a>
             <a href="#" class="text-white font-semibold text-lg leading-none">Profile</a>
         </div>
-    </nav> {% endcomment %}
+    </nav>
     <div class="flex flex-1 overflow-auto">
-        <div class="w-1/2 h-full flex items-center p-8 bg-[#095358]">
+        <div class="w-1/2 h-full flex items-center p-8 bg-gradient-to-t from-green-200 to-green-300">
             <img src="{{ car.image }}" alt="{{ car.name }}" class="rounded-lg w-full max-h-full bg-white">
         </div>
-        <div class="w-1/2 h-full overflow-y-auto p-8 flex flex-col items-start gap-y-4 bg-[#095358]"
+        <div class="w-1/2 h-full overflow-y-auto p-8 flex flex-col items-start gap-y-4 bg-gradient-to-t from-green-200 to-green-300"
             style="scrollbar-width: none;">
             <div class="flex items-center gap-x-6 justify-between w-full mb-2">
-                <div class="font-semibold text-3xl text-gray-100 leading-none pb-2 border-b-2 border-b-gray-300">{{ car.name }}</div>
-                <div class="px-4 py-2 rounded-md bg-[#0008] text-gray-200 cursor-pointer" onclick="history.back()">Go Back</div>
+                <div class="font-semibold text-3xl text-gray-700 leading-none pb-2 border-b-2 border-b-gray-700">{{ car.name }}</div>
+                <div class="px-4 py-2 rounded-md bg-blue-500 text-gray-200 cursor-pointer" onclick="history.back()">Go Back</div>
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Company</div>
                     <div class="text-lg font-medium text-gray-100 w-full">{{ car.companyName }}</div>
                 </div>
                 {% if car.get_modelType_display %}
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Type</div>
                     <div class="text-lg font-medium text-gray-100 w-full">{{ car.get_modelType_display }}</div>
                 </div>
                 {% else %}
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300 w-full">Type</div>
                     <div class="text-lg font-medium text-gray-100 w-full">{{ car.modelType }}</div>
                 </div>
                 {% endif %}
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Year</div>
                     <div class="text-lg font-medium text-gray-100">{{ car.manufacturingYear }}</div>
                 </div>
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Price</div>
                     <div class="text-lg font-medium text-gray-100">${{ car.price }}</div>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-4 w-full">
                 {% if car.isNew %}
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Condition</div>
                     <div class="text-lg font-medium text-gray-100">New</div>
                 </div>
                 {% else %}
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Condition</div>
                     <div class="text-lg font-medium text-gray-100">Used</div>
                 </div>
                 {% endif %}
-                <div class="flex flex-col gap-y-1 bg-[#0008] rounded-md px-4 py-2 w-full">
+                <div class="flex flex-col gap-y-1 bg-blue-500 rounded-md px-4 py-2 w-full">
                     <div class="text-gray-300">Posted</div>
                     <div class="text-lg font-medium text-gray-100">{{ car.createdAt | timesince }} ago</div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 bg-[#0008] gap-4 rounded-md px-4 pt-2 pb-4 w-full">
+            <div class="grid grid-cols-1 bg-blue-500 gap-4 rounded-md px-4 pt-2 pb-4 w-full">
                 <div class="text-gray-300">Description</div>
                 <div class="text-lg font-medium text-gray-100">{{ car.description }}</div>
             </div>
-            {% if user.is_authenticated %}
-                <div class="flex items-center justify-end gap-3 w-full">
-                    <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button>
-                    <!-- bikes.html -->
-                    <a href="#" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
-                </div>
-            {% endif %}
         </div>
     </div>
-    <!-- <div class="flex">
-        <div class="message-list">
-            {% for message in messages %}
-                <div class="message-item" data-id="{{ message.id }}">
-                    {{ message.content|slice:":50" }}{% if message.content|length > 50 %}...{% endif %}
-                </div>
-            {% empty %}
-                <p>No messages yet.</p>
-            {% endfor %}
-        </div>
-        <div class="message-content">
-            {% if messages %}
-                <div class="message" data-id="{{ messages.last.id }}">
-                    <div class="message-content-wrapper {% if message.sender == user %}sent{% else %}received{% endif %}">
-                        <p>{{ messages.last.content }}</p>
-                        <p class="message-time">{{ messages.last.created_at }}</p>
-                    </div>
-                </div>
-            {% else %}
-                <p>Select a message to view.</p>
-            {% endif %}
-        </div>
-    </div>
+</body>
 
-    {% if not is_owner %}
-        <form method="post" class="mt-4">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="bg-[#0008] text-white py-2 px-4 rounded hover:bg-blue-600">Send</button>
-        </form>
-    {% else %}
-        <p class="mt-4 text-gray-600">You are the owner of this car. You can view messages sent to you.</p>
-    {% endif %}
-</div> -->
-</div>
-
-{% endblock %}
+</html>

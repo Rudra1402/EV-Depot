@@ -1,8 +1,6 @@
 from django import forms
 # from .models import CustomUser
 # from django.contrib.auth.hashers import make_password
-from django.contrib.auth.forms import AuthenticationForm
-
 #
 # class UserRegisterForm(forms.ModelForm):
 #     mobile = forms.CharField(max_length=10)
@@ -19,9 +17,10 @@ from django.contrib.auth.forms import AuthenticationForm
 #         if commit:
 #             user.save()
 #         return user
-class UserLoginForm(AuthenticationForm):
-    username = forms.CharField(max_length=254, label='Username')
-    password = forms.CharField(widget=forms.PasswordInput, label='Password')
+#
+# class UserLoginForm(forms.Form):
+#     email = forms.EmailField(max_length=30)
+#     password = forms.CharField(widget=forms.PasswordInput)
 
 
 

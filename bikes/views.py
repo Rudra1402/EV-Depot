@@ -2,9 +2,7 @@ from datetime import datetime, timedelta
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
-from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from django.urls import reverse
 
 from users.models import Buyer
 from .utils import upload_image_to_firebase
@@ -25,14 +23,13 @@ def index(request):
                     image_url = upload_image_to_firebase(image, 'bike_images')
                     bike.image = image_url
                     bike.user = Buyer.objects.get(pk=4)
-                    print(Buyer.objects.get(pk=4))
 
                 form.save()
                 return redirect('bikes:homepage')  # Redirect to the same page to clear the form
         else:
             form = BikeForm()
 
-        bikes = Bikes.objects.filter(purchasedBy__isnull=True)
+        bikes = Bikes.objects.all()
 
         latest = request.GET.get('latest')
         if latest:
@@ -56,7 +53,6 @@ def index(request):
         return render(request,'index.html', context)
     except Exception as e:
         print(str(e))
-        
 
 def bikeById(request, id):
     bike = get_object_or_404(Bikes, id=id)
@@ -71,30 +67,6 @@ def delete_bike(request, id):
     else:
         print(f"Received {request.method} request, only DELETE is allowed")
         raise Http404("Only DELETE method is allowed")
-
-
-def edit_bike(request, id):
-    bike = get_object_or_404(Bikes, id=id)
-
-    if request.method == 'POST':
-        form = BikeForm(request.POST, request.FILES, instance=bike)
-        if form.is_valid():
-            if 'image' in request.FILES:
-                image = request.FILES['image']
-                image_url = upload_image_to_firebase(image, 'bike_images')
-                bike.image = image_url
-            form.save()
-            return redirect('bikes:homepage')
-    else:
-        form = BikeForm(instance=bike)
-        form.fields['image'].initial = None
-
-    context = {
-        'form': form,
-        'bike': bike,
-    }
-    return render(request, 'edit_bike.html', context)
-
 
 def bike_list(request):
     bikes = Bikes.objects.all()
@@ -115,28 +87,3 @@ def bike_list(request):
         'bikes': bikes
     }
     return render(request, 'index.html', context)
-
-
-#@login_required
-def purchase_bike(request, bike_id):
-    bike = get_object_or_404(Bikes, id=bike_id)
-    owner = bike.user
-    return render(request, 'purchase_bike.html', {'bike': bike, 'owner': owner})
-
-#@login_required
-def complete_purchase(request, bike_id):
-    bike = get_object_or_404(Bikes, id=bike_id)
-    buyer = Buyer.objects.get(username=request.user)
-    owner = bike.user
-
-    # Allocate points
-    buyer.points += 100  # or any logic to calculate points
-    buyer.save()
-    owner.points += 50  # or any logic to calculate points
-    owner.save()
-
-    # Mark the bike as purchased
-    bike.purchasedBy = buyer
-    bike.save()
-
-    return redirect(reverse('bikes:homepage'))  # or any page you want to redirect to
