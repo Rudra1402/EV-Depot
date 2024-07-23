@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c66e7b4-d612-4458-868c-aeefd2003056" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes/templates/bike.html" beforeDir="false" afterPath="$PROJECT_DIR$/bikes/templates/bike.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bikes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes/templates/purchase_bike.html" beforeDir="false" afterPath="$PROJECT_DIR$/bikes/templates/purchase_bike.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes/templates/vehicle_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/bikes/templates/vehicle_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bikes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bikes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/templates/cars/car.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/cars/car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/templates/cars/carindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/cars/templates/cars/carindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trucks/templates/trucks/purchase_truck.html" beforeDir="false" afterPath="$PROJECT_DIR$/trucks/templates/trucks/purchase_truck.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +45,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "Merging Gull",
+    "git-widget-placeholder": "Gull",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
