@@ -58,7 +58,7 @@
             <h2 class="text-xl font-semibold text-gray-800">Filter Options</h2>
             <div>({{most_visited_app}} is the most visited!)</div>
             </div>
-    
+
             <!-- Filter Fields -->
             <div class="flex flex-col gap-4 p-6 rounded-md shadow-lg bg-[#095358]">
                 <!-- Search Input -->
@@ -67,14 +67,14 @@
                     <input type="text" id="query" placeholder="Search bikes" name="query" value="{{ request.GET.query }}"
                         class="p-3 rounded-md border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
-    
+
                 <!-- Latest Checkbox -->
                 <div class="flex items-center gap-3">
                     <input type="checkbox" id="latest" name="latest" value="true" {% if request.GET.latest %}checked{% endif %}
                         class="scale-125 text-blue-500 focus:ring-2 focus:ring-blue-500">
                     <label for="latest" class="text-gray-100">Latest</label>
                 </div>
-    
+
                 <!-- Sort Checkbox -->
                 <div class="flex items-center gap-3">
                     <input type="checkbox" id="sort" name="sort" value="name" {% if request.GET.sort == 'name' %}checked{% endif %}
@@ -82,10 +82,10 @@
                     <label for="sort" class="text-gray-100">Sort by Name (A-Z)</label>
                 </div>
             </div>
-    
+
             <!-- Apply Filters Button -->
             <div class="w-full gap-3 flex justify-end mt-0">
-                
+
                 <button type="submit"
                     class="px-6 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors duration-200">
                     Apply Filters
@@ -111,7 +111,7 @@
             {% endif %} {% endcomment %}
         </h1>
 
-        
+
         <div class="flex flex-col gap-y-5 w-full">
             {% if bikes %}
                 {% for bike in bikes %}
