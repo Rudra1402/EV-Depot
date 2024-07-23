@@ -10,6 +10,9 @@ from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChan
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Buyer
+from cars.models import Cars
+from bikes.models import Bikes
+from trucks.models import Trucks
 from .forms import UserLoginForm
 
 def Register(request):
@@ -85,6 +88,14 @@ def profile(request):
     try:
         buyer = Buyer.objects.get(username=user)
         points = buyer.points
+        purchased_cars = Cars.objects.filter(purchasedBy=buyer)
+        purchased_bikes = Bikes.objects.filter(purchasedBy=buyer)
+        #purchased_trucks = Trucks.objects.filter(purchasedBy=buyer)
+
+        # Check if any vehicles were purchased
+        has_purchased_cars = purchased_cars.exists()
+        has_purchased_bikes = purchased_bikes.exists()
+        #has_purchased_trucks = purchased_trucks.exists()
     except Buyer.DoesNotExist:
         points = 0  # Default value if the Buyer instance is not found
 
@@ -100,6 +111,12 @@ def profile(request):
         'visit_counts': visit_counts,
         'most_visited_app': most_visited_app,
         'badge': badge,
+        'purchased_cars': purchased_cars,
+        'purchased_bikes': purchased_bikes,
+        #'purchased_trucks': purchased_trucks,
+        'has_purchased_cars': has_purchased_cars,
+        'has_purchased_bikes': has_purchased_bikes,
+        #'has_purchased_trucks': has_purchased_trucks,
     }
     return render(request, 'profile.html', context)
 
