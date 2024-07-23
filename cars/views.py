@@ -82,25 +82,11 @@ def carindex(request):
 #@login_required
 def carById(request, id):
     car = get_object_or_404(Cars, id=id)
-    # messages = Message.objects.filter(car=car).order_by('-created_at')
-
-    # if request.method == 'POST':
-    #     form = MessageForm(request.POST)
-    #     if form.is_valid():
-    #         message = form.save(commit=False)
-    #         message.car = car
-    #         message.user = request.user
-    #         message.save()
-    #         return redirect('cars:car-by-id', id=id)
-    # else:
-    #     form = MessageForm()
-
-    # context = {
-    #     'car': car,
-    #     'messages': messages,
-    #     'form': form,
-    # }
-    return render(request, 'cars/car.html', {'car': car})
+    context = {
+        'car': car,
+        'is_owner': car.user
+    }
+    return render(request, 'cars/car.html', context)
 
 
 def deleteCar(request, id):
