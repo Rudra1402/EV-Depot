@@ -10,6 +10,9 @@ from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChan
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Buyer
+from bikes.models import Bikes
+from cars.models import Cars
+from trucks.models import Trucks
 from .forms import UserLoginForm
 
 def Register(request):
@@ -85,8 +88,10 @@ def profile(request):
     try:
         buyer = Buyer.objects.get(username=user)
         points = buyer.points
+        bikes = Bikes.objects.filter(purchasedBy=buyer)
     except Buyer.DoesNotExist:
         points = 0  # Default value if the Buyer instance is not found
+        bikes = None
 
     # points = user.points
     if points < 100:
@@ -100,6 +105,7 @@ def profile(request):
         'visit_counts': visit_counts,
         'most_visited_app': most_visited_app,
         'badge': badge,
+        'bikes': bikes
     }
     return render(request, 'profile.html', context)
 
