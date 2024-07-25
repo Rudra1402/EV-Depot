@@ -92,7 +92,7 @@
             </div>
             {% if user.is_authenticated %}
                 <div class="flex items-center justify-end gap-3 w-full">
-                    <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button>
+                    {% comment %} <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button> {% endcomment %}
                     <!-- bikes.html -->
                     <a href="{% url 'bikes:purchase_bike' bike.id %}" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
                 </div>
