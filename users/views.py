@@ -10,10 +10,11 @@ from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChan
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Buyer
+from bikes.models import Bikes
+from cars.models import Cars
+from trucks.models import Trucks
 from .forms import UserLoginForm
 
-
-# Created Register function to collect data like username,firstname and email which helps to register as user.
 def Register(request):
     if request.method == 'GET':
         return render(request, "register.html")
@@ -36,42 +37,12 @@ def Register(request):
             try:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 Buyer.objects.create(username=user, firstname=firstname, lastname=lastname, email=email, mobile=mobile, address=address, city=city)
-                messages.success(request, "Account created successfully!")
-                return redirect('base:home')
+                # messages.success(request, "Account created successfully!")
+                return redirect('users:login')
             except IntegrityError:
                 messages.warning(request, "Account already exists!")
                 return redirect('users:register')
         return render(request, "register.html")
-
-# Created login function to check user login and password to redirect home or give errors if password incorrect.
-
-# def LoginUser(request):
-#     if request.method == "GET":
-#         return render(request, "login.html")
-#
-#     if request.method == "POST":
-#         username = request.POST['username']
-#         password = request.POST['password']
-#
-#         user = authenticate(request, username=username, password=password)
-#         if user is not None:
-#             login(request, user)
-#             print("from login", user)
-#             print("current: ", timezone.now())
-#
-#             # Set session variable
-#             request.session['last_login'] = str(timezone.now())
-#
-#             # Set a cookie (e.g., user_id)
-#             response = redirect('base:home')
-#             response.set_cookie('user_id', user.id, max_age=3600)  # Cookie valid for 1 hour
-#
-#             messages.success(request, "Logged in successfully!")
-#             return response
-#         else:
-#             messages.error(request, "Invalid username or password!")
-#
-#     return render(request, "login.html")
 
 def LoginUser(request):
     if request.method == "GET":
@@ -87,17 +58,15 @@ def LoginUser(request):
             print("from login", user)
             print("current: ", timezone.now())
 
-            # Set session variables
             request.session['last_login'] = str(timezone.now())
             request.session['user_id'] = user.id
             last_login = request.session.get('last_login')
             request.session['user_name'] = user.username
 
-            # Optionally, set a cookie (e.g., user_id)
             response = redirect('base:home')
-            response.set_cookie('user_id', user.id, max_age=3600)  # Cookie valid for 1 hour
+            response.set_cookie('user_id', user.id, max_age=3600)
 
-            messages.success(request, "Logged in successfully!")
+            # messages.success(request, "Logged in successfully!")
             return response
         else:
             messages.error(request, "Invalid username or password!")
@@ -106,16 +75,72 @@ def LoginUser(request):
 
 def LogoutUser(request):
     logout(request)
-    messages.success(request, "You have been logged out.")
+    # messages.success(request, "You have been logged out.")
     return redirect('users:login')
 
 @login_required
 def profile(request):
+    user = request.user
     visit_counts = request.visit_counts
     most_visited_app = max(visit_counts, key=visit_counts.get)
+
+    # Fetch the Buyer instance
+    try:
+        buyer = Buyer.objects.get(username=user)
+        points = buyer.points
+        bikes = Bikes.objects.filter(purchasedBy=buyer)
+    except Buyer.DoesNotExist:
+        points = 0  # Default value if the Buyer instance is not found
+        bikes = None
+
+    # points = user.points
+    if points < 100:
+        badge = 'bronze_badge.png'
+    elif points < 150:
+        badge = 'silver_badge.png'
+    else:
+        badge = 'gold_badge.png'
 
     context = {
         'visit_counts': visit_counts,
         'most_visited_app': most_visited_app,
+        'badge': badge,
+        'bikes': bikes
     }
     return render(request, 'profile.html', context)
+
+@login_required
+def UpdateProfile(request):
+    if request.method == 'POST':
+        user = request.user
+        buyer = get_object_or_404(Buyer, username=user)
+
+        buyer.firstname = request.POST['firstname']
+        buyer.lastname = request.POST['lastname']
+        buyer.mobile = request.POST['mobile']
+        buyer.address = request.POST['address']
+        buyer.city = request.POST['city']
+        buyer.save()
+
+        # messages.success(request, "Profile updated successfully!")
+        return redirect('users:profile')
+    else:
+        return render(request, 'update_profile.html')
+
+@login_required
+def DeleteProfile(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        # messages.success(request, "Profile deleted successfully!")
+        return redirect('users:register')
+
+@login_required
+def messages(request, user_id):
+    seller = Buyer.objects.get(pk=user_id)
+    if seller is None:
+        return HttpResponse("<h2>Seller not found!</h2>")
+    context = {
+        'range': range(4)
+    }
+    return render(request, "messages.html", context)
