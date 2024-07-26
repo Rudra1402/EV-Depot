@@ -31,8 +31,8 @@ def index(request):
         else:
             form = TruckForm()
 
-        # trucks = Trucks.objects.filter(purchasedBy__isnull=True)
-        trucks = Trucks.objects.all()
+        trucks = Trucks.objects.filter(purchasedBy__isnull=True)
+        # trucks = Trucks.objects.all()
 
         latest = request.GET.get('latest')
         if latest:

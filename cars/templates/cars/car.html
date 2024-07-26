@@ -99,7 +99,7 @@
                 <div class="text-gray-300">Description</div>
                 <div class="text-lg font-medium text-gray-100">{{ car.description }}</div>
             </div>
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and user.username|safe != car.user.username|safe %}
                 <div class="flex items-center justify-end gap-3 w-full">
                     {% comment %} <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button> {% endcomment %}
                     <!-- bikes.html -->

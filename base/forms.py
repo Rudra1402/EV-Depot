@@ -18,7 +18,7 @@ class CarsForm(forms.ModelForm):
             'price': forms.NumberInput(attrs={'class': 'px-3 py-3 rounded w-full', 'placeholder': 'Price'}),
             'description': forms.Textarea(
                 attrs={'class': 'px-3 py-3 rounded w-full', 'rows': 8, 'placeholder': 'Description'}),
-            'image': forms.ClearableFileInput(attrs={'multiple': False, 'class': 'px-3 py-3 rounded w-full', 'placeholder': 'Image URL'}),
+            'image': forms.ClearableFileInput(attrs={'multiple': False, 'class': 'px-3 py-2.5 bg-white rounded w-full', 'placeholder': 'Image URL'}),
             'isNew': forms.CheckboxInput(attrs={'class': 'scale-125'}),
         }
 
@@ -51,7 +51,11 @@ class TruckForm(forms.ModelForm):
             'description': forms.Textarea(
                 attrs={'class': 'px-3 py-3 rounded w-full', 'rows': 8, 'placeholder': 'Description'}),
             'image': forms.ClearableFileInput(
-                attrs={'multiple': False, 'class': 'px-3 py-3 rounded w-full', 'placeholder': 'Image URL'}),
+                attrs={
+                    'multiple': False,
+                    'class': 'px-3 py-2.5 rounded w-full bg-white',
+                    'placeholder': 'Image URL'
+                }),
             'isNew': forms.CheckboxInput(attrs={'class': 'scale-125'}),
         }
 
