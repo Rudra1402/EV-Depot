@@ -1,9 +1,7 @@
-
-
 {% extends "base.html" %}
 {% load static %}
 {% block extra_head %}
-<script src="{% static 'script.js' %}"></script>
+<script src="{% static 'carscript.js' %}"></script>
 <style>
     .poppins-regular {
         font-family: "Poppins", sans-serif;
@@ -73,9 +71,11 @@
                     class="px-6 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors duration-200">
                     Apply Filters
                 </button>
+                {%if user.is_authenticated %}
                 <a href="{% url 'base:common_form' 'cars' %}" class="px-6 py-2 rounded-md bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors duration-200 text-center">
                     Add Cars
                 </a>
+                {% endif %}
             </div>
         </form>
     </div>
@@ -108,15 +108,13 @@
                                 <a href="{% url "cars:car-by-id" id=car.id %}" class="text-gray-800">
                                     <h2 class="text-2xl font-semibold text-gray-800">{{ car.name }}</h2>
                                 </a>
-                                {% if user.username|safe == vehicle.user.username|safe %}
+                                {% if user.username|safe == car.user.username|safe %}
                                     <div class="flex items-center gap-2 px-2">
-                                        <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                                        <a href="{% url 'cars:edit-car' id=car.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
                                             <i class="fa-solid fa-pen-to-square text-gray-100"></i>
-                                        </div>
-                                        <div
-                                        class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"
-                                        onclick="deleteCar({{ car.id }},'{{car.name}}')"
-                                        >
+                                        </a>
+                                        <div class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center"
+                                            onclick="deleteCar({{ car.id }},'{{ car.name }}')">
                                             <i class="fa-solid fa-trash text-gray-100"></i>
                                         </div>
                                     </div>

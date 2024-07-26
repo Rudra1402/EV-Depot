@@ -99,11 +99,10 @@
                 <div class="text-gray-300">Description</div>
                 <div class="text-lg font-medium text-gray-100">{{ car.description }}</div>
             </div>
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and is_owner.username != user %}
                 <div class="flex items-center justify-end gap-3 w-full">
-                    <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button>
-                    <!-- bikes.html -->
-                    <a href="#" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
+                    <!-- <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button> -->
+                    <a href="{% url 'cars:purchase-car' car.id %}" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
                 </div>
             {% endif %}
         </div>

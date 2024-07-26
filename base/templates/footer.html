@@ -1,12 +1,44 @@
 {% load static %}
-<div class="bg-[#0B391C] py-4 px-20">
-    <div class="bg-black rounded-lg py-4 px-10 flex items-center justify-between">
-        <img src="{% static "logo.png" %}" class="h-10 w-auto">
-        <div class="flex items-center justify-center gap-x-6">
-            <img src="{% static "twitter.png" %}" class="h-6 w-auto">
-            <img src="{% static "insta.png" %}" class="h-6 w-6">
-            <img src="{% static "fb.png" %}" class="h-6 w-auto">
-            <img src="{% static "linkedin.png" %}" class="h-6 w-auto">
+<div class="bg-[#0B391C] py-4 px-20 flex flex-col items-center gap-2.5">
+    <div class="bg-black w-full rounded-md px-6 py-8 flex items-start justify-center gap-10">
+        <img src="{% static "logo.png" %}" class="h-20 w-auto my-auto">
+        <div class="flex items-center justify-between w-2/3">
+            <div class="flex gap-20 items-start justify-center w-full text-blue-200">
+                <div class="flex flex-col gap-y-3">
+                    <a href={% url "base:home" %}>&gt;&nbsp;&nbsp;Home</a>
+                    <a href={% url "base:about" %}>&gt;&nbsp;&nbsp;About</a>
+                    {% if user.is_authenticated %}
+                    <a href={% url "users:profile" %}>&gt;&nbsp;&nbsp;{{user.username}}</a>
+                    {% else %}
+                    <a href={% url "users:login" %}>&gt;&nbsp;&nbsp;Login</a>
+                    <a href={% url "users:register" %}>&gt;&nbsp;&nbsp;Register</a>
+                    {% endif %}
+                </div>
+                <div class="flex flex-col gap-y-3">
+                    <a href={% url "bikes:homepage" %}>&gt;&nbsp;&nbsp;Bikes</a>
+                    <a href={% url "cars:homepage" %}>&gt;&nbsp;&nbsp;Cars</a>
+                    <a href={% url "trucks:homepage" %}>&gt;&nbsp;&nbsp;Trucks</a>
+                </div>
+            </div>
+            <div class="flex flex-col items-start gap-6">
+                <div class="flex items-center justify-center gap-2.5">
+                    <input 
+                        placeholder="Subscribe to newsletter"
+                        type="text"
+                        class="py-2 px-3 rounded text-gray-800"
+                    />
+                    <button class="px-5 py-2 bg-green-700 text-white rounded">Subscribe</button>
+                </div>
+                <div class="flex items-center justify-center gap-x-6">
+                    <img src="{% static "twitter.png" %}" class="h-6 w-auto">
+                    <img src="{% static "insta.png" %}" class="h-6 w-6">
+                    <img src="{% static "fb.png" %}" class="h-6 w-auto">
+                    <img src="{% static "linkedin.png" %}" class="h-6 w-auto">
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="py-3 bg-black w-full rounded text-gray-300 text-sm text-center">
+        &copy; 2024 EVDepot, All rights reserved!
     </div>
 </div>
