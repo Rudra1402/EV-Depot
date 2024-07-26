@@ -28,6 +28,38 @@
     const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
 </script>
 
+<script>
+    function deleteCar(carId, carTitle) {
+    if (window.confirm(`Are you sure you want to delete ${carTitle}`)) {
+        fetch(`/cars/delete/${carId}`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRFToken': csrfToken,
+            },
+        })
+            .then(response => {
+                console.log(`Successfully deleted car with ID: ${carId}`);
+
+                // Remove the car element from the DOM
+                document.getElementById(`car-${carId}`).remove();
+
+                // Update the car count
+                const countElement = document.getElementById('count');
+                const currentCount = parseInt(countElement.textContent);
+                console.log(`Current car count: ${currentCount}`);  // Log current count
+                countElement.textContent = (currentCount - 1).toString();
+                console.log(`Updated car count: ${countElement.textContent}`);  // Log updated count
+
+
+                alert(`${carTitle} deleted successfully!`);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+}
+</script>
+
 {% endblock %}
 {% block body_block %}
 {% if error_message %}
@@ -110,9 +142,9 @@
                                 </a>
                                 {% if user.username|safe == car.user.username|safe %}
                                     <div class="flex items-center gap-2 px-2">
-                                        <div class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center">
+                                        <a href="{% url 'cars:edit-car' id=car.id %}" class="bg-blue-600 rounded h-8 w-8 cursor-pointer flex items-center justify-center">
                                             <i class="fa-solid fa-pen-to-square text-gray-100"></i>
-                                        </div>
+                                        </a>
                                         <div
                                         class="bg-[#6741d9] rounded h-8 w-8 cursor-pointer flex items-center justify-center"
                                         onclick="deleteCar({{ car.id }},'{{car.name}}')"
