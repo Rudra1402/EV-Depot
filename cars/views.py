@@ -44,7 +44,8 @@ def carindex(request):
                     image = request.FILES['image']
                     image_url = upload_image_to_firebase(image, 'bike_images')
                     car.image = image_url
-                    car.user = Buyer.objects.get(pk=4)
+                    user = Buyer.objects.get(username=request.user)
+                    car.user = Buyer.objects.get(pk=user.id)
 
                 form.save()
                 return redirect('cars:homepage')  # Redirect to the same page to clear the form
