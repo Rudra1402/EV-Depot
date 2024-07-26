@@ -21,7 +21,8 @@ class Trucks(models.Model):
     image = models.ImageField(upload_to='trucks/')
     isNew = models.BooleanField(default=True)
     createdAt = models.DateField(default=timezone.now)
-    user = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='trucks', default=1)
+    user = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='trucks')
+    purchasedBy = models.ForeignKey(Buyer, on_delete=models.SET_NULL, null=True, blank=True, related_name='purchased_trucks')
 
     def __str__(self):
         return self.name

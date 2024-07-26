@@ -15,7 +15,7 @@
                 </div>
             {% endif %}
             <div class="flex flex-col items-center gap-6">
-                <div class="flex flex-col items-center gap-2">
+                <div class="flex flex-col items-center gap-1">
                     <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center">
                         <div class="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center">
                             <img src="{% static badge %}" alt="Badge" class="p-5 object-cover">
@@ -25,7 +25,7 @@
                     <p class="text-gray-600 font-semibold">{{ user.email }}</p>
                 </div>
                 <div class="border-t border-gray-200 pt-4 w-full">
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-1">
                         <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>First Name:</strong> {{ user.buyer.firstname|capfirst }}</p>
                         <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>Last Name:</strong> {{ user.buyer.lastname|capfirst }}</p>
                         <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>Mobile:</strong> {{ user.buyer.mobile }}</p>
@@ -33,12 +33,14 @@
                         <p class="text-gray-700 hover:bg-gray-100 rounded p-2"><strong>City:</strong> {{ user.buyer.city|capfirst }}</p>
                     </div>
                 </div>
-                {% comment %} <div class="border-t border-gray-200 pt-4 w-full">
-                    <div class="flex flex-col gap-2">
-                        <p class="text-gray-500 text-sm">Last Updated: {{ user.buyer.updated_at }}</p>
+                {% if request.session.last_login %}
+                <div class="border-t border-b border-gray-200 py-4 w-full">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-gray-500 text-sm">Last login: {{ request.session.last_login }}</p>
                     </div>
-                </div> {% endcomment %}
-                <div class="flex gap-4 mt-4">
+                </div>
+                {% endif %}
+                <div class="flex gap-4 mt-2">
                     <a href="{% url 'users:update_profile' %}" class="bg-blue-500 text-white px-4 py-2 rounded">Update Profile</a>
                     <form method="POST" action="{% url 'users:delete_profile' %}">
                         {% csrf_token %}
@@ -47,16 +49,40 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white shadow-md flex flex-col gap-5 rounded-lg p-6 w-2/3 min-h-full max-h-full overflow-auto">
-            <div class="flex gap-1 text-lg leading-none pb-5 border-b border-b-gray-300">
-                &#9733;&nbsp;Your most frequently visited vehicle is
+        <div class="bg-white shadow-md flex flex-col gap-5 rounded-lg p-6 w-2/3 min-h-full max-h-full overflow-auto" style="scrollbar-width: none;">
+            <div class="flex items-center gap-1 text-lg leading-none pb-5 border-b border-b-gray-300">
+                <div class="text-2xl leading-none">&#9733;&nbsp;</div>Your most frequently visited vehicle is
                 <a href={% url "bikes:homepage" %} class="font-semibold text-blue-700">{{most_visited_app}}</a>
             </div>
             <div class="flex flex-col gap-4">
-                <div class="text-xl leading-none font-semibold">Bikes History</div>
-                <div class="flex flex-wrap gap-4">
+                <div class="text-xl leading-none font-semibold">Bikes History ({{bikes|length}})</div>
+                <div class="flex w-full overflow-auto gap-4">
                     {% if bikes %}
                         {% for vehicle in bikes %}
+                        <div class="rounded-lg min-w-64 max-w-64 flex flex-col items-center bg-white border border-gray-200 shadow-lg bike-item" id="bike-{{ vehicle.id }}">
+                            <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-full h-40 max-h-full object-cover">
+                            <div class="p-4 w-full flex flex-col gap-y-4">
+                                <div class="flex items-center justify-between gap-5">
+                                    <a href="{% url "bikes:bikebyid" id=vehicle.id %}" class="text-gray-800">
+                                        <h2 class="text-xl font-semibold text-gray-800">{{ vehicle.name }}</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="flex flex-col gap-1">
+                        <div class="py-0 text-gray-700">You have not purchased any bikes!</div>
+                        <a href={% url "bikes:homepage" %} class="text-blue-700">Visit bikes!</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="text-xl leading-none font-semibold">Cars History ({{cars|length}})</div>
+                <div class="flex w-full overflow-auto gap-4">
+                    {% if cars %}
+                        {% for vehicle in cars %}
                         <div class="rounded-lg w-1/3 flex flex-col items-center bg-white border border-gray-200 shadow-lg bike-item" id="bike-{{ vehicle.id }}">
                             <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-full h-40 max-h-full object-cover">
                             <div class="p-4 w-full flex flex-col gap-y-4">
@@ -69,8 +95,34 @@
                         </div>
                         {% endfor %}
                     {% else %}
-                        <div class="p-2 text-gray-700">You have not purchased any bikes!</div>
-                        <a href={% url "bikes:homepage" %}>Visit bikes!</a>
+                        <div class="flex flex-col gap-1">
+                        <div class="py-0 text-gray-700">You have not purchased any cars!</div>
+                        <a href={% url "cars:homepage" %} class="text-blue-700">Visit cars!</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="text-xl leading-none font-semibold">Trucks History ({{trucks|length}})</div>
+                <div class="flex w-full overflow-auto gap-4">
+                    {% if trucks %}
+                        {% for vehicle in trucks %}
+                        <div class="rounded-lg w-1/3 flex flex-col items-center bg-white border border-gray-200 shadow-lg bike-item" id="bike-{{ vehicle.id }}">
+                            <img src="{{ vehicle.image }}" alt="{{ vehicle.name }}" class="w-full h-40 max-h-full object-cover">
+                            <div class="p-4 w-full flex flex-col gap-y-4">
+                                <div class="flex items-center justify-between gap-5">
+                                    <a href="{% url "bikes:bikebyid" id=vehicle.id %}" class="text-gray-800">
+                                        <h2 class="text-xl font-semibold text-gray-800">{{ vehicle.name }}</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="flex flex-col gap-1">
+                        <div class="py-0 text-gray-700">You have not purchased any trucks!</div>
+                        <a href={% url "trucks:homepage" %} class="text-blue-700">Visit trucks!</a>
+                        </div>
                     {% endif %}
                 </div>
             </div>

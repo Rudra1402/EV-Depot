@@ -4,6 +4,7 @@ from django.http import HttpResponse, JsonResponse, Http404
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.urls import reverse
 
 from users.models import Buyer
 from .utils import upload_image_to_firebase
@@ -50,7 +51,7 @@ def carindex(request):
         else:
             form = CarForm()
 
-        cars = Cars.objects.all()
+        cars = Cars.objects.filter(purchasedBy__isnull=True)
 
         latest = request.GET.get('latest')
         if latest:
@@ -164,3 +165,27 @@ def car_list(request):
 #         'sender': message.sender.id
 #     }
 #     return JsonResponse(data)
+
+@login_required
+def purchase_car(request, car_id):
+    car = get_object_or_404(Cars, id=car_id)
+    owner = car.user
+    return render(request, 'cars/purchase_car.html', {'car': car, 'owner': owner})
+
+@login_required
+def complete_purchase(request, car_id):
+    car = get_object_or_404(Cars, id=car_id)
+    buyer = Buyer.objects.get(username=request.user)
+    owner = car.user
+
+    # Allocate points
+    buyer.points += 100  # or any logic to calculate points
+    buyer.save()
+    owner.points += 50  # or any logic to calculate points
+    owner.save()
+
+    # Mark the bike as purchased
+    car.purchasedBy = buyer
+    car.save()
+
+    return redirect(reverse('cars:homepage'))

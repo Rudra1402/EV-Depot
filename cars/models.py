@@ -29,6 +29,7 @@ class Cars(models.Model):
     isNew = models.BooleanField(default=True)
     createdAt = models.DateField(default=timezone.now)
     user = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='cars')
+    purchasedBy = models.ForeignKey(Buyer, on_delete=models.SET_NULL, null=True, blank=True, related_name='purchased_cars')
     
     class Meta:
         verbose_name_plural = "cars"
