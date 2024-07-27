@@ -1,11 +1,13 @@
 from datetime import datetime, timedelta
+
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, JsonResponse, Http404
-from django.views.decorators.http import require_http_methods
-from django.db.models import Q
+from django.views.decorators.http import require_http_methods, require_POST
+from django.db.models import Q, Avg
 from django.urls import reverse
 
-from trucks.models import Trucks
+from trucks.models import Trucks, RatingT
 from .forms import TruckForm
 from users.models import Buyer
 from .utils import upload_image_to_firebase
@@ -48,7 +50,7 @@ def index(request):
 
         truckForm = TruckForm()
         context = {
-            'trucks': trucks,
+            'trucks': trucks.annotate(average_rating=Avg('ratings__rating')),
             'form': truckForm,
             'visit_counts': request.visit_counts,
             'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
@@ -60,7 +62,29 @@ def index(request):
 
 def truckById(request, id):
     truck = get_object_or_404(Trucks, id=id)
-    return render(request, 'trucks/truck.html', {'truck': truck})
+    user_rating = None
+    buyer = get_object_or_404(Buyer, username=request.user)
+    if request.user.is_authenticated:
+        user_rating = RatingT.objects.filter(truck=truck, user=buyer).first()
+    return render(request, 'trucks/truck.html', {'truck': truck, 'user_rating': user_rating})
+@login_required
+@require_POST
+def rate_truck(request, truck_id):
+    truck = get_object_or_404(Trucks, id=truck_id)
+    if request.method == 'POST':
+        rating_value = request.POST.get('rating')
+        if rating_value:
+            rating_value = int(rating_value)
+            # Ensure rating is between 1 and 5
+            if 1 <= rating_value <= 5:
+                buyer = get_object_or_404(Buyer, username=request.user)
+                RatingT.objects.update_or_create(
+                    truck=truck,
+                    user=buyer,
+                    defaults={'rating': rating_value}
+                )
+                return redirect('trucks:homepage')
+    return JsonResponse({'success': False, 'message': 'Invalid rating'}, status=400)
 
 def edit_truck(request, id):
     truck = get_object_or_404(Trucks, id=id)
@@ -111,7 +135,7 @@ def truck_list(request):
         trucks = trucks.filter(name__icontains=query)
 
     context = {
-        'trucks': trucks
+        'trucks': trucks.annotate(average_rating=Avg('ratings__rating'))
     }
     return render(request, 'trucks/index.html', context)
 
