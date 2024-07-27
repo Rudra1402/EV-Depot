@@ -26,3 +26,15 @@ class Trucks(models.Model):
 
     def __str__(self):
         return self.name
+
+class RatingT(models.Model):
+    truck = models.ForeignKey(Trucks, on_delete=models.CASCADE, related_name='ratings')
+    user = models.ForeignKey(Buyer, on_delete=models.CASCADE)
+    rating = models.PositiveSmallIntegerField()
+
+    class Meta:
+        unique_together = ('truck', 'user')
+
+    def __str__(self):
+        return f"{self.truck.name} - {self.user.username} - {self.rating}"
+

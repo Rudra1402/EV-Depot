@@ -11,4 +11,5 @@ urlpatterns = [
     # path('messages/<int:message_id>/', views.get_message, name='get-message'),
     path('purchase/<int:car_id>/', views.purchase_car, name='purchase-car'),
     path('complete_purchase/<int:car_id>/', views.complete_purchase, name='complete-purchase'),
+    path('rate/<int:car_id>/', views.rate_car, name='rate_car'),
 ]

@@ -26,3 +26,14 @@ class Bikes(models.Model):
     def __str__(self):
         return self.name
 
+class Rating(models.Model):
+    bike = models.ForeignKey(Bikes, on_delete=models.CASCADE, related_name='ratings')
+    user = models.ForeignKey(Buyer, on_delete=models.CASCADE)
+    rating = models.PositiveSmallIntegerField()
+
+    class Meta:
+        unique_together = ('bike', 'user')
+
+    def __str__(self):
+        return f"{self.bike.name} - {self.user.username} - {self.rating}"
+
