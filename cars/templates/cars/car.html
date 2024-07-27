@@ -24,6 +24,20 @@
         .car-item:hover img {
             transform: scale(1.05);
         }
+
+        .rating-stars input[type="radio"] {
+            display: none;
+        }
+
+        .rating-stars label {
+            font-size: 2em;
+            color: gray;
+            cursor: pointer;
+        }
+
+        .rating-stars input[type="radio"]:checked ~ label {
+            color:gold;
+        }
     </style>
     <script>
         const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
@@ -32,15 +46,15 @@
 {% block body_block %}
 
 <div class="m-0 p-0 w-screen h-screen flex flex-col poppins-regular bg-[#f5f5f5]">
-    {% comment %} <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">
-        <img src="{% static "logo.png" %}" class="h-10 w-auto">
-        <div class="flex items-center justify-center gap-x-8">
-            <a href="#" class="text-white font-semibold text-lg leading-none">Home</a>
-            <a href="#" class="text-white font-semibold text-lg leading-none">About</a>
-            <a href="#" class="text-white font-semibold text-lg leading-none">Vehicles</a>
-            <a href="#" class="text-white font-semibold text-lg leading-none">Profile</a>
-        </div>
-    </nav> {% endcomment %}
+{#    {% comment %} <nav class="flex items-end justify-between px-24 py-6 w-full h-fit bg-black">#}
+{#        <img src="{% static "logo.png" %}" class="h-10 w-auto">#}
+{#        <div class="flex items-center justify-center gap-x-8">#}
+{#            <a href="#" class="text-white font-semibold text-lg leading-none">Home</a>#}
+{#            <a href="#" class="text-white font-semibold text-lg leading-none">About</a>#}
+{#            <a href="#" class="text-white font-semibold text-lg leading-none">Vehicles</a>#}
+{#            <a href="#" class="text-white font-semibold text-lg leading-none">Profile</a>#}
+{#        </div>#}
+{#    </nav> {% endcomment %}#}
     <div class="flex flex-1 overflow-auto">
         <div class="w-1/2 h-full flex items-center p-8 bg-[#095358]">
             <img src="{{ car.image }}" alt="{{ car.name }}" class="rounded-lg w-full max-h-full bg-white">
@@ -103,45 +117,74 @@
                 <div class="flex items-center justify-end gap-3 w-full">
                     {% comment %} <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button> {% endcomment %}
                     <!-- bikes.html -->
-                    <a href={% url "cars:purchase-car" car.id %} class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
+                    <a href="{% url 'cars:purchase-car' car.id %}" class="bg-[#0008] transition text-white py-2 px-4 rounded inline-block">Purchase</a>
                 </div>
             {% endif %}
-        </div>
-    </div>
-    <!-- <div class="flex">
-        <div class="message-list">
-            {% for message in messages %}
-                <div class="message-item" data-id="{{ message.id }}">
-                    {{ message.content|slice:":50" }}{% if message.content|length > 50 %}...{% endif %}
-                </div>
-            {% empty %}
-                <p>No messages yet.</p>
-            {% endfor %}
-        </div>
-        <div class="message-content">
-            {% if messages %}
-                <div class="message" data-id="{{ messages.last.id }}">
-                    <div class="message-content-wrapper {% if message.sender == user %}sent{% else %}received{% endif %}">
-                        <p>{{ messages.last.content }}</p>
-                        <p class="message-time">{{ messages.last.created_at }}</p>
-                    </div>
-                </div>
+        <div>
+        <h3 class="text-xl font-semibold" style="color:yellow">Rate this car</h3>
+            {% if user.is_authenticated %}
+                {% if user_rating %}
+                    <p style="color: white">You have already rated this car: {{ user_rating.rating }} stars</p>
+                {% else %}
+                    <form method="post" action="{% url 'cars:rate_car' car.id %}">
+                            {% csrf_token %}
+                            <div id="rating-stars" class="flex gap-1">
+                                {% for i in "12345" %}
+                                    <label>
+                                        <input type="radio" name="rating" value="{{ i }}" class="hidden">
+                                        <span class="text-2xl cursor-pointer" style="color: white;">★</span>
+                                    </label>
+                                {% endfor %}
+                            </div>
+                            <button type="submit" class="mt-2 bg-blue-500 text-white py-2 px-4 rounded">Submit Rate</button>
+                        </form>
+                {% endif %}
             {% else %}
-                <p>Select a message to view.</p>
+                <p>You must be <a href="{% url 'login' %}">logged in</a> to rate.</p>
             {% endif %}
         </div>
-    </div>
 
-    {% if not is_owner %}
-        <form method="post" class="mt-4">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="bg-[#0008] text-white py-2 px-4 rounded hover:bg-blue-600">Send</button>
-        </form>
-    {% else %}
-        <p class="mt-4 text-gray-600">You are the owner of this car. You can view messages sent to you.</p>
-    {% endif %}
-</div> -->
+        <div>
+{#            <h3 class="text-xl font-semibold">Average Rating</h3>#}
+{#            <p>{{ bike.ratings.aggregate(Avg('rating'))['rating__avg']|default:"No ratings yet" }}</p>#}
+{#            <p>{{ vehicle.average_rating|default:"No ratings yet" }}</p>#}
+        </div>
+        </div>
+    </div>
 </div>
+{#    <!-- <div class="flex">#}
+{#        <div class="message-list">#}
+{#            {% for message in messages %}#}
+{#                <div class="message-item" data-id="{{ message.id }}">#}
+{#                    {{ message.content|slice:":50" }}{% if message.content|length > 50 %}...{% endif %}#}
+{#                </div>#}
+{#            {% empty %}#}
+{#                <p>No messages yet.</p>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#        <div class="message-content">#}
+{#            {% if messages %}#}
+{#                <div class="message" data-id="{{ messages.last.id }}">#}
+{#                    <div class="message-content-wrapper {% if message.sender == user %}sent{% else %}received{% endif %}">#}
+{#                        <p>{{ messages.last.content }}</p>#}
+{#                        <p class="message-time">{{ messages.last.created_at }}</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% else %}#}
+{#                <p>Select a message to view.</p>#}
+{#            {% endif %}#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    {% if not is_owner %}#}
+{#        <form method="post" class="mt-4">#}
+{#            {% csrf_token %}#}
+{#            {{ form.as_p }}#}
+{#            <button type="submit" class="bg-[#0008] text-white py-2 px-4 rounded hover:bg-blue-600">Send</button>#}
+{#        </form>#}
+{#    {% else %}#}
+{#        <p class="mt-4 text-gray-600">You are the owner of this car. You can view messages sent to you.</p>#}
+{#    {% endif %}#}
+{#</div> -->#}
 
 {% endblock %}
