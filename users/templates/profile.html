@@ -52,7 +52,7 @@
         <div class="bg-white shadow-md flex flex-col gap-5 rounded-lg p-6 w-2/3 min-h-full max-h-full overflow-auto" style="scrollbar-width: none;">
             <div class="flex items-center gap-1 text-lg leading-none pb-5 border-b border-b-gray-300">
                 <div class="text-2xl leading-none">&#9733;&nbsp;</div>Your most frequently visited vehicle is
-                <a href={% url "bikes:homepage" %} class="font-semibold text-blue-700">{{most_visited_app}}</a>
+                <a href={% url most_visited_app|add:":homepage" %} class="font-semibold text-blue-700">{{most_visited_app}}</a>
             </div>
             <div class="flex flex-col gap-4">
                 <div class="text-xl leading-none font-semibold">Bikes History ({{bikes|length}})</div>
