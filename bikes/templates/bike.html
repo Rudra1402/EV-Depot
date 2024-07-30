@@ -105,7 +105,7 @@
                 <div class="text-gray-300">Description</div>
                 <div class="text-lg font-medium text-gray-100">{{ bike.description }}</div>
             </div>
-            {% if user.is_authenticated and user.username|safe != bike.user.username|safe %}
+            {% if user.is_authenticated and user.username|safe != bike.user.username|safe and bike.purchasedBy == None %}
                 <div class="flex items-center justify-end gap-3 w-full">
                     {% comment %} <button class="bg-[#0008] transition text-white py-2 px-4 rounded">Message Owner</button> {% endcomment %}
                     <!-- bikes.html -->
