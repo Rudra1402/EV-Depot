@@ -80,7 +80,7 @@ def carindex(request):
 
 
 
-#@login_required
+@login_required
 def carById(request, id):
     car = get_object_or_404(Cars, id=id)
     # messages = Message.objects.filter(car=car).order_by('-created_at')

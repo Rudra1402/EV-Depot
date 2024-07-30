@@ -59,7 +59,7 @@ def index(request):
     except Exception as e:
         print(str(e))
 
-
+@login_required
 def truckById(request, id):
     truck = get_object_or_404(Trucks, id=id)
     user_rating = None

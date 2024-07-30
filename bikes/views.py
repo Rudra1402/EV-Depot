@@ -57,7 +57,7 @@ def index(request):
     except Exception as e:
         print(str(e))
         
-
+@login_required
 def bikeById(request, id):
     bike = get_object_or_404(Bikes, id=id)
     user_rating = None
