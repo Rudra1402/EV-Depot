@@ -5,6 +5,7 @@ from django.views.decorators.http import require_http_methods, require_POST
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q, Avg
 from django.urls import reverse
+from django.contrib import messages
 
 from users.models import Buyer
 from .utils import upload_image_to_firebase
@@ -26,9 +27,12 @@ def index(request):
                     bike.image = image_url
                     user = Buyer.objects.get(username=request.user)
                     bike.user = Buyer.objects.get(pk=user.id)
-
-                form.save()
-                return redirect('bikes:homepage')  # Redirect to the same page to clear the form
+                    form.save()
+                    return redirect('bikes:homepage')
+                else:
+                    messages.error(request, "Please upload an image! It is mandatory!")
+            else:
+                messages.error(request, "There was an error in your form. Please correct it.")
         else:
             form = BikeForm()
 
@@ -60,12 +64,13 @@ def index(request):
 @login_required
 def bikeById(request, id):
     bike = get_object_or_404(Bikes, id=id)
-    user_rating = None
+    # user_rating = None
     buyer = get_object_or_404(Buyer, username=request.user)
     if request.user.is_authenticated:
         user_rating = Rating.objects.filter(bike=bike, user=buyer).first()
     return render(request, 'bike.html', {'bike': bike, 'user_rating': user_rating})
 
+@login_required
 def delete_bike(request, id):
     if request.method == 'DELETE':
         print(f"Received DELETE request for bike ID {id}")
@@ -95,6 +100,7 @@ def rate_bike(request, bike_id):
                 return redirect('bikes:homepage')
     return JsonResponse({'success': False, 'message': 'Invalid rating'}, status=400)
 
+@login_required
 def edit_bike(request, id):
     bike = get_object_or_404(Bikes, id=id)
 
@@ -139,13 +145,13 @@ def bike_list(request):
     return render(request, 'index.html', context)
 
 
-#@login_required
+@login_required
 def purchase_bike(request, bike_id):
     bike = get_object_or_404(Bikes, id=bike_id)
     owner = bike.user
     return render(request, 'purchase_bike.html', {'bike': bike, 'owner': owner})
 
-#@login_required
+@login_required
 def complete_purchase(request, bike_id):
     bike = get_object_or_404(Bikes, id=bike_id)
     buyer = Buyer.objects.get(username=request.user)

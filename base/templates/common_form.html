@@ -6,6 +6,15 @@
     <!-- Container for centering the form -->
     <div class="w-full max-w-3xl p-6 bg-white rounded-md shadow-lg overflow-y-auto" style="scrollbar-width: none; max-height: calc(100vh - 4rem);">
         <h1 class="text-2xl font-bold mb-6 text-gray-800">Add {{ app_name }}</h1>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
         <form method="post" action="{% url app_name|add:':homepage' %}" enctype="multipart/form-data" class="p-6 rounded-md bg-[#095358] flex flex-col gap-4">
             {% csrf_token %}
             <div class="flex items-center w-full gap-4">
