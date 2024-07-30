@@ -11,6 +11,8 @@ from .utils import upload_image_to_firebase
 
 from bikes.models import Bikes, Rating
 from .forms import BikeForm
+
+
 # Create your views here.
 def index(request):
     try:
@@ -19,7 +21,7 @@ def index(request):
             print(request.POST, request.FILES)
             if form.is_valid():
                 bike = form.save(commit=False)
-                
+
                 if 'image' in request.FILES:
                     image = request.FILES['image']
                     image_url = upload_image_to_firebase(image, 'bike_images')
@@ -53,10 +55,10 @@ def index(request):
             'visit_counts': request.visit_counts,
             'most_visited_app': max(request.visit_counts, key=request.visit_counts.get)
         }
-        return render(request,'index.html', context)
+        return render(request, 'index.html', context)
     except Exception as e:
         print(str(e))
-        
+
 
 def bikeById(request, id):
     bike = get_object_or_404(Bikes, id=id)
@@ -65,6 +67,7 @@ def bikeById(request, id):
     if request.user.is_authenticated:
         user_rating = Rating.objects.filter(bike=bike, user=buyer).first()
     return render(request, 'bike.html', {'bike': bike, 'user_rating': user_rating})
+
 
 def delete_bike(request, id):
     if request.method == 'DELETE':
@@ -75,6 +78,7 @@ def delete_bike(request, id):
     else:
         print(f"Received {request.method} request, only DELETE is allowed")
         raise Http404("Only DELETE method is allowed")
+
 
 @login_required
 @require_POST
@@ -94,6 +98,7 @@ def rate_bike(request, bike_id):
                 )
                 return redirect('bikes:homepage')
     return JsonResponse({'success': False, 'message': 'Invalid rating'}, status=400)
+
 
 def edit_bike(request, id):
     bike = get_object_or_404(Bikes, id=id)
@@ -132,20 +137,21 @@ def bike_list(request):
     query = request.GET.get('query')
     if query:
         bikes = bikes.filter(name__icontains=query)
-    
+
     context = {
         'bikes': bikes.annotate(average_rating=Avg('ratings__rating'))
     }
     return render(request, 'index.html', context)
 
 
-#@login_required
+# @login_required
 def purchase_bike(request, bike_id):
     bike = get_object_or_404(Bikes, id=bike_id)
     owner = bike.user
     return render(request, 'purchase_bike.html', {'bike': bike, 'owner': owner})
 
-#@login_required
+
+# @login_required
 def complete_purchase(request, bike_id):
     bike = get_object_or_404(Bikes, id=bike_id)
     buyer = Buyer.objects.get(username=request.user)
@@ -161,4 +167,9 @@ def complete_purchase(request, bike_id):
     bike.purchasedBy = buyer
     bike.save()
 
+
     return redirect(reverse('bikes:homepage'))  # or any page you want to redirect to
+
+
+
+

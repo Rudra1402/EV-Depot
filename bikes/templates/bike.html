@@ -39,9 +39,45 @@
         .rating-stars input[type="radio"]:checked ~ label {
             color:gold;
         }
+
+        /* Default star color */
+.star {
+    color: #d1d5db; /* Light gray color for unselected stars */
+}
+
+/* Change color of selected star */
+.star.selected {
+    color: yellow; /* Yellow color for selected stars */
+}
+
+/* Change color of hovered stars */
+.star:hover, .star:hover ~ .star {
+    color: yellow;
+}
     </style>
     <script>
         const csrfToken = "{{ csrf_token }}";  // Add CSRF token as a global variable
+         document.addEventListener('DOMContentLoaded', function () {
+        const stars = document.querySelectorAll('.star');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function () {
+                const value = this.getAttribute('data-value');
+
+                stars.forEach(s => {
+                    s.classList.remove('selected');
+                });
+
+                this.classList.add('selected');
+
+                let previousSibling = this.previousElementSibling;
+                while (previousSibling) {
+                    previousSibling.classList.add('selected');
+                    previousSibling = previousSibling.previousElementSibling;
+                }
+            });
+        });
+    });
     </script>
 {% endblock %}
 {% block body_block %}
@@ -124,7 +160,7 @@
                                 {% for i in "12345" %}
                                     <label>
                                         <input type="radio" name="rating" value="{{ i }}" class="hidden">
-                                        <span class="text-2xl cursor-pointer" style="color: white;">★</span>
+                                        <span class="text-2xl cursor-pointer star" data-value="{{ i }}">★</span>
                                     </label>
                                 {% endfor %}
                             </div>

@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from users.models import Buyer
 
+
 # Create your models here.
 class Bikes(models.Model):
     BIKE_TYPES = [
@@ -21,10 +22,12 @@ class Bikes(models.Model):
     isNew = models.BooleanField(default=True)
     createdAt = models.DateField(default=timezone.now)
     user = models.ForeignKey(Buyer, on_delete=models.CASCADE, related_name='bikes')
-    purchasedBy = models.ForeignKey(Buyer, on_delete=models.SET_NULL, null=True, blank=True, related_name='purchased_bikes')
+    purchasedBy = models.ForeignKey(Buyer, on_delete=models.SET_NULL, null=True, blank=True,
+                                    related_name='purchased_bikes')
 
     def __str__(self):
         return self.name
+
 
 class Rating(models.Model):
     bike = models.ForeignKey(Bikes, on_delete=models.CASCADE, related_name='ratings')
@@ -36,4 +39,13 @@ class Rating(models.Model):
 
     def __str__(self):
         return f"{self.bike.name} - {self.user.username} - {self.rating}"
+
+
+
+
+
+
+
+
+
 
